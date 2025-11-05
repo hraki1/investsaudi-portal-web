@@ -180,7 +180,7 @@ export default function NationalPrograms() {
             </button>
 
             {/* Logo Swiper */}
-            <div className="w-full max-w-[500px] relative">
+            <div className="w-full max-w-[300px] sm:max-w-[500px] relative">
               <Swiper
                 direction="vertical"
                 slidesPerView={9}
@@ -191,13 +191,26 @@ export default function NationalPrograms() {
                 modules={[Navigation]}
                 onSwiper={setSwiperInstance}
                 onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-                className="h-[750px] logo-swiper"
-                autoplay={{
-                  delay: 3000,
-                  disableOnInteraction: false,
+                className="h-[500px] sm:h-[750px] logo-swiper"
+                breakpoints={{
+                  320: {
+                    slidesPerView: 5,
+                    spaceBetween: 5,
+                  },
+                  480: {
+                    slidesPerView: 5,
+                  },
+                  640: {
+                    slidesPerView: 95,
+
+                  },
+                  768: {
+                    slidesPerView: 9,
+                  },
+                  1024: {
+                    slidesPerView: 9,
+                  },
                 }}
-                slideActiveClass="swiper-slide-active-custom"
-                speed={600}
               >
                 {programLogos.map((logo, index) => {
                   // Calculate distance from center
@@ -241,7 +254,7 @@ export default function NationalPrograms() {
                       className="flex items-center justify-center"
                       style={{
                         perspective: "1000px",
-                        transformStyle: "preserve-3d",
+                        // transformStyle: "preserve-3d",
                         zIndex: zIndex,
                         position: "relative",
                       }}
@@ -255,7 +268,7 @@ export default function NationalPrograms() {
                             height: "85px",
                             width: "100%",
                             transform: `translateZ(${translateZ}px)`,
-                            transformStyle: "preserve-3d",
+                            // transformStyle: "preserve-3d",
                             pointerEvents: "auto",
                             position: "relative",
                             zIndex: zIndex,

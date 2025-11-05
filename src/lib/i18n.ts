@@ -2,8 +2,10 @@
 
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import enTranslations from "../locales/en/common.json";
-import arTranslations from "../locales/ar/common.json";
+import enCommon from "../locales/en/common.json";
+import arCommon from "../locales/ar/common.json";
+import enTranslations from "../locales/en/en.json";
+import arTranslations from "../locales/ar/ar.json";
 
 if (!i18n.isInitialized) {
   i18n
@@ -11,10 +13,10 @@ if (!i18n.isInitialized) {
     .init({
       resources: {
         en: {
-          translation: enTranslations,
+          translation: { ...enCommon, ...enTranslations },
         },
         ar: {
-          translation: arTranslations,
+          translation: { ...arCommon, ...arTranslations },
         },
       },
       lng: typeof window !== "undefined" ? localStorage.getItem("i18nextLng") || "en" : "en",

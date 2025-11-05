@@ -181,7 +181,7 @@ export default function Events() {
           <Swiper
             key={filteredEvents.length}
             modules={[Navigation]}
-            slidesPerView={2.5}
+            slidesPerView={1.2}
             spaceBetween={20}
             centeredSlides={true}
             loop={false}

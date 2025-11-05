@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { TbArrowCurveRight } from "react-icons/tb";
 import { CgArrowTopRight } from "react-icons/cg";
 
@@ -18,6 +18,7 @@ interface DashboardMetric {
 }
 
 export default function StrategicDirection() {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<"economy" | "society" | "nation">(
     "economy"
   );
@@ -26,21 +27,23 @@ export default function StrategicDirection() {
   const dashboardColumns: DashboardMetric[][] = [
     [
       {
-        label: "GDP Ranking",
+        label: t("strategic_direction.vision_dashboard.metrics.gdp_ranking"),
         baseline: "812.73",
         current: "936",
         target: "1,732.9",
         suffix: "B",
       },
       {
-        label: "Non-Oil Exports",
+        label: t(
+          "strategic_direction.vision_dashboard.metrics.non_oil_exports"
+        ),
         baseline: "534",
         current: "681",
         target: "1,325",
         suffix: "B",
       },
       {
-        label: "HDI",
+        label: t("strategic_direction.vision_dashboard.metrics.hdi"),
         baseline: "0.846",
         current: ".875",
         target: ".94",
@@ -48,21 +51,25 @@ export default function StrategicDirection() {
     ],
     [
       {
-        label: "Private Sector GDP",
+        label: t(
+          "strategic_direction.vision_dashboard.metrics.private_sector_gdp"
+        ),
         baseline: "40",
         current: "47",
         target: "65",
         suffix: "%",
       },
       {
-        label: "FDI GDP",
+        label: t("strategic_direction.vision_dashboard.metrics.fdi_gdp"),
         baseline: "1.1",
         current: "2.4",
         target: "5.7",
         suffix: "%",
       },
       {
-        label: "Talent Competitiveness",
+        label: t(
+          "strategic_direction.vision_dashboard.metrics.talent_competitiveness"
+        ),
         baseline: "29",
         current: "32",
         target: "20",
@@ -71,14 +78,16 @@ export default function StrategicDirection() {
     ],
     [
       {
-        label: "Logistics Performance",
+        label: t(
+          "strategic_direction.vision_dashboard.metrics.logistics_performance"
+        ),
         baseline: "49",
         current: "38",
         target: "25",
         suffix: "th",
       },
       {
-        label: "Women's Labor",
+        label: t("strategic_direction.vision_dashboard.metrics.womens_labor"),
         baseline: "22.8",
         current: "33.5",
         target: "40",
@@ -92,56 +101,56 @@ export default function StrategicDirection() {
       id: 1,
       icon: "📈",
       value: "1.8%",
-      description: "GDP Growth",
+      description: t("strategic_direction.stats.gdp_growth"),
     },
     {
       id: 2,
       icon: "💰",
       value: "24%",
-      description: "FDI Growth",
+      description: t("strategic_direction.stats.fdi_growth"),
     },
     {
       id: 3,
       icon: "⭐",
       value: "A+",
-      description: "Credit Rating",
+      description: t("strategic_direction.stats.credit_rating"),
     },
     {
       id: 4,
       icon: "🚀",
       value: "30.4%",
-      description: "Export Growth",
+      description: t("strategic_direction.stats.export_growth"),
     },
     {
       id: 1,
-      title: "Pro Investor",
+      title: t("strategic_direction.stats.pro_investor"),
       value: "24%",
-      description: "Pro Investor Description",
+      description: t("strategic_direction.stats.pro_investor_desc"),
     },
     {
       id: 2,
-      title: "Tax Incentives",
+      title: t("strategic_direction.stats.tax_incentives"),
       value: "24%",
-      description: "Tax Incentives Description",
+      description: t("strategic_direction.stats.tax_incentives_desc"),
     },
     {
       id: 3,
-      title: "Tax Laws",
+      title: t("strategic_direction.stats.tax_laws"),
       value: "24%",
-      description: "Tax Laws Description",
+      description: t("strategic_direction.stats.tax_laws_desc"),
     },
     {
       id: 4,
-      title: "Investment Law",
+      title: t("strategic_direction.stats.investment_law"),
       value: "24%",
-      description: "Investment Law Description",
+      description: t("strategic_direction.stats.investment_law_desc"),
     },
   ];
 
   const tabs: Array<{ id: "economy" | "society" | "nation"; title: string }> = [
-    { id: "economy", title: "Thriving Economy" },
-    { id: "society", title: "Vibrant Society" },
-    { id: "nation", title: "Ambitious Nation" },
+    { id: "economy", title: t("strategic_direction.thriving_economy") },
+    { id: "society", title: t("strategic_direction.vibrant_society") },
+    { id: "nation", title: t("strategic_direction.ambitious_nation") },
   ];
 
   // UI style constants
@@ -154,214 +163,181 @@ export default function StrategicDirection() {
 
   const tabContent = {
     economy: {
-      title: "Investment Destination",
+      title: t("strategic_direction.investment_destination"),
       items: [
         {
           icon: (
-            <Image
+            <img
               src="/icons/globe.png"
               alt="Economy"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Economy item 1",
+          text: t("strategic_direction.economy_items.item1"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/cash-02.png"
               alt="Investment"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Economy item 2",
+          text: t("strategic_direction.economy_items.item2"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/globe.png"
               alt="Market Access"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Economy item 3",
+          text: t("strategic_direction.economy_items.item3"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/catalogue.png"
               alt="Ecosystem"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Economy item 4",
+          text: t("strategic_direction.economy_items.item4"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/coins-01.png"
               alt="Incentives"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Economy item 5",
+          text: t("strategic_direction.economy_items.item5"),
         },
       ],
     },
     society: {
-      title: "Investment Destination",
+      title: t("strategic_direction.investment_destination"),
       items: [
         {
           icon: (
-            <Image
+            <img
               src="/icons/city-01.png"
               alt="Tourism"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Society item 1",
+          text: t("strategic_direction.society_items.item1"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/catalogue.png"
               alt="Culture"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Society item 2",
+          text: t("strategic_direction.society_items.item2"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/city-01.png"
               alt="Quality of Life"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Society item 3",
+          text: t("strategic_direction.society_items.item3"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/catalogue.png"
               alt="Education"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Society item 4",
+          text: t("strategic_direction.society_items.item4"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/city-01.png"
               alt="Social"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Society item 5",
+          text: t("strategic_direction.society_items.item5"),
         },
       ],
     },
     nation: {
-      title: "Investment Destination",
+      title: t("strategic_direction.investment_destination"),
       items: [
         {
           icon: (
-            <Image
+            <img
               src="/icons/globe.png"
               alt="Competitiveness"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Nation item 1",
+          text: t("strategic_direction.nation_items.item1"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/city-01.png"
               alt="Giga Projects"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Nation item 2",
+          text: t("strategic_direction.nation_items.item2"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/catalogue.png"
               alt="Digital"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Nation item 3",
+          text: t("strategic_direction.nation_items.item3"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/coins-01.png"
               alt="SMEs"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Nation item 4",
+          text: t("strategic_direction.nation_items.item4"),
         },
         {
           icon: (
-            <Image
+            <img
               src="/icons/globe.png"
               alt="Energy"
-              width={40}
-              height={40}
               className="w-full h-full"
             />
           ),
-          text: "Nation item 5",
+          text: t("strategic_direction.nation_items.item5"),
         },
       ],
     },
   };
 
   return (
-    <section className="relative pt-12 md:pt-10 bg-linear-to-br from-green-950 via-teal-950 to-blue-950">
+    <section className="relative pt-12 md:pt-10 bg-gradient-to-br from-green-950 via-teal-950 to-blue-950">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <div className="relative w-full h-full">
-          <Image
-            src="/investmentDestination-hero.png"
-            alt="Saudi Arabia landscape"
-            fill
-            className="object-cover"
-          />
-        </div>
+        <img
+          src="/investmentDestination-hero.png"
+          alt="Saudi Arabia landscape"
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
@@ -370,7 +346,7 @@ export default function StrategicDirection() {
         {/* Title */}
         <div className="flex items-center justify-between mb-12 md:mb-16">
           <h2 className="text-2xl sm:text-3xl bukra-bold md:text-5xl lg:text-6xl font-extralight text-white">
-            Strategic Direction
+            {t("strategic_direction.title")}
           </h2>
 
           {/* Vision 2030 Logo */}
@@ -378,19 +354,15 @@ export default function StrategicDirection() {
             <div className="text-center ">
               <div className="inline-block">
                 <div className="relative inline-block">
-                  <Image
+                  <img
                     src="/vision.png"
                     alt="Vision 2030"
-                    width={102}
-                    height={102}
                     className="w-16 md:w-25.5 h-auto object-cover"
                   />
                   <div className="absolute md:top-8.5 top-5 left-[21px] md:left-[38px] transform -translate-x-1/2 -translate-y-1/2">
-                    <Image
+                    <img
                       src="/Group.png"
                       alt="Vision Icon"
-                      width={32}
-                      height={32}
                       className="w-5 h-5 md:w-8 md:h-8 object-contain"
                     />
                   </div>
@@ -399,10 +371,10 @@ export default function StrategicDirection() {
                   style={{ fontFamily: "system-ui" }}
                   className="text-white text-[5px] md:text-[10px] tracking-wide font-medium"
                 >
-                  المملكة العربية السعودية
+                  {t("strategic_direction.saudi_arabia_ar")}
                 </div>
                 <div className="text-white text-[3.5px] md:text-[7px] tracking-wider font-medium">
-                  Kingdom of Saudi Arabia
+                  {t("strategic_direction.kingdom_eng")}
                 </div>
               </div>
             </div>
@@ -414,32 +386,23 @@ export default function StrategicDirection() {
           {/* Left Column: Vision Quote & Crown Prince - 4 columns */}
           <div className="lg:col-span-5 space-y-6 mb-10 lg:mb-0">
             {/* Vision Quote */}
-            <div className=" bg-linear-to-br from-black/40 via-black/30 to-black/0.5  backdrop-blur-sm p-6 md:p-8 rounded-2xl">
+            <div className=" bg-gradient-to-br from-black/40 via-black/30 to-black/0.5  backdrop-blur-sm p-6 md:p-8 rounded-2xl">
               <p className="text-white/90 text-xs md:text-2xl leading-relaxed">
-                “Our Vision is a strong, thriving, and stable Saudi Arabia that
-                provides opportunity for all. Our Vision is a tolerant country
-                with Islam as its constitution and moderation as its method. We
-                will welcome qualified individuals from all over the world and
-                will respect those who have come to join our journey and our
-                success.”
+                &quot;{t("strategic_direction.vision_quote")}&quot;
               </p>
               {/* Crown Prince */}
               <div className="flex items-start mt-12 gap-4">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/mbs.png"
-                    alt="Crown Prince"
-                    width={100}
-                    height={100}
-                    className="object-cover"
-                  />
-                </div>
+                <img
+                  src="/mbs.png"
+                  alt="Crown Prince"
+                  className="w-full h-full object-cover"
+                />
                 <div className="text-white">
                   <h3 className="font-medium text-base md:text-2xl mb-1">
-                    Crown Prince
+                    {t("strategic_direction.crown_prince")}
                   </h3>
                   <p className="text-base text-white/60 leading-tight">
-                    Crown Prince Title
+                    {t("strategic_direction.crown_prince_title")}
                   </p>
                 </div>
               </div>
@@ -450,9 +413,9 @@ export default function StrategicDirection() {
           <div className="lg:col-span-7 flex flex-col md:flex-row items-start justify-center">
             {/* Tabs/Pillars */}
             <div className="space-y-3 md:space-y-4 mb-5 mt-7 lg:mb-0">
-              {tabs.map((tab ,index) => (
+              {tabs.map((tab) => (
                 <button
-                  key={index}
+                  key={tab.id}
                   onClick={() =>
                     setActiveTab(tab.id as "economy" | "society" | "nation")
                   }
@@ -480,7 +443,7 @@ export default function StrategicDirection() {
                 {tabContent[activeTab].items.map((item, idx) => (
                   <div key={idx}>
                     <div className="flex gap-4 animate-fade-in">
-                      <div className="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center ">
+                      <div className="w-10 h-10 flex-shrink-0 rounded-lg flex items-center justify-center ">
                         {item.icon}
                       </div>
                       <p className="md:min-w-[418px] text-white/80 text-base md:text-lg leading-relaxed">
@@ -488,7 +451,7 @@ export default function StrategicDirection() {
                       </p>
                     </div>
                     {idx < tabContent[activeTab].items.length - 1 && (
-                      <div className="mt-6 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"></div>
+                      <div className="mt-6 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
                     )}
                   </div>
                 ))}
@@ -523,13 +486,13 @@ export default function StrategicDirection() {
                           {metric.label}
                         </p>
                         <div className="flex gap-2.5 items-center flex-nowrap text-[28px] text-center">
-                          <div className="flex justify-center gap-1 p-1 md:p-0 items-start backdrop-blur-sm w-[100px] md:w-[120px] xl:w-[137px] rounded-lg text-white text-base md:text-lg 2xl:text-[28px] font-semibold whitespace-nowrap shrink-0 relative">
+                          <div className="flex justify-center gap-1 p-1 md:p-0 items-start backdrop-blur-sm w-[100px] md:w-[120px] xl:w-[137px] rounded-lg text-white text-base md:text-lg 2xl:text-[28px] font-semibold whitespace-nowrap flex-shrink-0 relative">
                             {metric.baseline}
                             {metric.suffix && (
                               <div className="text-xs">{metric.suffix}</div>
                             )}
                           </div>
-                          <div className="flex justify-center gap-1 p-1 md:p-0 items-center bg-[#006461] w-[100px] md:w-[120px] xl:w-[137px] rounded-lg text-white text-base md:text-lg 2xl:text-[28px]  font-semibold whitespace-nowrap shrink-0 relative">
+                          <div className="flex justify-center gap-1 p-1 md:p-0 items-center bg-[#006461] w-[100px] md:w-[120px] xl:w-[137px] rounded-lg text-white text-base md:text-lg 2xl:text-[28px]  font-semibold whitespace-nowrap flex-shrink-0 relative">
                             <div className="flex justify-center gap-1 items-start">
                               {metric.current}
                               {metric.suffix && (
@@ -538,7 +501,7 @@ export default function StrategicDirection() {
                             </div>
                             <TbArrowCurveRight className="rotate-45" />
                           </div>
-                          <div className="flex justify-center gap-1 p-1 md:p-0 items-start bg-[#4D2C5B] w-[100px] md:w-[120px] xl:w-[137px]  rounded-lg text-white text-base md:text-lg 2xl:text-[28px]  font-semibold whitespace-nowrap shrink-0">
+                          <div className="flex justify-center gap-1 p-1 md:p-0 items-start bg-[#4D2C5B] w-[100px] md:w-[120px] xl:w-[137px]  rounded-lg text-white text-base md:text-lg 2xl:text-[28px]  font-semibold whitespace-nowrap flex-shrink-0">
                             {metric.target}
                             {metric.suffix && (
                               <div className="text-xs">{metric.suffix}</div>
@@ -555,22 +518,22 @@ export default function StrategicDirection() {
           {/* Footer with source and legend */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-4 border-t border-white/10">
             <p className="text-white/50 text-xs md:text-sm">
-              Source
+              {t("strategic_direction.vision_dashboard.source")}
             </p>
             <div className="flex gap-6 text-white text-xs md:text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-gray-700"></div>
                 <span>
-                  Baseline
+                  {t("strategic_direction.vision_dashboard.baseline")}
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#00A7A2]"></div>
-                <span>Current</span>
+                <span>{t("strategic_direction.vision_dashboard.current")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#814A98]"></div>
-                <span>Target</span>
+                <span>{t("strategic_direction.vision_dashboard.target")}</span>
               </div>
             </div>
           </div>
@@ -580,7 +543,7 @@ export default function StrategicDirection() {
         <div className="mt-12 mb-12 flex items-center justify-center text-center">
           <div className="flex items-center gap-2 justify-center bg-[#00A7A2] text-white md:px-6 px-5 py-2 rounded-3xl text-sm md:text-xl bukra-regular">
             <p>
-              Review the Economy Report{" "}
+              {t("strategic_direction.review_economy_report")}{" "}
               <span className="text-sm md:text-base">2025</span>
             </p>
             <CgArrowTopRight />
@@ -592,29 +555,21 @@ export default function StrategicDirection() {
       <div className="bg-black/30 backdrop-blur-sm px-4 md:px-6 lg:px-[30px] relative z-10">
         <div className="py-4">
           <Swiper
-            modules={[Navigation, Autoplay, Pagination, Autoplay]}
+            modules={[Navigation]}
             slidesPerView="auto"
-            speed={900}
             navigation={true}
-            pagination={{ clickable: true }}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            className="stats-swiper cursor-grab select-none"
+            className="stats-swiper"
           >
             {statsData.map((stat, index) => (
               <SwiperSlide
                 key={index}
-                className="w-auto! px-2 md:px-6 lg:px-4"
+                className="!w-auto px-2 md:px-6 lg:px-4"
               >
                 <div className="flex items-center gap-4 md:gap-8">
-                  <Image
+                  <img
                     src="/icons/saudi-tree.png"
                     alt=""
-                    width={22}
-                    height={22}
-                    className="h-[16px] md:h-[18px] lg:h-[22px] w-auto"
+                    className="h-[16px] md:h-[18px] lg:h-[22px]"
                   />
                   <div className="flex items-center gap-2">
                     <span className="text-cyan-400 text-sm md:text-base lg:text-[22px] font-bold whitespace-nowrap">
