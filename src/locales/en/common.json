@@ -1,0 +1,143 @@
+{
+  "footer": {
+    "whoWeAre": "WHO WE ARE",
+    "ourInvestments": "OUR INVESTMENTS",
+    "strategyAndImpact": "STRATEGY & IMPACT",
+    "investors": "INVESTORS",
+    "whoWeAreLinks": {
+      "leadership": "Our Leadership",
+      "history": "Our History",
+      "solutions": "Solutions"
+    },
+    "ourInvestmentsLinks": {
+      "portfolio": "Our Portfolio",
+      "gigaProjects": "Giga-Projects",
+      "investmentPools": "Investment Pools",
+      "governance": "Governance and Investment Decisions"
+    },
+    "strategyLinks": {
+      "program": "Our Program",
+      "investedBetter": "Invested in Better"
+    },
+    "investorsLinks": {
+      "greenFinance": "Green Finance Framework",
+      "capitalMarkets": "Capital Markets Program",
+      "annualReports": "Annual Reports",
+      "financialStatements": "Financial Statements",
+      "creditRatings": "Credit Ratings"
+    },
+    "contactTitle": "For any enquiries, get in touch",
+    "contactButton": "Contact Us",
+    "languageTitle": "MISA WEBSITE OFFERED IN",
+    "english": "English",
+    "arabic": "(Arabic العربية)"
+  },
+  "hero": {
+    "title": "Welcome to",
+    "titleHighlight": "Invest Saudi Portal",
+    "subtitle": "Your gateway to investment opportunities in Saudi Arabia. Discover, connect, and grow your business in the Kingdom.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "features": {
+    "title": "Key Features",
+    "subtitle": "Everything you need to start your investment journey in Saudi Arabia.",
+    "investmentOpportunities": {
+      "title": "Investment Opportunities",
+      "description": "Discover a wide range of investment opportunities across various sectors in Saudi Arabia."
+    },
+    "marketInsights": {
+      "title": "Market Insights",
+      "description": "Access real-time market data and insights to make informed investment decisions."
+    },
+    "networking": {
+      "title": "Networking",
+      "description": "Connect with investors, partners, and stakeholders in the Saudi market."
+    },
+    "expertSupport": {
+      "title": "Expert Support",
+      "description": "Get guidance from investment experts and consultants throughout your journey."
+    }
+  },
+  "about": {
+    "title": "About Invest Saudi Portal",
+    "description1": "Invest Saudi Portal is dedicated to facilitating investment opportunities in Saudi Arabia. We provide a comprehensive platform for investors to discover, connect, and grow their businesses in the Kingdom.",
+    "description2": "Our mission is to support Vision 2030 by attracting international investments and fostering economic growth through innovative solutions and expert guidance.",
+    "whyChooseUs": "Why Choose Us?",
+    "benefits": {
+      "database": "Comprehensive investment database",
+      "expert": "Expert consultation and support",
+      "insights": "Real-time market insights",
+      "network": "Strong network of partners and investors"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive services to support your investment journey in Saudi Arabia.",
+    "consultation": {
+      "title": "Investment Consultation",
+      "description": "Expert guidance on investment opportunities and market analysis."
+    },
+    "research": {
+      "title": "Market Research",
+      "description": "Comprehensive market research and industry reports."
+    },
+    "businessSetup": {
+      "title": "Business Setup",
+      "description": "Assistance with company registration and licensing."
+    },
+    "matching": {
+      "title": "Investment Matching",
+      "description": "Connect with the right partners and investment opportunities."
+    },
+    "legal": {
+      "title": "Legal Support",
+      "description": "Legal consultation and compliance assistance."
+    },
+    "support": {
+      "title": "Ongoing Support",
+      "description": "Continuous support throughout your investment journey."
+    }
+  },
+  "statistics": {
+    "activeInvestors": "Active Investors",
+    "investmentProjects": "Investment Projects",
+    "sectorsCovered": "Sectors Covered",
+    "successRate": "Success Rate"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Trusted by investors and businesses across various sectors."
+  },
+  "cta": {
+    "title": "Ready to Start Your Investment Journey?",
+    "subtitle": "Join thousands of investors who have found success in Saudi Arabia. Get started today and unlock new opportunities.",
+    "button": "Contact Us Now"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "contactInfo": "Contact Information",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "name": "Name",
+    "message": "Message",
+    "sendButton": "Send Message"
+  },
+  "header": {
+    "features": "Features",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "navbar": {
+    "awareness": "Awareness",
+    "explore_saudi": "Explore Saudi",
+    "our_setup": "Our Setup",
+    "news_events": "News & Events",
+    "contact_us": "Contact Us",
+    "search": "Search"
+  }
+}
+

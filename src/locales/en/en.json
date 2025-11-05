@@ -1,0 +1,339 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "opportunities": "Opportunities",
+    "sectors": "Sectors",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Unlock Investment Opportunities In Saudi Arabia.",
+    "subtitle": "audi Arabia 1s creating the world's most ambitious portfolio of investment portunities — offering unparalleled access to opportunities in innovation, ustainability, Al, and Advanced Technologies.",
+    "explore_sectors": "Explore Sectors",
+    "e_services": "E-Services",
+    "e_consulting": "E-Consulting"
+  },
+  "features": {
+    "title": "Why Invest in Saudi Arabia",
+    "strategic_location": {
+      "title": "Strategic Location",
+      "description": "Gateway to Middle East, Africa, and Asia markets with access to over 3 billion consumers"
+    },
+    "economic_growth": {
+      "title": "Strong Economic Growth",
+      "description": "Diversified economy with Vision 2030 driving sustainable development and innovation"
+    },
+    "business_friendly": {
+      "title": "Business-Friendly Environment",
+      "description": "Streamlined processes, 100% foreign ownership, and competitive tax incentives"
+    },
+    "infrastructure": {
+      "title": "World-Class Infrastructure",
+      "description": "Modern transportation, logistics, and digital infrastructure supporting business growth"
+    }
+  },
+  "sectors": {
+    "title": "Key Investment Sectors",
+    "energy": "Energy & Renewables",
+    "tourism": "Tourism & Entertainment",
+    "technology": "Technology & Innovation",
+    "manufacturing": "Manufacturing & Industry",
+    "healthcare": "Healthcare & Biotech",
+    "finance": "Finance & Banking"
+  },
+  "stats": {
+    "gdp": "GDP Growth",
+    "projects": "Active Projects",
+    "investors": "International Investors",
+    "opportunities": "Investment Opportunities"
+  },
+  "cta": {
+    "title": "Ready to Start Your Journey?",
+    "description": "Join thousands of successful investors who chose Saudi Arabia as their investment destination",
+    "button": "Get Started Today"
+  },
+  "opportunities": {
+    "title": "Explore Regional Investment Opportunities",
+    "key_figures": "Key Figures",
+    "giga_projects": "Giga Projects",
+    "opportunities_section": "Opportunities",
+    "view_more": "View More",
+    "vs_last_year": "VS Last Year",
+    "regions": {
+      "riyadh": "Riyadh",
+      "makkah": "Makkah",
+      "eastern": "Eastern Province"
+    },
+    "stats": {
+      "gdp_ranking": "Global GDP Ranking",
+      "private_sector": "Private Sector Contribution",
+      "logistics": "Logistics Performance Index",
+      "fdi": "(FDI) Share Of GDP"
+    },
+    "projects": {
+      "advanced_manufacturing": "Advanced Manufacturing",
+      "aerospace_defense": "Aerospace & Defense",
+      "agriculture_food": "Agriculture & Food",
+      "tourism_development": "Tourism Development",
+      "infrastructure": "Infrastructure",
+      "hospitality": "Hospitality",
+      "energy_oil": "Energy & Oil",
+      "petrochemicals": "Petrochemicals",
+      "logistics_hub": "Logistics Hub",
+      "religious_tourism": "Religious Tourism",
+      "real_estate": "Real Estate",
+      "smart_cities": "Smart Cities",
+      "industrial_parks": "Industrial Parks",
+      "port_development": "Port Development",
+      "technology_sector": "Technology Sector"
+    }
+  },
+  "footer": {
+    "about_text": "Saudi Arabia's official investment platform, connecting global investors with opportunities in the Kingdom",
+    "quick_links": "Quick Links",
+    "resources": "Resources",
+    "contact_us": "Contact Us",
+    "rights": "All rights reserved"
+  },
+  "navbar": {
+    "awareness": "Awareness",
+    "explore_saudi": "Explore Saudi",
+    "our_setup": "Our Setup",
+    "news_events": "News & Events",
+    "contact_us": "Contact Us",
+    "search": "Search"
+  },
+  "key_strategies": {
+    "title": "Overview Of Key National Strategies",
+    "vibrant_society": "Vibrant Society",
+    "thriving_economy": "Thriving Economy",
+    "ambitious_nation": "Ambitious Nation",
+    "national_investment": "National Investment Strategy",
+    "gaming_esports": "National Gaming and Esports Strategy",
+    "industrial_strategy": "National Industrial Strategy",
+    "real_estate": "Real Estate Sector Strategy and Other",
+    "vision_programs": "Vision Programs",
+    "vision_programs_desc": "The NIS Is One Of The Main Enablers To Vision 2030, Via A Comprehensive Package Of Reforms To The National Investment System",
+    "vision_projects": "Vision Projects",
+    "vision_projects_desc": "Major giga-projects transforming Saudi Arabia",
+    "goals": "Goals",
+    "goals_desc": "Strategic objectives aligned with Vision 2030",
+    "pillar": "Pillar",
+    "pillar_desc": "Core pillars supporting national transformation",
+    "sectors": "Sectors",
+    "sectors_desc": "Key economic sectors driving growth",
+    "latest_progress": "Latest Strategic Progress",
+    "latest_progress_desc": "Recent achievements and milestones"
+  },
+  "strategic_direction": {
+    "title": "KSA's Strategic Direction",
+    "vision_quote": "Our Vision is a strong, thriving, and stable Saudi Arabia that provides opportunity for all. Our Vision is a tolerant country with Islam as its constitution and moderation as its method. We will welcome qualified individuals from all over the world and will respect those who have come to join our journey and our success.",
+    "crown_prince": "HRH Mohammed bin Salman Crown",
+    "crown_prince_title": "Prince, Prime Minister, and Chairman of the Council of Economic and Development Affairs",
+    "saudi_arabia_ar": "المملكة العربية السعودية",
+    "kingdom_eng": "KINGDOM OF SAUDI ARABIA",
+    "thriving_economy": "A Thriving Economy",
+    "vibrant_society": "A Vibrant Society",
+    "ambitious_nation": "An Ambitious Nation",
+    "investment_destination": "Saudi as an Investment Destination",
+    "economy_items": {
+      "item1": "World's fastest-growing G20 economy, positioned as a global logistics",
+      "item2": "Over $2+ Trillion in opportunities driven by Vision 2030 megaprojects",
+      "item3": "Global market access with tariff-free trade to 17 Arab countries",
+      "item4": "Pro-investor ecosystem with 100% foreign ownership and regulatory",
+      "item5": "Government contracts and tax incentives through the RHQ program"
+    },
+    "society_items": {
+      "item1": "Targeting 100M annual tourist visits by 2030 as a top global",
+      "item2": "Cultural renaissance with UNESCO sites and entertainment initiatives",
+      "item3": "Modern infrastructure and world-class amenities improving quality of",
+      "item4": "Investment in education, healthcare, and sports creating vibrant",
+      "item5": "Social development programs enhancing citizen wellbeing"
+    },
+    "nation_items": {
+      "item1": "Targeting top 5 global competitiveness through comprehensive",
+      "item2": "Ambitious giga-projects like NEOM and Qiddiya reshaping the",
+      "item3": "Digital transformation driving government efficiency and services",
+      "item4": "Supporting SMEs to contribute significantly to GDP growth and",
+      "item5": "Renewable energy leadership with ambitious clean energy"
+    },
+    "stats": {
+      "gdp_growth": "Real GDP Growth in 2024",
+      "fdi_growth": "in YoY FDI inflows growth in 2024",
+      "credit_rating": "Sovereign credit rating (S&P)",
+      "export_growth": "Non-oil export growth YoY Jul 2025",
+      "pro_investor": "Pro-investor ecosystem",
+      "pro_investor_desc": "Comprehensive support system for international investors",
+      "tax_incentives": "Significant tax incentives",
+      "tax_incentives_desc": "Attractive tax benefits and exemptions for investors",
+      "tax_laws": "Tax Laws & Regulations",
+      "tax_laws_desc": "Clear and transparent tax framework",
+      "investment_law": "Investment Law",
+      "investment_law_desc": "Robust legal framework protecting investor rights"
+    },
+    "vision_dashboard": {
+      "title": "Vision 2030 Dashboard",
+      "metrics": {
+        "gdp_ranking": "Global GDP Ranking [$]",
+        "non_oil_exports": "Non-Oil Exports Share Of Non-Oil GDP",
+        "hdi": "Human Development Index (HDI)",
+        "private_sector_gdp": "Private Sector Contribution To GDP [%]",
+        "fdi_gdp": "Foreign Direct Investment (FDI) Share Of GDP",
+        "talent_competitiveness": "Ranking In Global Talent Competitiveness Index",
+        "logistics_performance": "Logistics Performance Index",
+        "womens_labor": "Women's Labor Force Participation Rate [%]"
+      },
+      "baseline": "Baseline (2016)",
+      "current": "Current (2025)",
+      "target": "Target (2030)",
+      "source": "Source: Vision 2030 annual report 2024; Vision 2030"
+    }
+  },
+  "destination": {
+    "title": "The 'Ideal Investment Destination'",
+    "global_rankings": "Global Rankings",
+    "macroeconomic_overview": "Macroeconomic Overview",
+    "business_environment": "Business Environment",
+    "business_environment_desc": "Rankings And Performance On Business Environment Rankings",
+    "world_competitiveness": "In World Competitiveness Ranking In 2025",
+    "pillar1": "Pillar 1",
+    "pillar2": "Pillar 2",
+    "pillar3": "Pillar 3",
+    "pillar4": "Pillar 4",
+    "business_efficiency_2025": "In Business Efficiency In 2025",
+    "business_efficiency_2021": "In Business Efficiency In 2021",
+    "gov_efficiency": "In Gov. Efficiency In 2025",
+    "economic_performance": "In Economic Performance In 2025",
+    "infra_performance": "In Infra. Performance In 2025",
+    "top_stats": {
+      "trust_ranking": "Out Of 28 Countries With The Highest % Of Trust In Gov. In 2024",
+      "ip_enforcement": "Globally In IP Enforcement Competitiveness In 2025",
+      "multinational_corps": "Multinational Corporations Choose KSA To Establish Their RHQs"
+    }
+  },
+  "events": {
+    "title": "Events",
+    "filters": {
+      "all": "All Events",
+      "upcoming": "Upcoming Events",
+      "past": "Past Events",
+      "webinar": "Webinar"
+    },
+    "cta_button": "Interested to attend",
+    "previous": "Previous",
+    "next": "Next",
+    "see_more": "See More"
+  },
+  "investor_matchmaking": {
+    "title": "Investor Matchmaking",
+    "subtitle": "A digital service that empowers investors to explore opportunities and build partnerships through a smart matching journey designed to drive economic growth.",
+    "what_is_title": "What Is Matchmaking?",
+    "what_is_description": "It aims to consolidate public sector projects and potential investment opportunities in one place, facilitating communication between investors and project providers to enhance growth and economic development.",
+    "download_guide": "Download Guide",
+    "apply_for_service": "Apply for Service",
+    "tabs": {
+      "partner_access": "Partner Access",
+      "opportunity_listing": "Opportunity Listing",
+      "partnership_matching": "Partnership Matching"
+    },
+    "partner_access": {
+      "title": "Partner access",
+      "description": "This service allows you to explore registered companies that are actively seeking to form investment partnerships in Saudi Arabia. Through the Partner Directory—a smart tool within the Matchmaking Service - you can easily connect with potential local and international partners, and streamline the matchmaking process through a seamless and secure digital experience that enhances investment collaboration."
+    },
+    "opportunity_listing": {
+      "title": "Opportunity Listing",
+      "description": "Browse and discover investment opportunities available in Saudi Arabia from various sectors and regions."
+    },
+    "partnership_matching": {
+      "title": "Partnership Matching",
+      "description": "Find the right partners for your investment journey through our intelligent matching system."
+    }
+  },
+  "e_services": {
+    "title": "E-Services",
+    "top_tabs": {
+      "e_services": "E-Services",
+      "process_explorer": "Process Explorer",
+      "advocacy_services": "Advocacy Services",
+      "advisory_services": "Advisory Services"
+    },
+    "sidebar": {
+      "registration_services": "Registration Services",
+      "governmental_services": "Governmental Services",
+      "post_registration_services": "Post-Registration Services"
+    },
+    "overview": {
+      "title": "Overview",
+      "description": "The Ministry of Investment offers digital services related to registrations to streamline the procedures for obtaining the necessary permits and conducting investment activities for starting and sustaining projects, ensuring that investors comply with the required regulations and standards.",
+      "services": {
+        "issuing_registration": "Issuing Investment Registration To Start Investment Activities",
+        "confirming_registration": "Confirming Existing Registration",
+        "modifying_registration": "Modifying Registration Details",
+        "converting_registration": "Converting An Investment Registration To National, And The Optionally Canceling The Registration."
+      },
+      "download_guide": "Download Guide",
+      "e_services_button": "E-Services",
+      "image_alt": "Investment Services"
+    }
+  },
+  "rhq_service": {
+    "title": "Regional Headquarters Program (RHQ)",
+    "subtitle": "Saudi Arabia Is A Dynamic, Globally Influential Economic Powerhouse In The Middle East, Offering Diverse Landscapes, Climates, And A Rich Cultural Heritage That Blends Tradition With Modernity",
+    "national_programs_title": "National Programs",
+    "programs": {
+      "quality_of_life": "Quality of Life Program",
+      "saudi_arabia_startup": "Start Up",
+      "national_investment_strategy": "NATIONAL INVESTMENT STRATEGY",
+      "global_supply_chain": "GLOBAL SUPPLY CHAIN RESILIENCE INITIATIVE",
+      "invest_saudi": "استثمر في السعودية",
+      "invest_saudi_sub": "INVEST SAUDI + RHQ",
+      "ignite": "Ignite!",
+      "partners": "شركاء",
+      "ntdp": "ntdp",
+      "financial_sector": "Financial Sector Development Program",
+      "air_connectivity": "Air Connectivity Program"
+    },
+    "sections": {
+      "pre_location": {
+        "title": "Pre Location",
+        "description": "Saudi Arabia is actively recognizing its potential, seizing opportunities, and driving economic growth both domestically and internationally."
+      },
+      "preparation": {
+        "title": "Preparation For The Relocation",
+        "description": "Vision 2030 has driven a surge in demand for skilled professionals, with diversification and innovation attracting multinational corporations and creating new opportunities for foreign experts seeking to contribute to the Kingdom's transformation."
+      },
+      "arrival": {
+        "title": "Arrival In KSA",
+        "description": "Discover essential resources and guidance to ease your transition to life in Saudi Arabia. From housing and education to transportation and community integration, build a strong foundation for your family and career in the Kingdom."
+      },
+      "living": {
+        "title": "Living In KSA",
+        "description": "Saudi Arabia is a treasure trove of history and culture, offering a glimpse into a rich and storied past. Experience the blend of tradition and modernity that makes life in the Kingdom unique and enriching."
+      }
+    },
+    "cta": {
+      "talk_to_advisor": "Talk to Advisor",
+      "visit_rhq": "Visit RHQ"
+    }
+  },
+  "stocks": {
+    "title": "Stocks",
+    "choose_another": "Choose Another"
+  },
+  "chat": {
+    "button_text": "Chat with us",
+    "title": "Chat Support",
+    "status": "Online",
+    "input_placeholder": "Type your message...",
+    "welcome_message": "Hello! How can I help you with investment opportunities in Saudi Arabia?",
+    "responses": {
+      "investment": "Saudi Arabia offers excellent investment opportunities across various sectors including technology, energy, tourism, and manufacturing. Would you like to know more about a specific sector?",
+      "visa": "For visa and travel information, please visit our services section or contact our support team directly.",
+      "contact": "You can reach us through our contact form, email, or phone. Check the footer section for all contact details.",
+      "greeting": "Hello! I'm here to help you with investment opportunities in Saudi Arabia. What would you like to know?",
+      "sectors": "Key investment sectors include Energy & Renewables, Tourism & Entertainment, Technology & Innovation, Manufacturing, Healthcare, and Finance. Which sector interests you?",
+      "opportunities": "Explore our opportunities section to discover regional investment opportunities across different regions of Saudi Arabia.",
+      "default": "Thank you for your message. Our team will get back to you soon. In the meantime, you can explore our website for more information about investment opportunities in Saudi Arabia."
+    }
+  }
+}
