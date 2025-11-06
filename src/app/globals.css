@@ -24,10 +24,10 @@ body {
   font-family: "F29LT Bukra Rg";
   src: url("https://db.onlinewebfonts.com/t/3954dbc5151f957fd9572ed69aac3c10.eot");
   src: url("https://db.onlinewebfonts.com/t/3954dbc5151f957fd9572ed69aac3c10.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/3954dbc5151f957fd9572ed69aac3c10.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/3954dbc5151f957fd9572ed69aac3c10.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/3954dbc5151f957fd9572ed69aac3c10.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/3954dbc5151f957fd9572ed69aac3c10.svg#F29LT Bukra Rg")format("svg");
+  url("https://db.onlinewebfonts.com/t/3954dbc5151f957fd9572ed69aac3c10.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/3954dbc5151f957fd9572ed69aac3c10.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/3954dbc5151f957fd9572ed69aac3c10.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/3954dbc5151f957fd9572ed69aac3c10.svg#F29LT Bukra Rg")format("svg");
 }
 
 @font-face {
@@ -41,16 +41,47 @@ body {
 }
 
 
+@font-face {
+  font-family: "F29LT Bukra Md";
+  src: url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.eot");
+  src: url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.svg#F29LT Bukra Md")format("svg");
+}
+
+
 .bukra-light {
   font-family: "F29LT Bukra Lt";
 }
 
 .bukra-regular {
-  font-family: "F29LT Bukra Regular";
+  font-family: "F29LT Bukra Rg";
 }
 
 .bukra-bold {
   font-family: "F29LT Bukra";
+}
+
+.bukra-medium {
+  font-family: "F29LT Bukra Md";
+}
+
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  /* translucent background */
+  border-radius: 16px;
+  /* smooth corners */
+  backdrop-filter: blur(10px);
+  /* main glass blur */
+  -webkit-backdrop-filter: blur(10px);
+  /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* soft glass border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* subtle shadow */
 }
 
 
@@ -282,7 +313,7 @@ body {
     padding: 20px !important;
     margin: 0 2px !important;
   }
-  
+
   .success-stories-pagination .swiper-pagination-bullet::before {
     content: '';
     position: absolute;
@@ -294,27 +325,27 @@ body {
     background: inherit;
     border-radius: 2px;
   }
-  
+
   .success-stories-pagination .swiper-pagination-bullet-active::before {
     width: 32px;
   }
-  
+
   /* Responsive adjustments for stacked cards on mobile */
   .success-stories-swiper.stacked-cards .stacked-slide {
     transform-origin: center center !important;
   }
-  
+
   .success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-next,
   .success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-prev {
     transform: scale(0.93) !important;
     opacity: 0.88;
   }
-  
+
   .success-stories-swiper.stacked-cards .stacked-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
     transform: scale(0.90) !important;
     opacity: 0.75;
   }
-  
+
   .success-stories-swiper.stacked-cards {
     padding: 20px 0 60px 0 !important;
   }
@@ -330,6 +361,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -345,6 +377,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -361,6 +394,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -668,4 +702,3 @@ box-shadow: 0px 1px 3px 0px #0A0D121A; */
 .phone-number-input:focus {
   outline: none;
 }
-

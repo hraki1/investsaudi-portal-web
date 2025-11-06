@@ -112,49 +112,25 @@ export default function NationalPrograms() {
     <section className="relative w-full py-16 md:py-20 overflow-hidden">
       {/* Background with gradient */}
       <div
-        className="absolute inset-0"
+        className="absolute z-0 inset-0"
         style={{
           background:
             "linear-gradient(245.07deg, #E6F6F6 11.73%, #ECE4F0 65.87%)",
         }}
-      >
-        <div className="absolute top-1 right-1 w-[300px] h-[400px] md:w-1/3 md:h-[550px] lg:w-2/3 lg:h-[588px] overflow-hidden">
-          <div
-            className="absolute inset-0 opacity-80"
-            style={{
-              backgroundImage: 'url("/bg-back.png")',
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "contain",
-              backgroundPosition: "top right",
-            }}
-          ></div>
-        </div>
+      ></div>
 
-        {/* Hexagon pattern overlay */}
-        <svg
-          className="absolute inset-0 w-full h-full opacity-10"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <defs>
-            <pattern
-              id="hexPattern"
-              width="80"
-              height="69.28"
-              patternUnits="userSpaceOnUse"
-            >
-              <path
-                d="M40 0L70 17.32L70 51.96L40 69.28L10 51.96L10 17.32Z"
-                fill="none"
-                stroke="#5BD5E8"
-                strokeWidth="1"
-                opacity="0.4"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#hexPattern)" />
-        </svg>
+      <div className="absolute top-1 right-1 w-[300px] h-[400px] md:w-1/3 md:h-[550px] lg:w-2/3 lg:h-[588px] overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url("/bg-back.png")',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            backgroundPosition: "top right",
+          }}
+        ></div>
       </div>
-
+      
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center md:text-left mb-12 md:mb-16">
@@ -202,7 +178,6 @@ export default function NationalPrograms() {
                   },
                   640: {
                     slidesPerView: 95,
-
                   },
                   768: {
                     slidesPerView: 9,

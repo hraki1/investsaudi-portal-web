@@ -82,6 +82,10 @@ export default function InvestorMatchmaking() {
         ></div>
       </div>
 
+      <div className="absolute inset-0  overflow-hidden">
+        
+      </div>
+
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="mb-3 md:mb-5">

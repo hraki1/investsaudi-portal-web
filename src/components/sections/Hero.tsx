@@ -53,8 +53,9 @@ const hero: Hero = {
     alt: "Saudi Arabia landscape",
   },
   content: {
-    title: "Invest in Saudi Arabia",
-    subtitle: "Your gateway to investment opportunities in the Kingdom",
+    title: "Invest Saudi – The Global Investment Opportunity Engine",
+    subtitle:
+      "Driven by world class opportunities, powered by talent, and designed for limitless scale — Saudi Arabia is redefining what nations can build.",
   },
   search: {
     placeholder: "i am looking for..",
@@ -97,96 +98,55 @@ const hero: Hero = {
   ],
 };
 
+const isRTL = false;
+
 export default function Hero() {
-
   return (
-    <section
-      id={hero.sectionId}
-      className="relative h-screen flex items-end overflow-hidden"
-    >
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <div className="relative w-full h-full">
-          <Image
-            src={hero.backgroundImage.src}
-            alt={hero.backgroundImage.alt}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute inset-0 bg-linear-to-b from-black/0 to-black"></div>
-      </div>
+    <div>
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-3  mb-20 md:mb-[8vh]">
+        <div className="max-w-[929px] mb-2 md:mb-5">
+          <h1
+            className={`text-3xl bukra-bold text-center ${isRTL ? 'md:text-right' : 'md:text-left'} sm:text-4xl md:text-5xl lg:text-[51px] font-extralight text-white mb-1 md:mb-2 leading-snug tracking-wide`}
+          >
+            {hero.content.title}
+          </h1>
 
-      {/*  main content container */}
-      <div>
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-12 mb-20 md:mb-[8vh]">
-          <div className="max-w-2xl mb-4 md:mb-5">
-            <h1 className="text-3xl bukra-bold sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-white mb-6 md:mb-0 leading-snug tracking-wide">
-              {hero.content.title}
-            </h1>
-
-            <p className="text-sm md:text-[22px] bukra-regular text-white/90 mb-8 md:mb-0 leading-relaxed">
-              {hero.content.subtitle}
-            </p>
-          </div>
-
-          {/* actions */}
-          <div className="flex flex-col justify-between  items-center md:items-start sm:flex-row flex-wrap gap-4">
-            {/* search input */}
-            <div className="min-w-[300px] sm:min-w-sm relative mb-5 sm:mb-0">
-              <input
-                type="text"
-                placeholder={hero.search.placeholder}
-                className="min-w-full sm:min-w-sm px-4 py-3 rounded-xl bg-black/30 text-white backdrop-blur-2xl border border-white/30 placeholder:text-white/70"
-              />
-              <HiMagnifyingGlass className="absolute right-4 top-1/2 -translate-y-1/2 text-white size-6" />
-            </div>
-
-            {/* buttons */}
-            <div className="flex flex-col bukra-regular sm:flex-row flex-wrap gap-4">
-              {hero.actions.map((action) => (
-                <button
-                  key={action}
-                  className="flex justify-between gap-3 items-center px-4 py-2.5 rounded-4xl bg-transparent border border-white/80 text-white"
-                >
-                  {action}
-                  <BsArrowUpRight className="size-4" />
-                </button>
-              ))}
-            </div>
-          </div>
+          <p className={`text-sm md:text-[22px] bukra-regular text-white/90 mb-8 md:mb-0 text-center ${isRTL ? 'md:text-right' : 'md:text-left'}`}>
+            {hero.content.subtitle}
+          </p>
         </div>
 
-        {/* Stats Section */}
-        <div className="hidden md:block relative z-10 bg-black/30 backdrop-blur-sm px-4 border-t border-white/10  ">
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-3">
-            {hero.stats.map((stat, index) => {
-              const IconComponent = iconComponents[stat.iconName];
-              return (
-                <div
-                  dir="ltr"
-                  key={index}
-                  className="rounded-lg p-2 flex items-center md:gap-5"
-                >
-                  {IconComponent && (
-                    <IconComponent className="w-10 h-10 text-white" />
-                  )}
+        {/* actions */}
+        <div className=" w-full flex flex-col justify-between  items-center md:items-start sm:flex-row flex-wrap gap-4">
+          {/* search input */}
+          <div className="w-[300px] md:min-w-[500px] relative mb-2 sm:mb-0">
+            <input
+              type="text"
+              placeholder={hero.search.placeholder}
+              className="min-w-full text-base px-4 py-4 rounded-xl bg-black/40 text-white border border-white/30 placeholder:text-white/70"
+              style={{
+                backdropFilter: "blur(40px)",
+                boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.1)",
+              }}
+            />
+            <HiMagnifyingGlass className={`absolute ${isRTL ? 'left-2' : 'right-2'} ${isRTL ? 'md:left-5' : 'md:right-5'} top-1/2 -translate-y-1/2 text-white size-6`} />
+          </div>
 
-                  <div>
-                    <h3 className="text-white">{stat.title}</h3>
-                    <p className="text-white/70 text-base">
-                      {stat.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+          {/* buttons */}
+          <div className=" flex flex-col bukra-regular sm:flex-row flex-wrap gap-2 md:gap-4">
+            {hero.actions.map((action) => (
+              <button
+                key={action}
+                className="bukra-regular flex justify-between gap-3 items-center pr-[22px] pl-[24px] py-3 rounded-4xl border border-white/30 text-white bg-black/30 backdrop-blur-xl"
+              >
+                {action}
+                <BsArrowUpRight className="size-4" />
+              </button>
+            ))}
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

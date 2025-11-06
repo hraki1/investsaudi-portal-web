@@ -104,18 +104,18 @@ export default function RegulatoryAgreement() {
 
   return (
     <section
-      className="relative w-full py-16 bg-linear-to-b from-white to-purple-50/30"
+      className="relative w-full lg:py-16"
       style={{
         background: `linear-gradient(245.07deg, #E6F6F6 11.73%, #ECE4F0 65.87%)`,
       }}
     >
       {/* Background Pattern - Subtle geometric pattern in top-right */}
       {/* background image down right */}
-      <div className="absolute top-1 right-1 w-[300px] h-[400px] md:w-1/3 md:h-[550px] lg:w-2/3 lg:h-[588px] overflow-hidden">
+      <div className="absolute top-1 right-1 w-[300px] h-[400px] md:w-1/3 md:h-[550px] lg:w-1/2 lg:h-[588px] overflow-hidden">
         <div
-          className="absolute inset-0 opacity-80"
+          className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/bg-back.png")',
+            backgroundImage: 'url("/RBA/bg.png")',
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
             backgroundPosition: "top right",

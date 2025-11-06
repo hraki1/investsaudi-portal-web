@@ -18,7 +18,7 @@ export default async function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-linear-to-b from-black/80 to-transparent backdrop-blur-lg">
+    <nav className="fixed top-0 w-full z-9999 bg-linear-to-b from-black/80 to-transparent backdrop-blur-lg">
       <div className="border-b border-white/10">
         <div className=" mx-auto px-4 sm:px-4 lg:px-5 py-3 md:py-3">
           <div className="flex items-center justify-between lg:my-2">

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
@@ -17,84 +18,31 @@ interface DashboardMetric {
   suffix?: string; // Optional suffix like "B", "%", "th", etc.
 }
 
+interface StatCard {
+  value: string;
+  suffix?: string; // "st", "b", "%", "&", etc.
+  title: string;
+  description: string;
+  gradientFrom: string;
+  isNewRecord?: boolean;
+}
+
+const gradientColors: Record<string, string> = {
+  "teal-900/80": "rgba(19, 78, 74, 0.8)",
+  "teal-700/60": "rgba(15, 118, 110, 0.6)",
+  "blue-900/80": "rgba(30, 58, 138, 0.8)",
+  "blue-700/60": "rgba(29, 78, 216, 0.6)",
+  "indigo-900/80": "rgba(30, 27, 75, 0.8)",
+  "indigo-700/60": "rgba(67, 56, 202, 0.6)",
+  "purple-900/80": "rgba(88, 28, 135, 0.8)",
+  "purple-700/60": "rgba(126, 34, 206, 0.6)",
+};
+
 export default function StrategicDirection() {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<"economy" | "society" | "nation">(
     "economy"
   );
-
-  // Dashboard metrics grouped by columns (array of arrays)
-  const dashboardColumns: DashboardMetric[][] = [
-    [
-      {
-        label: t("strategic_direction.vision_dashboard.metrics.gdp_ranking"),
-        baseline: "812.73",
-        current: "936",
-        target: "1,732.9",
-        suffix: "B",
-      },
-      {
-        label: t(
-          "strategic_direction.vision_dashboard.metrics.non_oil_exports"
-        ),
-        baseline: "534",
-        current: "681",
-        target: "1,325",
-        suffix: "B",
-      },
-      {
-        label: t("strategic_direction.vision_dashboard.metrics.hdi"),
-        baseline: "0.846",
-        current: ".875",
-        target: ".94",
-      },
-    ],
-    [
-      {
-        label: t(
-          "strategic_direction.vision_dashboard.metrics.private_sector_gdp"
-        ),
-        baseline: "40",
-        current: "47",
-        target: "65",
-        suffix: "%",
-      },
-      {
-        label: t("strategic_direction.vision_dashboard.metrics.fdi_gdp"),
-        baseline: "1.1",
-        current: "2.4",
-        target: "5.7",
-        suffix: "%",
-      },
-      {
-        label: t(
-          "strategic_direction.vision_dashboard.metrics.talent_competitiveness"
-        ),
-        baseline: "29",
-        current: "32",
-        target: "20",
-        suffix: "th",
-      },
-    ],
-    [
-      {
-        label: t(
-          "strategic_direction.vision_dashboard.metrics.logistics_performance"
-        ),
-        baseline: "49",
-        current: "38",
-        target: "25",
-        suffix: "th",
-      },
-      {
-        label: t("strategic_direction.vision_dashboard.metrics.womens_labor"),
-        baseline: "22.8",
-        current: "33.5",
-        target: "40",
-        suffix: "%",
-      },
-    ],
-  ];
 
   const statsData = [
     {
@@ -329,56 +277,104 @@ export default function StrategicDirection() {
     },
   };
 
+  // Static data array for stat cards
+  const statCards: StatCard[] = [
+    {
+      value: "1",
+      suffix: "st",
+      title: "Diversification & Reform Journey",
+      description:
+        "Presence Of Investment Opportunities For Transformational Projects",
+      gradientFrom: "#003A39",
+      isNewRecord: true,
+    },
+    {
+      value: "230",
+      suffix: "B",
+      title: "Game-Changing Opportunities",
+      description:
+        "Presence Of Investment Opportunities For Transformational Projects",
+      gradientFrom: "#002C46",
+    },
+    {
+      value: "10.7",
+      suffix: "%",
+      title: "Integrated Infrastructure",
+      description:
+        "Presence Of Investment Opportunities For Transformational Projects",
+      gradientFrom: "#002A32",
+    },
+    {
+      value: "1",
+      suffix: "st",
+      title: "Attractive Property Solutions",
+      description:
+        "Presence Of Investment Opportunities For Transformational Projects",
+      gradientFrom: "#001A2A",
+      isNewRecord: true,
+    },
+    {
+      value: "230",
+      suffix: "B",
+      title: "Young & Skilled Workforce",
+      description:
+        "Presence Of Investment Opportunities For Transformational Projects",
+      gradientFrom: "#14122E",
+    },
+  ];
+
   return (
-    <section className="relative pt-12 md:pt-10 bg-gradient-to-br from-green-950 via-teal-950 to-blue-950">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src="/investmentDestination-hero.png"
-          alt="Saudi Arabia landscape"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/20"></div>
-      </div>
-
+    <section className="relative pt-12 md:pt-10">
       {/* Background Saudi Emblem Pattern */}
-      <div className="container mx-auto px-3 relative z-10">
-        {/* Title */}
-        <div className="flex items-center justify-between mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl bukra-bold md:text-5xl lg:text-6xl font-extralight text-white">
-            {t("strategic_direction.title")}
-          </h2>
+      <div className="container mx-auto px-3 relative z-50">
+        {/* Card Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 mb-12 md:mb-16">
+          {statCards.map((card, index) => (
+            <div
+              key={index}
+              className="glass relative p-6 md:p-8 overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg"
+              style={{
+                background: `${card.gradientFrom}`,
+              }}
+            >
+              {/* Light effect at bottom right */}
+              <div
+                className="absolute bottom-0 right-0 w-full h-full pointer-events-none rounded-2xl overflow-hidden"
+                style={{
+                  background: `radial-gradient(ellipse 70% 50% at bottom right, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 25%, transparent 65%)`,
+                }}
+              />
 
-          {/* Vision 2030 Logo */}
-          <div className=" md:block">
-            <div className="text-center ">
-              <div className="inline-block">
-                <div className="relative inline-block">
-                  <img
-                    src="/vision.png"
-                    alt="Vision 2030"
-                    className="w-16 md:w-25.5 h-auto object-cover"
-                  />
-                  <div className="absolute md:top-8.5 top-5 left-[21px] md:left-[38px] transform -translate-x-1/2 -translate-y-1/2">
-                    <img
-                      src="/Group.png"
-                      alt="Vision Icon"
-                      className="w-5 h-5 md:w-8 md:h-8 object-contain"
-                    />
+              {/* background image */}
+              <div className="absolute inset-0">
+                <img
+                  src="/strategic/bg-card.png"
+                  alt={card.title}
+                  className="w-full h-1/2"
+                />
+              </div>
+
+              {/* card content */}
+              <div className="relative z-10">
+                <div className="flex items-center justify-center gap-2 mb-3">
+                  <div className="text-4xl md:text-5xl lg:text-[36px] bukra-bold text-white flex items-start">
+                    {card.value}
+                    {card.suffix && (
+                      <span className="text-2xl md:text-3xl lg:text-[28px] bukra-bold -mt-1">
+                        {card.suffix}
+                      </span>
+                    )}
                   </div>
                 </div>
-                <div
-                  style={{ fontFamily: "system-ui" }}
-                  className="text-white text-[5px] md:text-[10px] tracking-wide font-medium"
-                >
-                  {t("strategic_direction.saudi_arabia_ar")}
-                </div>
-                <div className="text-white text-[3.5px] md:text-[7px] tracking-wider font-medium">
-                  {t("strategic_direction.kingdom_eng")}
-                </div>
+                <h3 className="text-base md:text-xl text-center bukra-medium text-white mb-3">
+                  {card.title}
+                </h3>
+                <p className="text-xs md:text-sm opacity-80 text-white/80 text-center bukra-regular">
+                  {card.description}
+                </p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
 
         {/* Main Content Grid */}
@@ -386,9 +382,14 @@ export default function StrategicDirection() {
           {/* Left Column: Vision Quote & Crown Prince - 4 columns */}
           <div className="lg:col-span-5 space-y-6 mb-10 lg:mb-0">
             {/* Vision Quote */}
-            <div className=" bg-gradient-to-br from-black/40 via-black/30 to-black/0.5  backdrop-blur-sm p-6 md:p-8 rounded-2xl">
+            <div className=" bg-black/50  backdrop-blur-sm p-6 md:p-8 rounded-2xl">
               <p className="text-white/90 text-xs md:text-2xl leading-relaxed">
-                &quot;{t("strategic_direction.vision_quote")}&quot;
+                &quot;“Our Vision is a strong, thriving, and stable Saudi Arabia
+                that provides opportunity for all. Our Vision is a tolerant
+                country with Islam as its constitution and moderation as its
+                method. We will welcome qualified individuals from all over the
+                world and will respect those who have come to join our journey
+                and our success.”&quot;
               </p>
               {/* Crown Prince */}
               <div className="flex items-start mt-12 gap-4">
@@ -399,10 +400,11 @@ export default function StrategicDirection() {
                 />
                 <div className="text-white">
                   <h3 className="font-medium text-base md:text-2xl mb-1">
-                    {t("strategic_direction.crown_prince")}
+                    HRH Mohammed bin Salman Crown
                   </h3>
-                  <p className="text-base text-white/60 leading-tight">
-                    {t("strategic_direction.crown_prince_title")}
+                  <p className="text-base md:text-[22px] text-white/60 bukra-regular">
+                    “Prince, Prime Minister, and Chairman of the Council of
+                    Economic and Development Affairs ”
                   </p>
                 </div>
               </div>
@@ -460,85 +462,6 @@ export default function StrategicDirection() {
           </div>
         </div>
 
-        {/* Dashboard */}
-        <div className="mt-12 mb-12">
-          <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-8 md:p-5 relative overflow-hidden">
-            {/* Decorative background elements */}
-            <div className="absolute top-0 right-0 w-72 h-72 bg-orange-400/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-72 h-72 bg-green-400/5 rounded-full blur-3xl"></div>
-
-            <div className="relative z-10">
-              {/* Dashboard Grid - 3 equal columns */}
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                {dashboardColumns.map((column, colIdx) => (
-                  <div
-                    key={colIdx}
-                    className="space-y-7 flex flex-col items-center mb-5 md:mb-0"
-                  >
-                    {column.map((metric, idx) => (
-                      <div
-                        key={idx}
-                        className={` space-y-2.5 pb-3 px-4 xl:px-9 ${
-                          colIdx > 0 ? "md:gradient-border-left" : ""
-                        }`}
-                      >
-                        <p className="text-white text-sm md:text-sm leading-relaxed">
-                          {metric.label}
-                        </p>
-                        <div className="flex gap-2.5 items-center flex-nowrap text-[28px] text-center">
-                          <div className="flex justify-center gap-1 p-1 md:p-0 items-start backdrop-blur-sm w-[100px] md:w-[120px] xl:w-[137px] rounded-lg text-white text-base md:text-lg 2xl:text-[28px] font-semibold whitespace-nowrap flex-shrink-0 relative">
-                            {metric.baseline}
-                            {metric.suffix && (
-                              <div className="text-xs">{metric.suffix}</div>
-                            )}
-                          </div>
-                          <div className="flex justify-center gap-1 p-1 md:p-0 items-center bg-[#006461] w-[100px] md:w-[120px] xl:w-[137px] rounded-lg text-white text-base md:text-lg 2xl:text-[28px]  font-semibold whitespace-nowrap flex-shrink-0 relative">
-                            <div className="flex justify-center gap-1 items-start">
-                              {metric.current}
-                              {metric.suffix && (
-                                <div className="text-xs">{metric.suffix}</div>
-                              )}
-                            </div>
-                            <TbArrowCurveRight className="rotate-45" />
-                          </div>
-                          <div className="flex justify-center gap-1 p-1 md:p-0 items-start bg-[#4D2C5B] w-[100px] md:w-[120px] xl:w-[137px]  rounded-lg text-white text-base md:text-lg 2xl:text-[28px]  font-semibold whitespace-nowrap flex-shrink-0">
-                            {metric.target}
-                            {metric.suffix && (
-                              <div className="text-xs">{metric.suffix}</div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          {/* Footer with source and legend */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-4 border-t border-white/10">
-            <p className="text-white/50 text-xs md:text-sm">
-              {t("strategic_direction.vision_dashboard.source")}
-            </p>
-            <div className="flex gap-6 text-white text-xs md:text-sm">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-gray-700"></div>
-                <span>
-                  {t("strategic_direction.vision_dashboard.baseline")}
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-[#00A7A2]"></div>
-                <span>{t("strategic_direction.vision_dashboard.current")}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 rounded-full bg-[#814A98]"></div>
-                <span>{t("strategic_direction.vision_dashboard.target")}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Review link */}
         <div className="mt-12 mb-12 flex items-center justify-center text-center">
           <div className="flex items-center gap-2 justify-center bg-[#00A7A2] text-white md:px-6 px-5 py-2 rounded-3xl text-sm md:text-xl bukra-regular">
@@ -561,10 +484,7 @@ export default function StrategicDirection() {
             className="stats-swiper"
           >
             {statsData.map((stat, index) => (
-              <SwiperSlide
-                key={index}
-                className="!w-auto px-2 md:px-6 lg:px-4"
-              >
+              <SwiperSlide key={index} className="!w-auto px-2 md:px-6 lg:px-4">
                 <div className="flex items-center gap-4 md:gap-8">
                   <img
                     src="/icons/saudi-tree.png"
