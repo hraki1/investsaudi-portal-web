@@ -201,19 +201,19 @@ export default function WhereVisionBecomesInvestment({
                 {topStats.map((stat, index) => (
                   <div
                     key={index}
-                    className={` bg-white border border-gray-200 p-5`}
+                    className={`bg-white border border-gray-200 p-3 md:p-5 space-y-1 md:space-y-3`}
                   >
-                    <div className="flex items-baseline gap-1 mb-3">
+                    <div className="flex items-baseline gap-1">
                       <CounterNumber
                         value={stat.number}
                         suffix={stat.suffix}
-                        className="text-5xl flex font-light text-[#262626] bukra-medium md:text-[38px]"
+                        className="text-3xl flex font-light text-[#262626] bukra-medium md:text-[38px]"
                         suffixClassName="text-xl text-[#262626]"
                         animationDuration={0.8}
                         enableScaleAnimation={false}
                       />
                     </div>
-                    <p className="text-[##171717] text-sm md:text-base mb-5 bukra-regular min-h-[50px]">
+                    <p className="text-[##171717] text-sm md:text-base  bukra-regular min-h-[50px]">
                       {stat.description}
                     </p>
                     <div className="flex items-end gap-2">
@@ -229,8 +229,8 @@ export default function WhereVisionBecomesInvestment({
             </div>
 
             {/* World Competitiveness Ranking */}
-            <div className="bg-linear-to-r from-[#00A7A2] to-[#814a98]  p-1 pt-2  rounded-2xl mb-5 md:mb-8">
-              <div className="px-4 py-1 pb-2 relative flex items-center justify-between">
+            <div className="bg-linear-to-r from-[#00A7A2] to-[#814a98]  p-1 pt-2 rounded-2xl mb-5 md:mb-8">
+              <div className="px-4 py-1 pb-2 relative flex items-center  justify-between">
                 {/* content */}
                 <div>
                   <h3 className="text-2xl capitalize md:text-[32px] bukra-medium text-white">
@@ -242,7 +242,7 @@ export default function WhereVisionBecomesInvestment({
                 </div>
 
                 {/* IMD image */}
-                <div className="w-[76px] h-[28px]">
+                <div className="w-[10px] md:w-[76px] h-[5px] md:h-[28px]">
                   <img
                     src="/whereInvest/imd.png"
                     alt="IMD"
@@ -267,16 +267,7 @@ export default function WhereVisionBecomesInvestment({
               {/* 4 Pillars Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-white rounded-2xl">
                 {pillars.map((pillar) => (
-                  <div
-                    className={` bg-white p-3  ${
-                      pillar.id === 1
-                        ? "rounded-l-xl"
-                        : pillar.id === 4
-                        ? "rounded-r-xl"
-                        : ""
-                    }`}
-                    key={pillar.id}
-                  >
+                  <div className={` bg-white p-3 rounded-xl`} key={pillar.id}>
                     <div
                       className={`text-base text-[${pillar.textColor}] bukra-medium mb-3 flex items-center gap-2`}
                       style={{
@@ -568,7 +559,7 @@ export default function WhereVisionBecomesInvestment({
 
         {/* links  */}
         <div className="flex flex-col md:flex-row gap-4 md:gap-5 md:items-center md:justify-start">
-          <button className="border-[#006461] bukra-regular border md:border-[0.91px] rounded-full bg-white py-3.5 px-6 md:text-lg flex gap-2 justify-center items-center text-[#006461] w-full md:w-auto appearance-none transition-colors duration-200 hover:bg-[#006461] hover:text-white hover:border-[#006461] cursor-pointer">
+          <button className="border-[#006461] bukra-regular border md:border-[0.91px] rounded-full bg-white py-3.5 md:px-6 md:text-lg flex gap-2 justify-center items-center text-[#006461] w-full md:w-auto appearance-none transition-colors duration-200 hover:bg-[#006461] hover:text-white hover:border-[#006461] cursor-pointer">
             Open Latest Report
             <span>
               <svg

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { ImArrowUpRight2 } from "react-icons/im";
 import { IoArrowForwardOutline } from "react-icons/io5";
@@ -226,29 +228,22 @@ export default function StrategicInvestorProgram() {
                   alt=""
                   width={144}
                   height={144}
-                  className="w-20 md:w-36 h-full object-cover"
+                  className="w-32 md:w-46 lg:w-[226px] h-full object-cover"
                 />
               </div>
             </div>
 
             {/* Title and Subtitle */}
             <div className="flex-1">
-              <h2 className="text-3xl md:text-5xl lg:text-[48px] font-bold text-white mb-4 tracking-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-[46px] bukra-bold text-white mb-4">
                 Strategic Investor Program (SIP)
               </h2>
-              <p className="hidden md:block text-base md:text-lg lg:text-2xl text-white/90 max-w-3xl leading-relaxed">
+              <p className="text-base md:text-lg lg:text-2xl text-white/70 max-w-3xl leading-relaxed">
                 Accelerate your impact. Access Saudi Arabia`s premium investor
                 support system designed for global leaders and strategic
                 projects.
               </p>
             </div>
-          </div>
-          {/* Subtitle for Mobile App */}
-          <div className="flex justify-center md:hidden">         
-            <p className="text-center md:text-lg lg:text-2xl text-white/90 max-w-3xl leading-relaxed">
-              Accelerate your impact. Access Saudi Arabia`s premium investor
-              support system designed for global leaders and strategic projects.
-            </p>
           </div>
         </div>
 
@@ -280,10 +275,10 @@ export default function StrategicInvestorProgram() {
 
                   {/* Content */}
                   <div className="flex-1">
-                    <h4 className="text-white font-semibold text-lg mb-2">
+                    <h4 className="text-white font-semibold md:text-lg lg:text-[28px] bukra-medium mb-2">
                       {metric.title}
                     </h4>
-                    <p className="text-white/70 text-sm leading-relaxed">
+                    <p className="text-white/70 text-sm lg:text-lg bukra-regular leading-relaxed">
                       {metric.description}
                     </p>
                   </div>
@@ -309,28 +304,17 @@ export default function StrategicInvestorProgram() {
         {/* Program Pillars Section */}
         <div className="mb-12">
           <div className="relative pb-4 mb-8">
-            <h3 className="text-2xl md:text-3xl font-semibold text-white">
+            <h3 className="text-xl md:text-2xl lg:text-3xl bukra-bold text-white">
               Program Pillars
             </h3>
             {/* Gradient border */}
             <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-white/20 via-transparent to-transparent"></div>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-4 lg:gap-8 items-center">
-            {/* Left Side - Image */}
-            <div className="relative h-[400px] md:h-[500px] lg:h-[609px] rounded-2xl overflow-hidden">
-              <Image
-                src="/SIP/mbs.png"
-                alt="Strategic Investor Program"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
-            </div>
-
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 items-center">
             {/* Curly Brace - Center */}
-            <div className="hidden  -mr-[100px] lg:flex items-center justify-center relative h-full mh-[400px] md:h-[500px] lg:h-[609px] px-4">
-              {/* Curly Brace SVG - Provided design */}
-              <svg
+            {/* <div className="hidden  -mr-[100px] lg:flex items-center justify-center relative h-full mh-[400px] md:h-[500px] lg:h-[609px] px-4"> */}
+            {/* Curly Brace SVG - Provided design */}
+            {/* <svg
                 width="187"
                 height="614"
                 viewBox="0 0 187 614"
@@ -394,51 +378,67 @@ export default function StrategicInvestorProgram() {
                     <stop offset="1" stopColor="#00A7A2" />
                   </linearGradient>
                 </defs>
-              </svg>
-            </div>
+              </svg> */}
+            {/* </div> */}
 
-            {/* Right Side - Pillars */}
-            <div className="space-y-4 h-full flex flex-col justify-between">
-              {pillars.map((pillar, index) => (
-                <div
-                  key={index}
-                  className="group relative bg-linear-to-r from-black/40 via-black/20 to-translaprent backdrop-blur-sm rounded-xl p-3 md:p-5 lg:p-6 2xl:p-8 transition-all duration-300 cursor-pointer"
-                >
-                  <div className="flex items-center gap-5 md:gap-6 lg:gap-[26px]">
-                    {/* Number */}
-                    <span className="relative mr-2 text-6xl md:text-[64px] font-light text-white/20 group-hover:text-white/30 transition-colors">
-                      {pillar.number}
-                      <span className="absolute top-0 -right-3 w-px h-full rounded-full bg-linear-to-b from-transparent via-white/20 to-transparent"></span>
-                    </span>
+            {/* left Side - Pillars */}
+            <div className="space-y-5 h-full flex flex-col justify-center items-center">
+              {pillars.map((pillar, index) => {
+                const formattedNumber = pillar.number.toString().padStart(2, "0");
+                return (
+                  <div
+                    key={index}
+                    className="group relative bg-linear-to-r from-[#00201F] to-[#002F2E00] backdrop-blur-sm rounded-4xl p-3 md:p-5 lg:p-6 2xl:p-[30px] transition-all duration-300 cursor-pointer"
+                  >
+                    <div className="flex items-center gap-5 md:gap-6 lg:gap-[26px]">
+                      {/* Number */}
+                      <span className="relative mr-2 inline-flex items-center">
+                        <span className="pillar-number text-6xl md:text-[70px] lg:text-[78px] font-extrabold leading-none tracking-tight text-white/40 group-hover:text-white/80 transition-colors duration-300">
+                          {formattedNumber}
+                        </span>
+                        <span className="absolute top-0 -right-3 w-px h-full rounded-full bg-linear-to-b from-transparent via-white/20 to-transparent"></span>
+                      </span>
 
-                    {/* Content */}
-                    <div className="flex-1 pt-2 flex flex-col gap-2 md:gap-5">
-                      <h4 className="text-white font-semibold text-xl md:[28px]">
-                        {pillar.title}
-                      </h4>
-                      <p className="text-white/70 text-sm md:text-lg leading-relaxed">
-                        {pillar.description}
-                      </p>
-                    </div>
+                      {/* Content */}
+                      <div className="flex-1 pt-2 flex flex-col gap-2 md:gap-2">
+                        <h4 className="text-white bukra-bold text-xl md:[28px]">
+                          {pillar.title}
+                        </h4>
+                        <p className="text-white/70 text-sm md:text-base bukra-regular leading-relaxed max-w-[380px]">
+                          {pillar.description}
+                        </p>
+                      </div>
 
-                    {/* Arrow Icon */}
-                    <div className="w-8 h-8 -rotate-45 rounded-full bg-black/40 flex items-center justify-center border border-white/20 group-hover:bg-white/10 group-hover:border-white/30 transition-all shrink-0 mt-2">
-                      <IoArrowForwardOutline className="text-white" />
+                      {/* Arrow Icon */}
+                      <div className="w-9 h-9 -rotate-45 rounded-full bg-black/40 flex items-center justify-center border border-white/20 group-hover:bg-white/10 group-hover:border-white/30 transition-all shrink-0 mt-2">
+                        <IoArrowForwardOutline className="text-white text-[20px]" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
+            </div>
+
+            {/* right Side - Image */}
+            <div className="relative h-[400px] md:h-[500px]  lg:h-[609px] rounded-2xl overflow-hidden">
+              <Image
+                src="/SIP/pc.png"
+                alt="Strategic Investor Program"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
             </div>
           </div>
         </div>
 
         {/* Call-to-Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-8 py-4 bg-black/40 hover:bg-black/60 text-white md:text-lg font-semibold rounded-full transition-all duration-200 border border-white/20 hover:border-white/30 flex items-center justify-center gap-2 backdrop-blur-sm">
+          <button className="px-8 py-2.5 bg-black/40 hover:bg-black/60 text-white md:text-lg cursor-pointer font-semibold rounded-full transition-all duration-200 border border-white/20 hover:border-white/30 flex items-center justify-center gap-2 backdrop-blur-sm">
             <span>Learn More About Program Criteria</span>
             <ImArrowUpRight2 />
           </button>
-          <button className="px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white md:text-lg font-semibold rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+          <button className="px-8 py-2.5 bg-[#00A7A2] hover:bg-[#00695C] text-white md:text-lg cursor-pointer font-semibold rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
             <span>Review Eligibility & Apply Now</span>
             <ImArrowUpRight2 />
           </button>
@@ -470,6 +470,13 @@ export default function StrategicInvestorProgram() {
           }}
         ></div>
       </div>
+      <style jsx global>{`
+        .pillar-number {
+          -webkit-text-fill-color: transparent;
+          -webkit-text-stroke-width: 1px;
+          -webkit-text-stroke-color: currentColor;
+        }
+      `}</style>
     </section>
   );
 }

@@ -3,6 +3,10 @@
 
 import Image from "next/image";
 import { HiArrowRight } from "react-icons/hi2";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 interface StatCard {
   id: number;
@@ -93,6 +97,48 @@ const skillPrograms: SkillProgram[] = [
   },
 ];
 
+const heroSlides = [
+  {
+    id: 1,
+    image: "/Hero/Hero.png",
+    logos: [
+      "/logo.png",
+      "/logo-vision.png",
+      "/national-transformation/invest-saudi.png",
+    ],
+    title: "Empowering Saudi Talent",
+    description:
+      "Building a future-ready workforce through innovation, education, and strategic investment.",
+  },
+  {
+    id: 2,
+    image: "/Hero/Hero.png",
+    logos: [
+      "/logo.png",
+      "/logo-vision.png",
+      "/national-transformation/invest-saudi.png",
+    ],
+    title: "Empowering Saudi Talent",
+    description:
+      "Building a future-ready workforce through innovation, education, and strategic investment.",
+  },
+ 
+  {
+    id: 3,
+    image: "/Hero/Hero.png",
+    logos: [
+      "/logo.png",
+      "/logo-vision.png",
+      "/national-transformation/invest-saudi.png",
+    ],
+    title: "Empowering Saudi Talent",
+    description:
+      "Building a future-ready workforce through innovation, education, and strategic investment.",
+  },
+ 
+ 
+];
+
 export default function Talent() {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-linear-to-b from-gray-50 to-white">
@@ -113,20 +159,23 @@ export default function Talent() {
       <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-20">
         {/* Header Section */}
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-teal-500 text-lg md:text-xl font-medium mb-4">
+          <p className="text-teal-500 text-base md:text-lg lg:text-xl bukra-medium mb-4">
             Empowering People,{" "}
             <span className="text-[#814A98]"> Powering the Future</span>
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-[46px] bukra-bold text-[#001A2A] mb-2 md:mb-3 lg:mb-4">
             Talent – the engine of Saudi Arabia&apos;s transformation
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-lg md:text-[28px] bukra-regular text-[28px] max-w-6xl mx-auto">
             Through Vision 2030, Saudi Arabia is shaping a future-ready
             workforce
             <br className="hidden md:block" />
             powered by education, innovation, and digital skills.
           </p>
         </div>
+
+        {/* swiper section */}
+    
 
         {/* World-Class Saudi Talent Section */}
         <div
@@ -138,11 +187,11 @@ export default function Talent() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex-1 p-3">
               <div className="flex items-center gap-3 mb-4">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
-                  A Land of Diverse, World-Class Talent
+                <h2 className="text-xl md:text-2xl lg:text-3xl bukra-bold text-[#002338]">
+                  World-Class Saudi Talent, Global Impact{" "}
                 </h2>
               </div>
-              <p className="text-gray-700 text-base md:text-lg">
+              <p className="text-[#171717] text-base md:text-[22px] bukra-regular">
                 From visionary global reformers, astronauts to healthcare
                 innovators and cultural international leaders, Saudi talent is
                 redefining excellence on the world stage.
@@ -255,7 +304,7 @@ export default function Talent() {
             </div>
 
             {/* Text */}
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 whitespace-nowrap">
+            <h2 className="text-xl md:text-2xl lg:text-3xl bukra-bold text-[#002338]">
               A Land of Diverse, World-Class Talent
             </h2>
           </div>
@@ -411,7 +460,7 @@ export default function Talent() {
                   alt="Empowered Woman"
                   fill
                   className="object-cover scale-150 md:scale-160"
-                  style={{ top: '24px' }}
+                  style={{ top: "24px" }}
                   sizes="(max-width: 768px) 80px, 112px"
                 />
               </div>
@@ -421,7 +470,7 @@ export default function Talent() {
                   alt="Empowered Woman"
                   fill
                   className="object-cover scale-125"
-                  style={{ top: '4px' }}
+                  style={{ top: "4px" }}
                   sizes="(max-width: 768px) 80px, 112px"
                 />
               </div>
@@ -452,23 +501,26 @@ export default function Talent() {
             {/* Overlapping avatars - Right side */}
             <div className="flex items-center order-3">
               <div className="w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-white shadow-lg bg-[#36352C] flex items-center justify-center relative z-10">
-              <img
+                <img
                   src="/talent/avatars/avatar-4.png"
                   alt=""
                   className="absolute scale-150 top-4"
-                />              </div>
+                />{" "}
+              </div>
               <div className="w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-white shadow-lg bg-[#36352C] flex items-center justify-center relative z-20 -ml-4 md:-ml-10">
-              <img
+                <img
                   src="/talent/avatars/avatar-5.png"
                   alt=""
                   className="absolute scale-140 top-2"
-                />              </div>
+                />{" "}
+              </div>
               <div className="w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-white shadow-lg bg-[#36352C] flex items-center justify-center relative z-30 -ml-4 md:-ml-10">
-              <img
+                <img
                   src="/talent/avatars/avatar-6.png"
                   alt=""
                   className="absolute scale-130 top-2"
-                />              </div>
+                />{" "}
+              </div>
             </div>
           </div>
         </div>
@@ -481,6 +533,33 @@ export default function Talent() {
           </button>
         </div>
       </div>
+
+      <style jsx global>{`
+        .talent-hero-swiper {
+          position: relative;
+          border-radius: 1.5rem;
+          overflow: hidden;
+        }
+        .talent-hero-swiper .swiper-pagination {
+          bottom: 12px !important;
+        }
+        .talent-hero-swiper .swiper-pagination-bullet {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.4);
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          opacity: 1;
+          transition: all 0.3s ease;
+          margin: 0 6px !important;
+        }
+        .talent-hero-swiper .swiper-pagination-bullet-active {
+          background: rgba(255, 255, 255, 0.95);
+          width: 32px;
+          border-radius: 9999px;
+          transform: none;
+        }
+      `}</style>
     </section>
   );
 }

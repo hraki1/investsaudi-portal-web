@@ -102,20 +102,19 @@ export default function Opportunities() {
           }}
         ></div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2  items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* map */}
         <div className="container mx-auto px-3 md:px-12 lg:px-5 relative z-10">
           {/* Title with dotted border */}
-          <div className="pb-8 mb-16">
-            <h2 className="text-center text-2xl md:text-[34px] bukra-bold text-white">
+          <div className="my-10 md:my-10 lg:my-22 pb-8 md:mb-16 mt-10 lg:pt-10">
+            <h2 className="text-center text-3xl md:text-[34px] bukra-bold text-white">
               Explore Dynamic Regional Opportunities shaping Saudi Arabia’s
               growth story
             </h2>
           </div>
 
-          {/* Main Content Grid */}
           {/* Left Column - Map */}
-          <div className="relative flex justify-center items-center mx-auto md:mx-0">
+          <div className="relative flex mb-8 lg:mb-0 justify-center items-center mx-auto md:mx-0">
             <SaudiMap setActiveRegionByName={setActiveRegionByName} />
           </div>
         </div>
@@ -351,7 +350,7 @@ export default function Opportunities() {
                       );
                     }}
                     modules={[Navigation]}
-                    spaceBetween={0}
+                    spaceBetween={10}
                     slidesPerView={2}
                     breakpoints={{
                       320: { slidesPerView: 2 },
@@ -475,10 +474,10 @@ export default function Opportunities() {
                             {slideOpportunities.map((opportunity, idx) => (
                               <div
                                 key={idx}
-                                className={`rounded-lg backdrop-blur-sm bg-linear-to-br from-black/60  ${opportunity.gradient} border border-white/20 p-3 h-full flex flex-col cursor-pointer`}
+                                className={`rounded-xl backdrop-blur-sm bg-linear-to-br from-black/60  ${opportunity.gradient} border border-white/20 p-3 h-full flex flex-col cursor-pointer`}
                               >
                                 <div
-                                  className={`${opportunity.categoryColor} bukra-regular text-xs rounded-full px-3 flex items-center justify-center py-1.5 mb-4  w-fit`}
+                                  className={`${opportunity.categoryColor} bukra-regular text-xs rounded-full px-3 flex items-center justify-center py-2 mb-4  w-fit`}
                                 >
                                   <span className="text-white text-xs font-medium">
                                     {opportunity.category}

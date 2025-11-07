@@ -170,9 +170,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="360"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="564" y="364" width="7" height="7" className="nestedData" />
+            <rect
+              x="564"
+              y="364"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="570"
@@ -209,9 +219,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="130"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="344" y="134" width="7" height="7" className="nestedData" />
+            <rect
+              x="344"
+              y="134"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="355"
@@ -243,8 +263,24 @@ const SvgComponent = (props: SvgComponentProps) => {
             d="m121.04 16.454-4.234 15.708-.161 1.388.161 2.525.16 1.055.081.241.08.574.241.654.574.734 3.098 2.203 1.055 1.056 1.136 1.63.976 1.789.654 1.388 1.216 2.112.574.814.734.654.815.402.814.321 1.549.402 1.71.08 15.627-1.549 10.821-1.63 4.635.081 23.763 3.74 1.136.242.814.493.815.654 2.605 2.283.895.494 1.216.493 3.259.734 19.207.494 2.111-.322h3.5l1.296.322 1.136.573 7 5.611.975.494 1.136.401 1.95.241h2.846l4.154.574 1.055.401 1.297.815.654.735.895 1.135.493.654 1.549 3.741 1.056 1.79.573.895 1.71 1.63 5.29 4.072.654.735.241.815-.161.814-.654.815-1.549 1.63-2.926 2.363-29.305 18.312-3.821 2.926-.895.895-.654.815-.493.815-.241.895-.161.814-.894 13.425-.081.241-.16.574-.322.814-.573.815-4.969 4.968-2.203-.574-.734.081-13.344 5.53-13.023 7.412-6.105 1.71-13.264 6.345-.895.574-.814.574-3.821 4.234-1.388-1.136-.494-.241-.574-.161-.895-.08-1.216.241-1.055.241-3.661 1.87-.895.401-.814.081-.895-.081-.735-.493-.573-.654-.976-2.364h-1.549l-.654-.08-.734-.241-1.216-.734-.815-.161-1.136.321-.895.402-1.136.402-1.296.08-6.999-.734-2.203-.494-3.821-1.296-1.63-.976-2.363-1.95-.574-.735-.574-.814-.401-.815-.574-1.388-.402-1.71-.24-2.283-.081-3.58.321-6.426-.16-.895-.321-.814-.654-.494-.815-.16-.734.241-2.203 2.111-2.364 1.469-.734.654-.494.814-.401.815-1.469 3.66-.402.815-.573.734-.815.402-.975.241-6.024-.402-2.926-.574-5.37-1.79-2.03-.321h-2.766l-8.388 1.87-3.9 1.469h-1.39l-1.468-.493-.24-.161-.242-.241-9.03-11.807-1.136-1.055-1.549-1.056-.815-.401-6.918-1.71h-2.284l-2.765.493-4.635.322-7.24 1.388-1.47.493-1.215.574-1.217 1.216-.573.322-.895.16-5.049-.493-2.846-.735-1.216-.08-1.136.241-3.006.08v-.16l-.574-.241v-.241l.494-.895.573-1.629.241-1.71-.401-.975v-.574l.401-.734.322-.895.734-3.58.16-.574.402-.895-.08-.241.08-.574.322-.321.814-.493-.24-.654-.081-.895.08-.574.494.241v-.241l.08-.08h.16l-.32-.574-.081-.654.16-.654 3.902.734 4.153.735 5.45.895 4.888.895 5.21.895 4.153.734 2.031.321 4.073.735 3.66.573h.896l.895-.401 3.82-3.098 3.741-3.098 4.073-3.42 2.685-2.283 2.284-3.821 2.203-3.66 1.629-2.765 1.95-3.34.815-.894.975-.494 3.007-.654 3.178-.654 5.049-1.055 4.968-.975 4.716-.976 4.153-.895.735-.654 1.549-3.82 1.216-2.846 1.216-3.098 1.056-2.525.493-.734.815-.654 3.74-2.203 4.315-2.364 2.524-1.468.241-.16-1.71-2.032-3.821-4.555-3.901-4.555-3.821-4.555-3.821-4.556-.16-.08-.08-.16-.081-.161-.16-.08-4.556-4.969-4.475-4.888-.08-.08-4.555-4.968L85 27.24l1.296-.402 7.413-2.284 8.628-2.604 8.709-2.605 2.111-.573 6.598-2.031 1.296-.322-.011.035Z"
           />
 
-          <rect x="90" y="100" width="15" height="15" className="customDots" />
-          <rect x="94" y="104" width="7" height="7" className="nestedData" />
+          <rect
+            x="90"
+            y="100"
+            width="15"
+            height="15"
+            rx="50%"
+            ry="50%"
+            className="customDots"
+          />
+          <rect
+            x="94"
+            y="104"
+            width="7"
+            height="7"
+            rx="50%"
+            ry="50%"
+            className="nestedData"
+          />
 
           <g className={`group-hover:block `}>
             <text
@@ -282,9 +318,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="515"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="389" y="519" width="7" height="7" className="nestedData" />
+            <rect
+              x="389"
+              y="519"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="393"
@@ -321,9 +367,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="480"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="294" y="484" width="7" height="7" className="nestedData" />
+            <rect
+              x="294"
+              y="484"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="298"
@@ -360,9 +416,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="565"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="286" y="569" width="7" height="7" className="nestedData" />
+            <rect
+              x="286"
+              y="569"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="287"
@@ -399,9 +465,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="156"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="39" y="160" width="7" height="7" className="nestedData" />
+            <rect
+              x="39"
+              y="160"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="87"
@@ -438,9 +514,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="270"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="164" y="274" width="7" height="7" className="nestedData" />
+            <rect
+              x="164"
+              y="274"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="170"
@@ -477,9 +563,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="390"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="219" y="394" width="7" height="7" className="nestedData" />
+            <rect
+              x="219"
+              y="394"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="228"
@@ -528,9 +624,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="350"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="384" y="354" width="7" height="7" className="nestedData" />
+            <rect
+              x="384"
+              y="354"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="390"
@@ -567,9 +673,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="222"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="304" y="226" width="7" height="7" className="nestedData" />
+            <rect
+              x="304"
+              y="226"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="309"
@@ -606,9 +722,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="188"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="224" y="192" width="7" height="7" className="nestedData" />
+            <rect
+              x="224"
+              y="192"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
             <text
               x="259"
               y="200"
@@ -644,9 +770,19 @@ const SvgComponent = (props: SvgComponentProps) => {
               y="455"
               width="15"
               height="15"
+              rx="50%"
+              ry="50%"
               className="customDots"
             />
-            <rect x="242" y="459" width="7" height="7" className="nestedData" />
+            <rect
+              x="242"
+              y="459"
+              width="7"
+              height="7"
+              rx="50%"
+              ry="50%"
+              className="nestedData"
+            />
 
             <text
               x="242"
