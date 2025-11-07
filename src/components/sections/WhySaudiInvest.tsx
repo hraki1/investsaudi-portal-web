@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { TbArrowCurveRight } from "react-icons/tb";
 import { CgArrowTopRight } from "react-icons/cg";
+import i18n from "@/lib/i18n";
 
 // Swiper styles will be added to CSS file
 
@@ -27,18 +28,7 @@ interface StatCard {
   isNewRecord?: boolean;
 }
 
-const gradientColors: Record<string, string> = {
-  "teal-900/80": "rgba(19, 78, 74, 0.8)",
-  "teal-700/60": "rgba(15, 118, 110, 0.6)",
-  "blue-900/80": "rgba(30, 58, 138, 0.8)",
-  "blue-700/60": "rgba(29, 78, 216, 0.6)",
-  "indigo-900/80": "rgba(30, 27, 75, 0.8)",
-  "indigo-700/60": "rgba(67, 56, 202, 0.6)",
-  "purple-900/80": "rgba(88, 28, 135, 0.8)",
-  "purple-700/60": "rgba(126, 34, 206, 0.6)",
-};
-
-export default function StrategicDirection() {
+export default function WhySaudiInvest() {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<"economy" | "society" | "nation">(
     "economy"
@@ -96,9 +86,9 @@ export default function StrategicDirection() {
   ];
 
   const tabs: Array<{ id: "economy" | "society" | "nation"; title: string }> = [
-    { id: "economy", title: t("strategic_direction.thriving_economy") },
-    { id: "society", title: t("strategic_direction.vibrant_society") },
-    { id: "nation", title: t("strategic_direction.ambitious_nation") },
+    { id: "economy", title: "Transformational Vision" },
+    { id: "society", title: "Game-Changing Opportunities" },
+    { id: "nation", title: "Trusted and Stable Destination" },
   ];
 
   // UI style constants
@@ -323,6 +313,8 @@ export default function StrategicDirection() {
     },
   ];
 
+  const isRTL = i18n.language === "ar";
+
   return (
     <section className="relative pt-12 md:pt-10">
       {/* Background Saudi Emblem Pattern */}
@@ -332,7 +324,7 @@ export default function StrategicDirection() {
           {statCards.map((card, index) => (
             <div
               key={index}
-              className="glass relative p-6 md:p-8 overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg"
+              className=" relative p-6 md:p-8 overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg"
               style={{
                 background: `${card.gradientFrom}`,
               }}
@@ -377,44 +369,69 @@ export default function StrategicDirection() {
           ))}
         </div>
 
+        {/* title */}
+        <div className="max-w-2xl space-y-4  mb-6 md:mb-10 lg:mt-26">
+          <h2
+            className={`text-3xl text-center ${
+              isRTL ? "md:text-right" : "md:text-left"
+            } md:text-5xl lg:text-[38px] bukra-medium bukra-bold text-white`}
+          >
+            A Nation With A Bold Vision
+          </h2>
+          <p
+            className={`text-base text-center md:text-lg lg:text-[20px] text-white/70 bukra-regular ${
+              isRTL ? "md:text-right" : "md:text-left"
+            }`}
+          >
+            Unlocking game-changing opportunities for the world
+          </p>
+        </div>
+
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-14 mb-16">
-          {/* Left Column: Vision Quote & Crown Prince - 4 columns */}
-          <div className="lg:col-span-5 space-y-6 mb-10 lg:mb-0">
+        <div className="flex flex-col xl:flex-row gap-8 xl:gap-12 mb-16  ">
+          {/* Left Column: Vision Quote & Crown Prince */}
+          <div className="flex-1 xl:max-w-[530px]   mb-10 xl:mb-0">
             {/* Vision Quote */}
-            <div className=" bg-black/50  backdrop-blur-sm p-6 md:p-8 rounded-2xl">
-              <p className="text-white/90 text-xs md:text-2xl leading-relaxed">
-                &quot;“Our Vision is a strong, thriving, and stable Saudi Arabia
-                that provides opportunity for all. Our Vision is a tolerant
-                country with Islam as its constitution and moderation as its
-                method. We will welcome qualified individuals from all over the
-                world and will respect those who have come to join our journey
-                and our success.”&quot;
+            <div className="h-full w-full bg-black/50 backdrop-blur-2xl p-6 md:p-[40px] md:pb-[30px] rounded-2xl flex flex-col justify-between">
+              <p className="text-white/90 text-base md:text-[22px] leading-relaxed bukra-regular ">
+                “Our Vision is a strong, thriving, and stable Saudi Arabia that
+                provides opportunity for all. Our Vision is a{" "}
+                <span className="text-[#00A7A2]">tolerant country </span> with
+                Islam as its constitution and moderation as its method. We will
+                welcome <span className="text-[#00A7A2]">qualified</span>{" "}
+                individuals from all over the world and will respect those who
+                have come to{" "}
+                <span className="text-[#00A7A2]">
+                  join our journey and our success
+                </span>{" "}
+                .”
               </p>
               {/* Crown Prince */}
-              <div className="flex items-start mt-12 gap-4">
-                <img
-                  src="/mbs.png"
-                  alt="Crown Prince"
-                  className="w-full h-full object-cover"
-                />
-                <div className="text-white">
-                  <h3 className="font-medium text-base md:text-2xl mb-1">
+              <div className="flex justify-between items-start gap-4 md:gap-[15px] mt-8  ">
+                <div className="w-20 md:w-[134px] h-32 md:min-h-[168.5806427001953px] p-2  rounded-xl overflow-hidden shrink-0">
+                  <img
+                    src="/mbs.png"
+                    alt="Crown Prince"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className=" flex flex-col items-center text-white ">
+                  <h3 className="text-base md:text-xl bukra-bold mb-1">
                     HRH Mohammed bin Salman Crown
                   </h3>
-                  <p className="text-base md:text-[22px] text-white/60 bukra-regular">
-                    “Prince, Prime Minister, and Chairman of the Council of
-                    Economic and Development Affairs ”
+                  <p className="text-xs md:text-[16px] text-white bukra-regular">
+                    Prince, Prime Minister, and Chairman of the Council of
+                    Economic and Development Affairs 
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* right: Vision 2030 with Tabs - 4 columns */}
-          <div className="lg:col-span-7 flex flex-col md:flex-row items-start justify-center">
+          {/* right: Vision 2030 with Tabs */}
+          <div className="flex flex-col lg:flex-row gap-6 flex-1 items-start">
             {/* Tabs/Pillars */}
-            <div className="space-y-3 md:space-y-4 mb-5 mt-7 lg:mb-0">
+            <div className="lg:max-w-[320px] xl:max-w-[360px] space-y-3 md:space-y-4 mb-5 lg:mb-0 md:mt-10">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -434,26 +451,28 @@ export default function StrategicDirection() {
                         : "bg-transparent"
                     }`}
                   ></span>
-                  <h3 className="text-white font-light text-base md:text-lg lg:text-2xl">
+                  <h3 className="text-white font-light text-base md:text-lg lg:text-[20px] bukra-regular">
                     {tab.title}
                   </h3>
                 </button>
               ))}
             </div>
-            <div className="bg-black/40 backdrop-blur-sm p-6 md:p-8 rounded-2xl">
-              <div className="space-y-6">
+
+            {/* content */}
+            <div className="bg-black/40 flex-1 backdrop-blur-sm p-6 md:p-8 2xl:py-[30px] 2xl:px-[30px] rounded-2xl">
+              <div className="space-y-3 md:space-y-6">
                 {tabContent[activeTab].items.map((item, idx) => (
                   <div key={idx}>
-                    <div className="flex gap-4 animate-fade-in">
-                      <div className="w-10 h-10 flex-shrink-0 rounded-lg flex items-center justify-center ">
+                    <div className="flex gap-5 animate-fade-in">
+                      <div className="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center ">
                         {item.icon}
                       </div>
-                      <p className="md:min-w-[418px] text-white/80 text-base md:text-lg leading-relaxed">
+                      <p className="md:min-w-[418px] text-white/80 text-base md:text-xl leading-relaxed">
                         {item.text}
                       </p>
                     </div>
                     {idx < tabContent[activeTab].items.length - 1 && (
-                      <div className="mt-6 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                      <div className="mt-6 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"></div>
                     )}
                   </div>
                 ))}
@@ -463,7 +482,7 @@ export default function StrategicDirection() {
         </div>
 
         {/* Review link */}
-        <div className="mt-12 mb-12 flex items-center justify-center text-center">
+        {/* <div className="mt-12 mb-12 flex items-center justify-center text-center">
           <div className="flex items-center gap-2 justify-center bg-[#00A7A2] text-white md:px-6 px-5 py-2 rounded-3xl text-sm md:text-xl bukra-regular">
             <p>
               {t("strategic_direction.review_economy_report")}{" "}
@@ -471,11 +490,11 @@ export default function StrategicDirection() {
             </p>
             <CgArrowTopRight />
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Bottom Stats Bar - Swiper */}
-      <div className="bg-black/30 backdrop-blur-sm px-4 md:px-6 lg:px-[30px] relative z-10">
+      {/* <div className="bg-black/30 backdrop-blur-sm px-4 md:px-6 lg:px-[30px] relative z-10">
         <div className="py-4">
           <Swiper
             modules={[Navigation]}
@@ -484,7 +503,7 @@ export default function StrategicDirection() {
             className="stats-swiper"
           >
             {statsData.map((stat, index) => (
-              <SwiperSlide key={index} className="!w-auto px-2 md:px-6 lg:px-4">
+              <SwiperSlide key={index} className="w-auto! px-2 md:px-6 lg:px-4">
                 <div className="flex items-center gap-4 md:gap-8">
                   <img
                     src="/icons/saudi-tree.png"
@@ -504,7 +523,7 @@ export default function StrategicDirection() {
             ))}
           </Swiper>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -104,7 +104,7 @@ export default function Hero() {
   return (
     <div>
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-3  mb-20 md:mb-[8vh]">
+      <div className="relative z-10 container mx-auto px-3 mb-20 md:mb-[8vh]">
         <div className="max-w-[929px] mb-2 md:mb-5">
           <h1
             className={`text-3xl bukra-bold text-center ${isRTL ? 'md:text-right' : 'md:text-left'} sm:text-4xl md:text-5xl lg:text-[51px] font-extralight text-white mb-1 md:mb-2 leading-snug tracking-wide`}
