@@ -14,7 +14,7 @@ import SupportAndContact from "@/components/sections/SupportAndContact";
 import Talent from "@/components/sections/Talent";
 import HeroContainer from "@/components/sections/HeroContainer";
 // import Chatbot from "@/components/shared/Chatbot";
-import Unlocking from "@/components/sections/Unlocking";
+// import Unlocking from "@/components/sections/Unlocking";
 
 export default function Home() {
   return (
@@ -23,8 +23,8 @@ export default function Home() {
       {/* <SuccessStories /> */}
       {/* <Hero />
         <StrategicDirection /> */}
+      {/* <Unlocking /> */}
       <Opportunities />
-      <Unlocking />
       <Talent />
       <Incentives />
       <Events />

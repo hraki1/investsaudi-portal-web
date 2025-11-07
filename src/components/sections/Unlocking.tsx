@@ -312,12 +312,16 @@ export default function Unlocking() {
 
   const leftSectors = useMemo(
     () =>
-      sectors.filter((sector) => sector.id !== activeSectorId && sector.side === "left"),
+      sectors.filter(
+        (sector) => sector.id !== activeSectorId && sector.side === "left"
+      ),
     [activeSectorId]
   );
   const rightSectors = useMemo(
     () =>
-      sectors.filter((sector) => sector.id !== activeSectorId && sector.side === "right"),
+      sectors.filter(
+        (sector) => sector.id !== activeSectorId && sector.side === "right"
+      ),
     [activeSectorId]
   );
 
@@ -327,8 +331,16 @@ export default function Unlocking() {
 
   return (
     <section className="relative overflow-hidden bg-[#001A2A] py-16 md:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,184,169,0.22)_0%,_transparent_45%),_radial-gradient(circle_at_bottom,_rgba(0,60,77,0.7)_0%,_transparent_60%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[url('/patterns/grid-dots.svg')] opacity-20 mix-blend-screen" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(160.64deg,#001421_13.58%,#003A39_87.49%)]" />
+      {/* Dot pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, white 2px, transparent 2px)",
+          backgroundSize: "30px 30px",
+        }}
+      ></div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 text-white md:px-6 lg:px-0">
         <header className="space-y-4 text-center md:text-left">
@@ -616,5 +628,3 @@ export default function Unlocking() {
     </section>
   );
 }
-
-
