@@ -14,15 +14,17 @@ import SupportAndContact from "@/components/sections/SupportAndContact";
 import Talent from "@/components/sections/Talent";
 import HeroContainer from "@/components/sections/HeroContainer";
 // import Chatbot from "@/components/shared/Chatbot";
+import Unlocking from "@/components/sections/Unlocking";
 
 export default function Home() {
   return (
     <main>
       <HeroContainer />
       {/* <SuccessStories /> */}
-        {/* <Hero />
+      {/* <Hero />
         <StrategicDirection /> */}
       <Opportunities />
+      <Unlocking />
       <Talent />
       <Incentives />
       <Events />

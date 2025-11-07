@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import WhySaudiInvest from "./WhySaudiInvest";
 import { useState } from "react";
 import WhereVisionBecomesInvestment from "./WhereVisionBecomesInvestment.";
+import Unlocking from "./Unlocking";
 
 export default function HeroContainer() {
   const isRTL = false;
@@ -50,6 +51,8 @@ export default function HeroContainer() {
           </div>
         </div>
       </section>
+
+      <Unlocking />
 
       {/* why invest in saudi arabia section */}
       <section className="min-h-screen relative">
