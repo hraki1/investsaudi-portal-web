@@ -109,28 +109,22 @@ export default function NationalPrograms() {
   ];
 
   return (
-    <section className="relative w-full py-16 md:py-20 overflow-hidden">
+    <section className="relative w-full py-16 md:py-20 bg-linear-to-l from-[#E6F6F6] to-[#ECE4F0] overflow-hidden ">
       {/* Background with gradient */}
-      <div
-        className="absolute z-0 inset-0"
-        style={{
-          background:
-            "linear-gradient(245.07deg, #E6F6F6 11.73%, #ECE4F0 65.87%)",
-        }}
-      ></div>
+      {/* <div className="absolute z-0 inset-0 "></div> */}
 
-      <div className="absolute top-1 right-1 w-[300px] h-[400px] md:w-1/3 md:h-[550px] lg:w-2/3 lg:h-[588px] overflow-hidden">
+      <div className="absolute top-1 right-1 w-[300px] h-[400px] md:w-3/2 md:h-[550px] lg:w-full overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/bg-back.png")',
+            backgroundImage: 'url("/national-transformation/bg.png")',
             backgroundRepeat: "no-repeat",
             backgroundSize: "contain",
             backgroundPosition: "top right",
           }}
         ></div>
       </div>
-      
+
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center md:text-left mb-12 md:mb-16">
