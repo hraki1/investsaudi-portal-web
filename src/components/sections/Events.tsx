@@ -151,7 +151,7 @@ export default function Events() {
         <div className="container mx-auto px-6 md:px-12 lg:px-20">
           {/* Title */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 md:mb-12">
-           Events
+            Events
           </h2>
 
           {/* Navigation Tabs */}
@@ -290,7 +290,9 @@ export default function Events() {
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/60 backdrop-blur-3xl flex items-center justify-center group-hover:bg-purple-700/80 transition-all">
               <HiArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
-            <span className="text-sm sm:text-base font-medium hidden sm:inline">{t("events.previous")}</span>
+            <span className="text-sm sm:text-base font-medium hidden sm:inline">
+              {t("events.previous")}
+            </span>
           </button>
 
           {/* Custom Pagination Dots */}
@@ -312,7 +314,9 @@ export default function Events() {
           )}
 
           <button className="events-next flex items-center gap-2 sm:gap-3 text-white hover:text-white/80 transition-all group">
-            <span className="text-sm sm:text-base font-medium hidden sm:inline">{t("events.next")}</span>
+            <span className="text-sm sm:text-base font-medium hidden sm:inline">
+              {t("events.next")}
+            </span>
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/60 backdrop-blur-3xl flex items-center justify-center group-hover:bg-purple-700/80 transition-all">
               <HiArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>

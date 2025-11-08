@@ -219,7 +219,7 @@ export default function StrategicInvestorProgram() {
       <div className="relative z-10 container mx-auto px-3 md:px-12 lg:px-16 py-16 md:py-24">
         {/* Header Section */}
         <div className="mb-12 md:mb-16">
-          <div className="flex items-start gap-6 md:gap-9 mb-6">
+          <div className="flex items-start gap-5 md:gap-9 mb-5">
             {/* KSA Logo/Icon */}
             <div className="shrink-0 mt-2">
               <div className=" flex items-center justify-center backdrop-blur-sm relative">

@@ -99,7 +99,7 @@ const categoryCards: CategoryCard[] = [
 
 export default function Incentives() {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden bg-linear-to-br from-[#1a2b4a] via-[#1e3a5f] to-[#2d5a6e]">
+    <section className="relative py-16 md:py-24 overflow-hidden bg-linear-to-l from-[#001421] via-[#002338] to-[#3A2144]">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -125,9 +125,9 @@ export default function Incentives() {
           </div>
 
           {/* Hero Image with Stats Overlay */}
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl md:pb-0">
             {/* Background Image */}
-            <div className="relative h-[400px] md:h-[500px]">
+            <div className="relative h-[280px] sm:h-[360px] md:h-[500px]">
               <Image
                 src="/incentives/card.jpg"
                 alt="Futuristic City Skyline"
@@ -140,12 +140,12 @@ export default function Incentives() {
             </div>
 
             {/* Stats Cards Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="relative -mt-12 px-4 py-6 sm:px-6 sm:py-7 md:px-8 md:py-8 md:absolute md:bottom-0 md:left-0 md:right-0 md:mt-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
                 {statItems.map((stat, index) => (
                   <div
                     key={stat.id}
-                    className="bg-white/10 backdrop-blur-md rounded-2xl p-4 md:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                    className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-5 md:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                     style={{
                       background:
                         index === 0
@@ -165,7 +165,7 @@ export default function Incentives() {
                     <div className="text-sm md:text-base font-semibold text-white mb-1">
                       {stat.label}
                     </div>
-                    <div className="text-xs md:text-sm text-gray-200">
+                    <div className="text-xs sm:text-sm text-gray-200">
                       {stat.description}
                     </div>
                   </div>

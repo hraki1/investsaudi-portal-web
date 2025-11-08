@@ -29,10 +29,10 @@ export default function Home() {
       <Opportunities />
       <StrategicInvestorProgram />
       <Events />
-      <InvestorMatchmaking />
       <Talent />
       <Incentives />
       <NationalPrograms />
+      <InvestorMatchmaking />
       <Miza />
       <RegulatoryAgreement />
       <SupportAndContact />
