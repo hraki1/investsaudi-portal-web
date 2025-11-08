@@ -273,7 +273,8 @@ export default function PhoneNumberInput({
   className = "",
   autoDetectCountry = true, // Auto-detect by default
 }: PhoneNumberInputProps) {
-  const [selectedCountry, setSelectedCountry] = useState<string>(defaultCountry);
+  const [selectedCountry, setSelectedCountry] =
+    useState<string>(defaultCountry);
   const [phoneNumber, setPhoneNumber] = useState<string>(value);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -281,7 +282,8 @@ export default function PhoneNumberInput({
   const selectRef = useRef<HTMLDivElement>(null);
   const previousValueRef = useRef<string>(value);
 
-  const selectedCountryData = countries.find((c) => c.code === selectedCountry) || countries[0];
+  const selectedCountryData =
+    countries.find((c) => c.code === selectedCountry) || countries[0];
 
   // Function to detect country from IP address
   useEffect(() => {
@@ -297,13 +299,15 @@ export default function PhoneNumberInput({
               Accept: "application/json",
             },
           });
-          
+
           if (response.ok) {
             const data = await response.json();
             if (data.country_code) {
               const countryCode = data.country_code.toUpperCase();
               // Verify country exists in our list
-              const foundCountry = countries.find((c) => c.code === countryCode);
+              const foundCountry = countries.find(
+                (c) => c.code === countryCode
+              );
               if (foundCountry) {
                 setSelectedCountry(countryCode);
                 return;
@@ -316,18 +320,23 @@ export default function PhoneNumberInput({
 
         // Fallback: Try ip-api.com (free, no API key needed)
         try {
-          const response = await fetch("https://ip-api.com/json/?fields=status,message,countryCode", {
-            method: "GET",
-            headers: {
-              Accept: "application/json",
-            },
-          });
-          
+          const response = await fetch(
+            "https://ip-api.com/json/?fields=status,message,countryCode",
+            {
+              method: "GET",
+              headers: {
+                Accept: "application/json",
+              },
+            }
+          );
+
           if (response.ok) {
             const data = await response.json();
             if (data.status === "success" && data.countryCode) {
               const countryCode = data.countryCode.toUpperCase();
-              const foundCountry = countries.find((c) => c.code === countryCode);
+              const foundCountry = countries.find(
+                (c) => c.code === countryCode
+              );
               if (foundCountry) {
                 setSelectedCountry(countryCode);
                 return;
@@ -366,7 +375,7 @@ export default function PhoneNumberInput({
       const matchingCountry = countries
         .sort((a, b) => b.dialCode.length - a.dialCode.length)
         .find((c) => value.startsWith(c.dialCode));
-      
+
       if (matchingCountry) {
         const numberOnly = value.replace(matchingCountry.dialCode, "");
         // Wrap in startTransition to avoid cascading renders
@@ -411,11 +420,17 @@ export default function PhoneNumberInput({
     };
   }, []);
 
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setSelectedCountry("SA");
+  }, [selectedCountryData]);
+
   function handleCountrySelect(countryCode: string) {
     setSelectedCountry(countryCode);
     setIsDropdownOpen(false);
     setSearchQuery("");
-    const selectedCountryDialCode = countries.find((c) => c.code === countryCode)?.dialCode || "";
+    const selectedCountryDialCode =
+      countries.find((c) => c.code === countryCode)?.dialCode || "";
     const fullNumber = `${selectedCountryDialCode}${phoneNumber}`;
     if (onChange) {
       onChange(fullNumber);
@@ -454,15 +469,17 @@ export default function PhoneNumberInput({
                 const target = e.target as HTMLImageElement;
                 const countryCode = selectedCountryData.code.toLowerCase();
                 if (!target.dataset.retried) {
-                  target.dataset.retried = 'true';
+                  target.dataset.retried = "true";
                   target.src = `https://countryflagsapi.com/png/${countryCode}`;
                 } else if (!target.dataset.retried2) {
-                  target.dataset.retried2 = 'true';
+                  target.dataset.retried2 = "true";
                   target.src = `https://flagsapi.com/${countryCode.toUpperCase()}/flat/32.png`;
                 }
               }}
             />
-            <span className="phone-country-code">{selectedCountryData.dialCode}</span>
+            <span className="phone-country-code">
+              {selectedCountryData.dialCode}
+            </span>
             <svg
               className={`phone-dropdown-arrow ${isDropdownOpen ? "open" : ""}`}
               width="12"
@@ -513,11 +530,16 @@ export default function PhoneNumberInput({
                         unoptimized
                       />
                       <span className="phone-item-name">{country.name}</span>
-                      <span className="phone-item-code">{country.dialCode}</span>
+                      <span className="phone-item-code">
+                        {country.dialCode}
+                      </span>
                     </button>
                   ))
                 ) : (
-                  <div className="phone-dropdown-item" style={{ cursor: "default", color: "#9ca3af" }}>
+                  <div
+                    className="phone-dropdown-item"
+                    style={{ cursor: "default", color: "#9ca3af" }}
+                  >
                     No countries found
                   </div>
                 )}
