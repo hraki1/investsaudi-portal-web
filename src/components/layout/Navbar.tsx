@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-999 bg-linear-to-b from-black/80 to-transparent backdrop-blur-lg">
-      <div className="border-b border-white/10 md:py-4">
+      <div className="border-b border-white/10 md:py-2">
         <div className=" mx-auto px-4 sm:px-4 lg:px-5 py-3 md:py-3">
           <div className="flex items-center justify-between lg:my-2">
             {/* Logo */}
@@ -123,19 +123,19 @@ export default function Navbar() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="lg:hidden mt-4 pb-4 border-t border-white/10 pt-4">
+            <div className="lg:hidden mt-4 pb-2 border-t border-white/10 pt-4">
               <div className="flex flex-col space-y-4">
                 {navigationLinks.map((link, index) => (
                   <a
                     key={index}
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-white text-base tracking-wide hover:text-gray-300 transition-colors uppercase"
+                    className="text-white text-base font-normal bukra-regular tracking-wide hover:text-gray-300 transition-colors capitalize"
                   >
                     {link.label}
                   </a>
                 ))}
-                <div className="pt-2 border-t border-white/10">
+                <div className="pt-5 border-t border-white/10">
                   <button className="text-white hover:text-gray-300 transition-colors flex items-center gap-2">
                     <svg
                       className="w-5 h-5"
