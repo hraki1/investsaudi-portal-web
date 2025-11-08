@@ -14,8 +14,8 @@ export default function LanguageSwitcher() {
     setIsOpen(false);
   };
 
-  const currentLanguage = i18n.language === 'ar' ? 'العربية' : 'English';
-  const otherLanguage = i18n.language === 'ar' ? 'English' : 'العربية';
+  const currentLanguage = i18n.language === 'en' ? 'العربية' : 'English';
+  const otherLanguage = i18n.language === 'en' ? 'العربية' : 'English';
 
   return (
     <div className="relative">
@@ -38,7 +38,7 @@ export default function LanguageSwitcher() {
         <div className="absolute top-full left-0 mt-1 w-full bg-black/20 backdrop-blur-sm rounded shadow-lg z-50">
           <button
             onClick={() => toggleLanguage(i18n.language === 'en' ? 'ar' : 'en')}
-            className="w-full text-left text-white font-bold py-2 px-4 hover:bg-black/30 transition-colors rounded"
+            className="w-full text-left text-white bukra-regular py-3 px-4 hover:bg-black/30 transition-colors rounded"
           >
             {otherLanguage}
           </button>
