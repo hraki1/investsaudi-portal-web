@@ -34,61 +34,15 @@ export default function WhySaudiInvest() {
     "economy"
   );
 
-  const statsData = [
-    {
-      id: 1,
-      icon: "📈",
-      value: "1.8%",
-      description: t("strategic_direction.stats.gdp_growth"),
-    },
-    {
-      id: 2,
-      icon: "💰",
-      value: "24%",
-      description: t("strategic_direction.stats.fdi_growth"),
-    },
-    {
-      id: 3,
-      icon: "⭐",
-      value: "A+",
-      description: t("strategic_direction.stats.credit_rating"),
-    },
-    {
-      id: 4,
-      icon: "🚀",
-      value: "30.4%",
-      description: t("strategic_direction.stats.export_growth"),
-    },
-    {
-      id: 1,
-      title: t("strategic_direction.stats.pro_investor"),
-      value: "24%",
-      description: t("strategic_direction.stats.pro_investor_desc"),
-    },
-    {
-      id: 2,
-      title: t("strategic_direction.stats.tax_incentives"),
-      value: "24%",
-      description: t("strategic_direction.stats.tax_incentives_desc"),
-    },
-    {
-      id: 3,
-      title: t("strategic_direction.stats.tax_laws"),
-      value: "24%",
-      description: t("strategic_direction.stats.tax_laws_desc"),
-    },
-    {
-      id: 4,
-      title: t("strategic_direction.stats.investment_law"),
-      value: "24%",
-      description: t("strategic_direction.stats.investment_law_desc"),
-    },
-  ];
-
-  const tabs: Array<{ id: "economy" | "society" | "nation"; title: string }> = [
+  const tabs: Array<{
+    id: "economy" | "society" | "nation" | "talent" | "saudi";
+    title: string;
+  }> = [
     { id: "economy", title: "Transformational Vision" },
     { id: "society", title: "Game-Changing Opportunities" },
     { id: "nation", title: "Trusted and Stable Destination" },
+    { id: "talent", title: "Physical Infrastructure " },
+    { id: "saudi", title: "Digital Infrastructure" },
   ];
 
   // UI style constants
@@ -211,6 +165,116 @@ export default function WhySaudiInvest() {
       ],
     },
     nation: {
+      title: t("strategic_direction.investment_destination"),
+      items: [
+        {
+          icon: (
+            <img
+              src="/icons/globe.png"
+              alt="Competitiveness"
+              className="w-full h-full"
+            />
+          ),
+          text: t("strategic_direction.nation_items.item1"),
+        },
+        {
+          icon: (
+            <img
+              src="/icons/city-01.png"
+              alt="Giga Projects"
+              className="w-full h-full"
+            />
+          ),
+          text: t("strategic_direction.nation_items.item2"),
+        },
+        {
+          icon: (
+            <img
+              src="/icons/catalogue.png"
+              alt="Digital"
+              className="w-full h-full"
+            />
+          ),
+          text: t("strategic_direction.nation_items.item3"),
+        },
+        {
+          icon: (
+            <img
+              src="/icons/coins-01.png"
+              alt="SMEs"
+              className="w-full h-full"
+            />
+          ),
+          text: t("strategic_direction.nation_items.item4"),
+        },
+        {
+          icon: (
+            <img
+              src="/icons/globe.png"
+              alt="Energy"
+              className="w-full h-full"
+            />
+          ),
+          text: t("strategic_direction.nation_items.item5"),
+        },
+      ],
+    },
+    talent: {
+      title: t("strategic_direction.investment_destination"),
+      items: [
+        {
+          icon: (
+            <img
+              src="/icons/globe.png"
+              alt="Competitiveness"
+              className="w-full h-full"
+            />
+          ),
+          text: t("strategic_direction.nation_items.item1"),
+        },
+        {
+          icon: (
+            <img
+              src="/icons/city-01.png"
+              alt="Giga Projects"
+              className="w-full h-full"
+            />
+          ),
+          text: t("strategic_direction.nation_items.item2"),
+        },
+        {
+          icon: (
+            <img
+              src="/icons/catalogue.png"
+              alt="Digital"
+              className="w-full h-full"
+            />
+          ),
+          text: t("strategic_direction.nation_items.item3"),
+        },
+        {
+          icon: (
+            <img
+              src="/icons/coins-01.png"
+              alt="SMEs"
+              className="w-full h-full"
+            />
+          ),
+          text: t("strategic_direction.nation_items.item4"),
+        },
+        {
+          icon: (
+            <img
+              src="/icons/globe.png"
+              alt="Energy"
+              className="w-full h-full"
+            />
+          ),
+          text: t("strategic_direction.nation_items.item5"),
+        },
+      ],
+    },
+    saudi: {
       title: t("strategic_direction.investment_destination"),
       items: [
         {
@@ -392,7 +456,7 @@ export default function WhySaudiInvest() {
           {/* Left Column: Vision Quote & Crown Prince */}
           <div className="flex-1 xl:max-w-[530px]   mb-10 xl:mb-0">
             {/* Vision Quote */}
-            <div className="h-full w-full bg-black/50 backdrop-blur-2xl p-6 md:p-[40px] md:pb-[30px] rounded-2xl flex flex-col justify-between">
+            <div className="h-full w-full bg-black/60 backdrop-blur-2xl p-6 md:p-[40px] md:pb-[30px] rounded-2xl flex flex-col justify-between">
               <p className="text-white/90 text-base md:text-[22px] leading-relaxed bukra-regular ">
                 “Our Vision is a strong, thriving, and stable Saudi Arabia that
                 provides opportunity for all. Our Vision is a{" "}
@@ -429,16 +493,16 @@ export default function WhySaudiInvest() {
           </div>
 
           {/* right: Vision 2030 with Tabs */}
-          <div className="flex flex-col lg:flex-row gap-6 flex-1 items-start">
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-0 flex-1 items-start">
             {/* Tabs/Pillars */}
-            <div className="lg:max-w-[320px] xl:max-w-[360px] space-y-3 md:space-y-4 mb-5 lg:mb-0 md:mt-10">
+            <div className="lg:max-w-[320px] xl:max-w-[360px] space-y-3  mb-5 lg:mb-0 md:mt-10">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() =>
                     setActiveTab(tab.id as "economy" | "society" | "nation")
                   }
-                  className={`w-full text-left relative pl-6 rounded-l-xl transition-all duration-300 py-3 md:py-6 ${
+                  className={`w-full text-left relative pl-6 rounded-l-xl transition-all duration-300 py-3 md:py-5 ${
                     activeTab === tab.id
                       ? activeButtonBgClass
                       : inactiveButtonHoverClass
@@ -459,7 +523,7 @@ export default function WhySaudiInvest() {
             </div>
 
             {/* content */}
-            <div className="bg-black/40 flex-1 backdrop-blur-sm p-6 md:p-8 2xl:py-[30px] 2xl:px-[30px] rounded-2xl">
+            <div className="relative overflow-hidden bg-black/60 flex-1 backdrop-blur-sm p-6 md:p-8 2xl:py-[30px] 2xl:px-[30px] rounded-2xl">
               <div className="space-y-3 md:space-y-6">
                 {tabContent[activeTab].items.map((item, idx) => (
                   <div key={idx}>
@@ -467,7 +531,7 @@ export default function WhySaudiInvest() {
                       <div className="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center ">
                         {item.icon}
                       </div>
-                      <p className="md:min-w-[418px] text-white/80 text-base md:text-xl leading-relaxed">
+                      <p className="md:min-w-[418px] text-white/80 text-base bukra-regular md:text-xl leading-relaxed">
                         {item.text}
                       </p>
                     </div>
@@ -476,6 +540,47 @@ export default function WhySaudiInvest() {
                     )}
                   </div>
                 ))}
+              </div>
+
+              {/* shape background */}
+              <div className=" absolute -bottom-[120px] -right-[140px] w-[697.75px] h-[361px] rounded-full overflow-hidden">
+                <svg
+                  width="562"
+                  height="244"
+                  viewBox="0 0 562 244"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity="0.6" filter="url(#filter0_f_20879_6501)">
+                    <path
+                      d="M1152.9 714.501C686.709 524.233 319.663 932.839 168.431 843.876C-21.6776 732.044 228.547 303.79 471.121 211.041C757.049 101.714 1468.83 843.442 1152.9 714.501Z"
+                      fill="#00A7A2"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_f_20879_6501"
+                      x="-98.5973"
+                      y="0"
+                      width="1530.73"
+                      height="1056.73"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="BackgroundImageFix"
+                        result="shape"
+                      />
+                      <feGaussianBlur
+                        stdDeviation="100"
+                        result="effect1_foregroundBlur_20879_6501"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
               </div>
             </div>
           </div>
