@@ -495,7 +495,7 @@ export default function WhySaudiInvest() {
           {/* right: Vision 2030 with Tabs */}
           <div className="flex flex-col lg:flex-row gap-6 md:gap-0 flex-1 items-start">
             {/* Tabs/Pillars */}
-            <div className="lg:max-w-[320px] xl:max-w-[360px] space-y-3  mb-5 lg:mb-0 md:mt-10">
+            <div className="lg:max-w-[320px] xl:max-w-[360px] space-y-3  sm:mb-5 lg:mb-0 md:mt-10">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
