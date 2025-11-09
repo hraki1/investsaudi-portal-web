@@ -377,7 +377,7 @@ export default function Incentives() {
                             color-interpolation-filters="sRGB"
                           >
                             <feFlood
-                              flood-opacity="0"
+                              floodOpacity="0"
                               result="BackgroundImageFix"
                             />
                             <feBlend
@@ -560,7 +560,7 @@ export default function Incentives() {
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -692,7 +692,7 @@ export default function Incentives() {
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -830,7 +830,7 @@ export default function Incentives() {
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -964,7 +964,7 @@ export default function Incentives() {
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"
@@ -1093,7 +1093,7 @@ export default function Incentives() {
                       filterUnits="userSpaceOnUse"
                       color-interpolation-filters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
                         mode="normal"
                         in="SourceGraphic"

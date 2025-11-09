@@ -407,7 +407,7 @@ export default function NationalPrograms() {
           {/* Right Side - RHQ Program Card */}
           <div className="lg:col-span-9 bg-[#FFFFFFB2]/70 p-2 md:p-2 rounded-4xl">
             <div
-              className="rounded-3xl p-4 md:p-10 bg-white shadow-xl"
+              className="rounded-3xl p-4 md:p-8 bg-white shadow-xl"
               style={{
                 background:
                   "linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 50%, #F3F4F6 100%)",
@@ -425,11 +425,11 @@ export default function NationalPrograms() {
               </p>
 
               {/* Stages Grid */}
-              <div className="space-y-6">
+              <div className="space-y-2">
                 {rhqStages.map((stage) => (
                   <div
                     key={stage.id}
-                    className="relative overflow-hidden flex flex-col md:flex-row items-start md:items-center gap-4 p-5 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md"
+                    className="relative overflow-hidden flex flex-col md:flex-row items-start md:items-center gap-4 p-5 rounded-2xl transition-all duration-300 hover:shadow-md"
                   >
                     {/* left side content */}
                     <div>
@@ -457,7 +457,7 @@ export default function NationalPrograms() {
                     </div>
 
                     {/* right side Image */}
-                    <div className="w-[241px] h-[151px] overflow-hidden shadow-md shrink-0">
+                    <div className="w-[241px] h-[151px] overflow-hidden shadow-md rounded-xl shrink-0">
                       <div className="w-full h-full overflow-hidden rounded-xl border border-white/42 flex items-center justify-center">
                         <img
                           src={stage.image}
@@ -500,7 +500,7 @@ export default function NationalPrograms() {
                             color-interpolation-filters="sRGB"
                           >
                             <feFlood
-                              flood-opacity="0"
+                              floodOpacity="0"
                               result="BackgroundImageFix"
                             />
                             <feBlend
@@ -522,7 +522,7 @@ export default function NationalPrograms() {
               </div>
 
               {/* Visit RHQ Button */}
-              <div className="flex justify-end mt-8">
+              <div className="flex justify-end mt-3">
                 <button className="flex gap-5 items-center md:text-lg bukra-medium px-6 py-3  border border-[#A3A3A3] rounded-full text-black transition-all duration-300 hover:scale-105 cursor-pointer">
                   <span>Visit RHQ</span>
                   <div>
