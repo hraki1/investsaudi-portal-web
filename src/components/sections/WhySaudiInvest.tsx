@@ -565,7 +565,7 @@ export default function WhySaudiInvest() {
                       width="1530.73"
                       height="1056.73"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
                       <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend

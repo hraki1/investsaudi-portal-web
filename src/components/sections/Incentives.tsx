@@ -374,7 +374,7 @@ export default function Incentives() {
                             width="969.193"
                             height="647.497"
                             filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
+                            colorInterpolationFilters="sRGB"
                           >
                             <feFlood
                               floodOpacity="0"
@@ -558,7 +558,7 @@ export default function Incentives() {
                       width="969.193"
                       height="647.497"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
                       <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
@@ -653,7 +653,7 @@ export default function Incentives() {
                       height="47"
                       rx="23.5"
                       fill="black"
-                      fill-opacity="0.31"
+                      fillOpacity="0.31"
                     />
                     <path
                       d="M28.8966 16.5865C29.4474 16.5865 29.9135 17.0526 29.9135 17.6034V27.7716C29.9135 28.3648 29.4474 28.7885 28.8966 28.7885C28.3035 28.7885 27.8798 28.3648 27.8798 27.7716V20.0607L18.0928 29.8477C17.6692 30.2713 17.0337 30.2713 16.6523 29.8477C16.2287 29.4663 16.2287 28.8308 16.6523 28.4495L26.4393 18.6626H18.7284C18.1352 18.6626 17.7115 18.1965 17.7115 17.6457C17.7115 17.0526 18.1352 16.6289 18.7284 16.6289H28.8966V16.5865Z"
@@ -690,7 +690,7 @@ export default function Incentives() {
                       width="969.193"
                       height="647.497"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
                       <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
@@ -791,7 +791,7 @@ export default function Incentives() {
                       height="47"
                       rx="23.5"
                       fill="black"
-                      fill-opacity="0.31"
+                      fillOpacity="0.31"
                     />
                     <path
                       d="M28.8966 16.5865C29.4474 16.5865 29.9135 17.0526 29.9135 17.6034V27.7716C29.9135 28.3648 29.4474 28.7885 28.8966 28.7885C28.3035 28.7885 27.8798 28.3648 27.8798 27.7716V20.0607L18.0928 29.8477C17.6692 30.2713 17.0337 30.2713 16.6523 29.8477C16.2287 29.4663 16.2287 28.8308 16.6523 28.4495L26.4393 18.6626H18.7284C18.1352 18.6626 17.7115 18.1965 17.7115 17.6457C17.7115 17.0526 18.1352 16.6289 18.7284 16.6289H28.8966V16.5865Z"
@@ -828,7 +828,7 @@ export default function Incentives() {
                       width="969.193"
                       height="647.497"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
                       <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
@@ -925,7 +925,7 @@ export default function Incentives() {
                       height="47"
                       rx="23.5"
                       fill="black"
-                      fill-opacity="0.31"
+                      fillOpacity="0.31"
                     />
                     <path
                       d="M28.8966 16.5865C29.4474 16.5865 29.9135 17.0526 29.9135 17.6034V27.7716C29.9135 28.3648 29.4474 28.7885 28.8966 28.7885C28.3035 28.7885 27.8798 28.3648 27.8798 27.7716V20.0607L18.0928 29.8477C17.6692 30.2713 17.0337 30.2713 16.6523 29.8477C16.2287 29.4663 16.2287 28.8308 16.6523 28.4495L26.4393 18.6626H18.7284C18.1352 18.6626 17.7115 18.1965 17.7115 17.6457C17.7115 17.0526 18.1352 16.6289 18.7284 16.6289H28.8966V16.5865Z"
@@ -962,7 +962,7 @@ export default function Incentives() {
                       width="969.193"
                       height="647.497"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
                       <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend
@@ -1054,7 +1054,7 @@ export default function Incentives() {
                       height="47"
                       rx="23.5"
                       fill="black"
-                      fill-opacity="0.31"
+                      fillOpacity="0.31"
                     />
                     <path
                       d="M28.8966 16.5865C29.4474 16.5865 29.9135 17.0526 29.9135 17.6034V27.7716C29.9135 28.3648 29.4474 28.7885 28.8966 28.7885C28.3035 28.7885 27.8798 28.3648 27.8798 27.7716V20.0607L18.0928 29.8477C17.6692 30.2713 17.0337 30.2713 16.6523 29.8477C16.2287 29.4663 16.2287 28.8308 16.6523 28.4495L26.4393 18.6626H18.7284C18.1352 18.6626 17.7115 18.1965 17.7115 17.6457C17.7115 17.0526 18.1352 16.6289 18.7284 16.6289H28.8966V16.5865Z"
@@ -1091,7 +1091,7 @@ export default function Incentives() {
                       width="969.193"
                       height="647.497"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
                       <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feBlend

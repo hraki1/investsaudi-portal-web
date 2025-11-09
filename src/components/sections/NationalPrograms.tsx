@@ -486,7 +486,7 @@ export default function NationalPrograms() {
                             ry="256.257"
                             transform="rotate(-19.7487 34.4166 -233.587)"
                             fill={stage.shapeColor}
-                            fill-opacity="0.3"
+                            fillOpacity="0.3"
                           />
                         </g>
                         <defs>
@@ -497,7 +497,7 @@ export default function NationalPrograms() {
                             width="1897.42"
                             height="1267.62"
                             filterUnits="userSpaceOnUse"
-                            color-interpolation-filters="sRGB"
+                            colorInterpolationFilters="sRGB"
                           >
                             <feFlood
                               floodOpacity="0"
