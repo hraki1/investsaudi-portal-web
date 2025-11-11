@@ -28,6 +28,19 @@ interface StatCard {
   isNewRecord?: boolean;
 }
 
+interface QuoteSegment {
+  text: string;
+  highlight?: boolean;
+}
+
+interface VisionQuoteContent {
+  quoteSegments: QuoteSegment[];
+  leaderName: string;
+  leaderTitle: string;
+  leaderImageSrc: string;
+  leaderImageAlt: string;
+}
+
 export default function WhySaudiInvest() {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<"economy" | "society" | "nation">(
@@ -52,6 +65,27 @@ export default function WhySaudiInvest() {
     "hover:border-cyan-400/60 hover:bg-cyan-400/5";
   const activeTabLeftBarClass =
     "bg-[linear-gradient(181.86deg,_#00A7A2_5.72%,_#0179C2_49.63%,_#814A98_93.54%)]";
+
+  const visionQuoteContent: VisionQuoteContent = {
+    quoteSegments: [
+      {
+        text: "“Our Vision is a strong, thriving, and stable Saudi Arabia that provides opportunity for all. Our Vision is a ",
+      },
+      { text: "tolerant country ", highlight: true },
+      {
+        text: "with Islam as its constitution and moderation as its method. We will welcome ",
+      },
+      { text: "qualified", highlight: true },
+      { text: " individuals from all over the world and will respect those who have come to " },
+      { text: "join our journey and our success", highlight: true },
+      { text: ".”" },
+    ],
+    leaderName: "HRH Mohammed bin Salman Crown",
+    leaderTitle:
+      "Prince, Prime Minister, and Chairman of the Council of Economic and Development Affairs",
+    leaderImageSrc: "/mbs.png",
+    leaderImageAlt: "Crown Prince",
+  };
 
   const tabContent = {
     economy: {
@@ -458,34 +492,31 @@ export default function WhySaudiInvest() {
             {/* Vision Quote */}
             <div className="h-full w-full bg-black/60 backdrop-blur-2xl p-6 md:p-[40px] md:pb-[30px] rounded-2xl flex flex-col justify-between">
               <p className="text-white/90 text-base md:text-[22px] leading-relaxed bukra-regular ">
-                “Our Vision is a strong, thriving, and stable Saudi Arabia that
-                provides opportunity for all. Our Vision is a{" "}
-                <span className="text-[#00A7A2]">tolerant country </span> with
-                Islam as its constitution and moderation as its method. We will
-                welcome <span className="text-[#00A7A2]">qualified</span>{" "}
-                individuals from all over the world and will respect those who
-                have come to{" "}
-                <span className="text-[#00A7A2]">
-                  join our journey and our success
-                </span>{" "}
-                .”
+              {visionQuoteContent.quoteSegments.map((segment, index) =>
+                segment.highlight ? (
+                  <span key={index} className="text-[#00A7A2]">
+                    {segment.text}
+                  </span>
+                ) : (
+                  <span key={index}>{segment.text}</span>
+                )
+              )}
               </p>
               {/* Crown Prince */}
               <div className="flex justify-between items-start gap-4 md:gap-[15px] mt-8  ">
                 <div className="w-20 md:w-[134px] h-32 md:min-h-[168.5806427001953px] p-2  rounded-xl overflow-hidden shrink-0">
                   <img
-                    src="/mbs.png"
-                    alt="Crown Prince"
+                  src={visionQuoteContent.leaderImageSrc}
+                  alt={visionQuoteContent.leaderImageAlt}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className=" flex flex-col items-center text-white ">
                   <h3 className="text-base md:text-xl bukra-bold mb-1">
-                    HRH Mohammed bin Salman Crown
+                  {visionQuoteContent.leaderName}
                   </h3>
                   <p className="text-xs md:text-[16px] text-white bukra-regular">
-                    Prince, Prime Minister, and Chairman of the Council of
-                    Economic and Development Affairs 
+                  {visionQuoteContent.leaderTitle}
                   </p>
                 </div>
               </div>

@@ -393,7 +393,14 @@ export default function StrategicInvestorProgram() {
                     <div className="flex items-center gap-5 md:gap-6 lg:gap-[26px]">
                       {/* Number */}
                       <span className="relative mr-2 inline-flex items-center">
-                        <span className="pillar-number text-6xl md:text-[70px] lg:text-[78px] font-extrabold leading-none tracking-tight text-white/40 group-hover:text-white/80 transition-colors duration-300">
+                        <span
+                          className="text-6xl md:text-[70px] lg:text-[78px] font-extrabold leading-none tracking-tight text-white/40 group-hover:text-white/80 transition-colors duration-300"
+                          style={{
+                            WebkitTextFillColor: "transparent",
+                            WebkitTextStrokeWidth: "1px",
+                            WebkitTextStrokeColor: "currentColor",
+                          }}
+                        >
                           {formattedNumber}
                         </span>
                         <span className="absolute top-0 -right-3 w-px h-full rounded-full bg-linear-to-b from-transparent via-white/20 to-transparent"></span>
@@ -470,13 +477,6 @@ export default function StrategicInvestorProgram() {
           }}
         ></div>
       </div>
-      <style jsx global>{`
-        .pillar-number {
-          -webkit-text-fill-color: transparent;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: currentColor;
-        }
-      `}</style>
     </section>
   );
 }

@@ -7,7 +7,7 @@ export default function SaudiMinistryOfIndustry() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_20396_22611)">
+      <g clipPath="url(#clip0_20396_22611)">
         <path
           d="M2.32601 7.74271L2.99062 7.00082L3.73251 7.74271H3.86389L4.65987 6.86944L3.79434 6.00391H3.66296L2.99062 6.73807L2.25646 6.00391H2.19464L1.3291 6.86944L2.19464 7.74271H2.32601Z"
           fill="white"
@@ -298,25 +298,25 @@ export default function SaudiMinistryOfIndustry() {
           y2="32.2354"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.13" stop-color="#DDD9D7" />
-          <stop offset="0.16" stop-color="#CECBC9" />
-          <stop offset="0.24" stop-color="#A7A7A6" />
-          <stop offset="0.25" stop-color="#A2A2A1" />
-          <stop offset="0.28" stop-color="#A9A9A9" />
-          <stop offset="0.32" stop-color="#BBBBBB" />
-          <stop offset="0.35" stop-color="#ACACAC" />
-          <stop offset="0.42" stop-color="#808181" />
-          <stop offset="0.48" stop-color="#8D8E8E" />
-          <stop offset="0.6" stop-color="#B1B1B1" />
-          <stop offset="0.7" stop-color="#D6D6D6" />
-          <stop offset="0.72" stop-color="#CCCDCD" />
-          <stop offset="0.77" stop-color="#B2B4B4" />
-          <stop offset="0.83" stop-color="#878B8C" />
-          <stop offset="0.9" stop-color="#4D5455" />
-          <stop offset="0.92" stop-color="#707475" />
-          <stop offset="0.96" stop-color="#9FA1A1" />
-          <stop offset="0.98" stop-color="#BDBDBD" />
-          <stop offset="1" stop-color="#C8C7C7" />
+          <stop offset="0.13" stopColor="#DDD9D7" />
+          <stop offset="0.16" stopColor="#CECBC9" />
+          <stop offset="0.24" stopColor="#A7A7A6" />
+          <stop offset="0.25" stopColor="#A2A2A1" />
+          <stop offset="0.28" stopColor="#A9A9A9" />
+          <stop offset="0.32" stopColor="#BBBBBB" />
+          <stop offset="0.35" stopColor="#ACACAC" />
+          <stop offset="0.42" stopColor="#808181" />
+          <stop offset="0.48" stopColor="#8D8E8E" />
+          <stop offset="0.6" stopColor="#B1B1B1" />
+          <stop offset="0.7" stopColor="#D6D6D6" />
+          <stop offset="0.72" stopColor="#CCCDCD" />
+          <stop offset="0.77" stopColor="#B2B4B4" />
+          <stop offset="0.83" stopColor="#878B8C" />
+          <stop offset="0.9" stopColor="#4D5455" />
+          <stop offset="0.92" stopColor="#707475" />
+          <stop offset="0.96" stopColor="#9FA1A1" />
+          <stop offset="0.98" stopColor="#BDBDBD" />
+          <stop offset="1" stopColor="#C8C7C7" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_20396_22611"
@@ -326,20 +326,20 @@ export default function SaudiMinistryOfIndustry() {
           y2="121.96"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.03" stop-color="#4E4D4D" />
-          <stop offset="0.04" stop-color="#636363" />
-          <stop offset="0.06" stop-color="#737474" />
-          <stop offset="0.08" stop-color="#7F7F80" />
-          <stop offset="0.11" stop-color="#858687" />
-          <stop offset="0.18" stop-color="#878889" />
-          <stop offset="0.35" stop-color="#4E4D4D" />
-          <stop offset="0.39" stop-color="#6B6A6A" />
-          <stop offset="0.45" stop-color="#888787" />
-          <stop offset="0.51" stop-color="#9F9E9E" />
-          <stop offset="0.58" stop-color="#B2B1B1" />
-          <stop offset="0.66" stop-color="#BEBDBD" />
-          <stop offset="0.77" stop-color="#C6C5C5" />
-          <stop offset="1" stop-color="#C8C7C7" />
+          <stop offset="0.03" stopColor="#4E4D4D" />
+          <stop offset="0.04" stopColor="#636363" />
+          <stop offset="0.06" stopColor="#737474" />
+          <stop offset="0.08" stopColor="#7F7F80" />
+          <stop offset="0.11" stopColor="#858687" />
+          <stop offset="0.18" stopColor="#878889" />
+          <stop offset="0.35" stopColor="#4E4D4D" />
+          <stop offset="0.39" stopColor="#6B6A6A" />
+          <stop offset="0.45" stopColor="#888787" />
+          <stop offset="0.51" stopColor="#9F9E9E" />
+          <stop offset="0.58" stopColor="#B2B1B1" />
+          <stop offset="0.66" stopColor="#BEBDBD" />
+          <stop offset="0.77" stopColor="#C6C5C5" />
+          <stop offset="1" stopColor="#C8C7C7" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_20396_22611"
@@ -349,31 +349,31 @@ export default function SaudiMinistryOfIndustry() {
           y2="-7.15874"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.03" stop-color="#676767" />
-          <stop offset="0.09" stop-color="#7E7E7D" />
-          <stop offset="0.16" stop-color="#929291" />
-          <stop offset="0.23" stop-color="#9E9E9D" />
-          <stop offset="0.29" stop-color="#A2A2A1" />
-          <stop offset="0.35" stop-color="#9A9A99" />
-          <stop offset="0.44" stop-color="#838383" />
-          <stop offset="0.52" stop-color="#676767" />
-          <stop offset="0.53" stop-color="#6D6D6D" />
-          <stop offset="0.59" stop-color="#979797" />
-          <stop offset="0.64" stop-color="#B1B1B1" />
-          <stop offset="0.67" stop-color="#BBBBBB" />
-          <stop offset="0.71" stop-color="#B9B9B9" />
-          <stop offset="0.73" stop-color="#B2B3B4" />
-          <stop offset="0.74" stop-color="#A6A8AA" />
-          <stop offset="0.75" stop-color="#95999C" />
-          <stop offset="0.76" stop-color="#868B8F" />
-          <stop offset="0.79" stop-color="#8B9093" />
-          <stop offset="0.83" stop-color="#9A9DA0" />
-          <stop offset="0.87" stop-color="#B3B4B5" />
-          <stop offset="0.9" stop-color="#C8C7C7" />
-          <stop offset="0.92" stop-color="#C3C2C3" />
-          <stop offset="0.95" stop-color="#B4B4B6" />
-          <stop offset="0.98" stop-color="#9B9EA0" />
-          <stop offset="1" stop-color="#868B8F" />
+          <stop offset="0.03" stopColor="#676767" />
+          <stop offset="0.09" stopColor="#7E7E7D" />
+          <stop offset="0.16" stopColor="#929291" />
+          <stop offset="0.23" stopColor="#9E9E9D" />
+          <stop offset="0.29" stopColor="#A2A2A1" />
+          <stop offset="0.35" stopColor="#9A9A99" />
+          <stop offset="0.44" stopColor="#838383" />
+          <stop offset="0.52" stopColor="#676767" />
+          <stop offset="0.53" stopColor="#6D6D6D" />
+          <stop offset="0.59" stopColor="#979797" />
+          <stop offset="0.64" stopColor="#B1B1B1" />
+          <stop offset="0.67" stopColor="#BBBBBB" />
+          <stop offset="0.71" stopColor="#B9B9B9" />
+          <stop offset="0.73" stopColor="#B2B3B4" />
+          <stop offset="0.74" stopColor="#A6A8AA" />
+          <stop offset="0.75" stopColor="#95999C" />
+          <stop offset="0.76" stopColor="#868B8F" />
+          <stop offset="0.79" stopColor="#8B9093" />
+          <stop offset="0.83" stopColor="#9A9DA0" />
+          <stop offset="0.87" stopColor="#B3B4B5" />
+          <stop offset="0.9" stopColor="#C8C7C7" />
+          <stop offset="0.92" stopColor="#C3C2C3" />
+          <stop offset="0.95" stopColor="#B4B4B6" />
+          <stop offset="0.98" stopColor="#9B9EA0" />
+          <stop offset="1" stopColor="#868B8F" />
         </linearGradient>
         <clipPath id="clip0_20396_22611">
           <rect width="153.702" height="43.8796" fill="white" />

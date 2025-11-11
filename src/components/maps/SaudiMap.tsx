@@ -129,6 +129,7 @@ const SvgComponent = (props: SvgComponentProps) => {
         <defs>
           <filter id="glassGlow" x="-40%" y="-40%" width="180%" height="180%">
             {/* <!-- Step 1: Background blur (simulate backdrop-filter: blur(46px)) --> */}
+          
 
             {/* <!-- Step 3: Blend the highlight with the blurred background --> */}
             <feBlend

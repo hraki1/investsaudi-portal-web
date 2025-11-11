@@ -44,10 +44,10 @@ export default function KAECLogo() {
           y2="3.77963"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#7DC357" />
-          <stop offset="0.2112" stop-color="#6FAF6D" />
-          <stop offset="0.7404" stop-color="#4F7FA1" />
-          <stop offset="1" stop-color="#426DB5" />
+          <stop stopColor="#7DC357" />
+          <stop offset="0.2112" stopColor="#6FAF6D" />
+          <stop offset="0.7404" stopColor="#4F7FA1" />
+          <stop offset="1" stopColor="#426DB5" />
         </linearGradient>
       </defs>
     </svg>

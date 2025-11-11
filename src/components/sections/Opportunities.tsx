@@ -132,7 +132,7 @@ export default function Opportunities() {
               }}
             ></div>
             {activeRegion && (
-              <div className="relative z-10 space-y-4">
+              <div className="relative z-10 space-y-2">
                 {/* Key Figures */}
                 <div>
                   <div className="flex flex-col gap-2 mb-4 md:mb-6">
