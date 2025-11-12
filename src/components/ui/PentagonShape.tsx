@@ -53,9 +53,9 @@ export default function PentagonShape(prop: Prop) {
           width="372.259"
           height="347.743"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -90,10 +90,10 @@ export default function PentagonShape(prop: Prop) {
           y2="357.467"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.0401177" stop-color="white" />
-          <stop offset="0.3" stop-color="#F6F6F6" />
-          <stop offset="0.77" stop-color="white" stop-opacity="0" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop offset="0.0401177" stopColor="white" />
+          <stop offset="0.3" stopColor="#F6F6F6" />
+          <stop offset="0.77" stopColor="white" stopOpacity="0" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_116_10219"
@@ -103,8 +103,8 @@ export default function PentagonShape(prop: Prop) {
           y2="216.967"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="#D4D4D4" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="#D4D4D4" />
         </linearGradient>
       </defs>
     </svg>
