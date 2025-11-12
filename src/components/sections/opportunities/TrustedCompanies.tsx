@@ -2,9 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
+import Marquee from "react-fast-marquee";
 import { CgArrowTopRight } from "react-icons/cg";
 
 type TrustedCompany = {
@@ -94,36 +92,16 @@ type LogoRowProps = {
 function LogoRow({ companies, reverse = false }: LogoRowProps) {
   return (
     <div className="w-full">
-      <div className="relative left-1/2 w-screen -translate-x-1/2 cursor-pointer select-none overflow-hidden">
-        <Swiper
-          className="trusted-companies-swiper px-4 sm:px-6 lg:px-8"
-          modules={[Navigation, Autoplay, Pagination, FreeMode]}
-          slidesPerView="auto"
-          speed={6000}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-            reverseDirection: reverse,
-            // pauseOnMouseEnter: true,
-          }}
-          allowTouchMove={true}
-          loopAdditionalSlides={companies.length}
-          breakpoints={{
-            320: { slidesPerView: 3.2, spaceBetween: 16 },
-            480: { slidesPerView: 3.2, spaceBetween: 18 },
-            640: { slidesPerView: 4.2, spaceBetween: 20 },
-            768: { slidesPerView: 5, spaceBetween: 24 },
-            1024: { slidesPerView: 5.5, spaceBetween: 24 },
-            1280: { slidesPerView: 6.5, spaceBetween: 24 },
-          }}
-          loop
-          freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
+      <div className="trusted-companies-marquee relative left-1/2 w-screen -translate-x-1/2 select-none overflow-hidden px-4 sm:px-6 lg:px-8">
+        <Marquee
+          direction={reverse ? "right" : "left"}
+          speed={40}
+          pauseOnHover
+          gradient={false}
+          className="flex items-center gap-6"
         >
-          {[...companies, ...companies].map((company, idx) => (
-            <SwiperSlide
-              key={`${company.name}-${idx}`}
-              className="trusted-companies-slide"
-            >
+          {companies.map((company) => (
+            <div key={company.name} className="trusted-company-card">
               <div className="flex h-28 items-center justify-center rounded-3xl bg-white px-5 md:px-6">
                 <img
                   src={company.logo}
@@ -132,9 +110,9 @@ function LogoRow({ companies, reverse = false }: LogoRowProps) {
                   loading="lazy"
                 />
               </div>
-            </SwiperSlide>
+            </div>
           ))}
-        </Swiper>
+        </Marquee>
       </div>
     </div>
   );
