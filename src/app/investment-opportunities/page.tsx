@@ -8,7 +8,7 @@ export default function InvestmentOpportunities() {
     <div className="relative">
       <ScrollProgressIndicator />
       <Hero />
-      <PathInvesting />
+      {/* <PathInvesting /> */}
       <TrustedCompanies />
     </div>
   );
