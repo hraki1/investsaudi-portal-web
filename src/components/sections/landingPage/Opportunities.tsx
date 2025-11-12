@@ -6,9 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import Image from "next/image";
-import SaudiMap from "../maps/SaudiMap";
-import { regionData } from "@/app/data/regionData";
-import CounterNumber from "../ui/CounterNumber";
+import SaudiMap from "../../maps/SaudiMap";
+import { regionData } from "@/data/regionData";
+import CounterNumber from "../../ui/CounterNumber";
 import Link from "next/link";
 
 export default function Opportunities() {

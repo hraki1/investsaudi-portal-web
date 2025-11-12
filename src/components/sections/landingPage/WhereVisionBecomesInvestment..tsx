@@ -3,7 +3,7 @@
 
 import i18n from "@/lib/i18n";
 import { useTranslation } from "react-i18next";
-import CounterNumber from "../shared/CounterNumber";
+import CounterNumber from "../../shared/CounterNumber";
 
 interface WhereVisionBecomesInvestmentProps {
   activeTab: "Competitiveness" | "Macroeconomic  Overview";

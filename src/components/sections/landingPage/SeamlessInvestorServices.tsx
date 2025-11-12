@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import PentagonShape from "@/components/ui/PentagonShape";
 import { ReactNode, useMemo, useState } from "react";
-import PentagonShape from "../ui/PentagonShape";
 
 type StatItem = {
   label: string;

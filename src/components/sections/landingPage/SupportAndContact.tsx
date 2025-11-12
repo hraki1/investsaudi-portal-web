@@ -5,7 +5,7 @@ import Image from "next/image";
 import { HiPhone, HiEnvelope } from "react-icons/hi2";
 import { FaXTwitter } from "react-icons/fa6";
 import { PiGlobe } from "react-icons/pi";
-import PhoneNumberInput from "../ui/PhoneNumberInput";
+import PhoneNumberInput from "@/components/ui/PhoneNumberInput";
 
 export default function SupportAndContact() {
   const [fileName, setFileName] = useState<string>("");

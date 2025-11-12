@@ -3,12 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi2";
-import SaudiLogoGruop from "../logos/SaudiLogoGruop";
-import SaudiMediaLogo from "../logos/SaudiMediaLogo";
-import SaudiMinistryOfIndustry from "../logos/SaudiMinistryOfIndustry";
-import RHQLogo from "../logos/RHQLogo";
-import SpecialIntegratedLogisticsZoneCompanyLogo from "../logos/SpecialIntegratedLogisticsZoneCompanyLogo";
-import KAECLogo from "../logos/KAECLogo";
+import SaudiLogoGruop from "../../logos/SaudiLogoGruop";
+import SaudiMediaLogo from "../../logos/SaudiMediaLogo";
+import SaudiMinistryOfIndustry from "../../logos/SaudiMinistryOfIndustry";
+import RHQLogo from "../../logos/RHQLogo";
+import SpecialIntegratedLogisticsZoneCompanyLogo from "../../logos/SpecialIntegratedLogisticsZoneCompanyLogo";
+import KAECLogo from "../../logos/KAECLogo";
 
 interface StatItem {
   id: number;

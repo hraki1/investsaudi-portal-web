@@ -3,7 +3,8 @@
 
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "./NavbarLanguageSwitcher";
+import NavbarLanguageSwitcher from "./NavbarLanguageSwitcher";
+import Link from "next/link";
 
 export default function Navbar() {
   const { t } = useTranslation();
@@ -11,7 +12,7 @@ export default function Navbar() {
 
   const navigationLinks = [
     { href: "", label: "why Saudi" },
-    { href: "", label: "sectors & opportunities" },
+    { href: "/investment-opportunities", label: "sectors & opportunities" },
     { href: "", label: "setup & scale" },
     { href: "", label: "programs & incentives" },
     { href: "", label: "knowledge" },
@@ -24,13 +25,13 @@ export default function Navbar() {
         <div className=" mx-auto px-4 sm:px-4 lg:px-5 py-3 md:py-3">
           <div className="flex items-center justify-between lg:my-2">
             {/* Logo */}
-            <div className="flex items-center">
+            <Link href="/" className="flex items-center">
               <img
                 src="/Navbar/logo.png"
                 alt="logo"
                 className="h-8 md:h-[50px] w-auto object-contain"
               />
-            </div>
+            </Link>
 
             {/* Navigation Links - Desktop */}
             <div className="hidden lg:flex items-center gap-5 lg:gap-5 xl:gap-6 rtl:space-x-reverse">
@@ -79,7 +80,7 @@ export default function Navbar() {
                   />
                 </svg>
               </button>
-              <LanguageSwitcher />
+              <NavbarLanguageSwitcher />
               <div className="hidden md:block text-white text-xs">
                 <div className="text-right leading-tight">
                   <img
