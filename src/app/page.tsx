@@ -14,14 +14,16 @@ import StrategicInvestorProgram from "@/components/sections/landingPage/Strategi
 import SuccessStories from "@/components/sections/landingPage/SuccessStories";
 import SupportAndContact from "@/components/sections/landingPage/SupportAndContact";
 import Talent from "@/components/sections/landingPage/Talent";
-import Chatbot from "@/components/shared/Chatbot";
+// import Chatbot from "@/components/shared/Chatbot";
 import Unlocking from "@/components/sections/landingPage/Unlocking";
+// import TrustedCompanies from "@/components/sections/opportunities/TrustedCompanies";
 
 export default function Home() {
   return (
     <main>
       <HeroContainer />
       {/* <InvestorServices /> */}
+      {/* <TrustedCompanies /> */}
       <SuccessStories />
       {/* <Hero />
         <Seamless Investor Services /> */}
@@ -38,7 +40,7 @@ export default function Home() {
       <RegulatoryAgreement />
       <SupportAndContact />
       <QRCard />
-      <Chatbot />
+      {/* <Chatbot /> */}
     </main>
   );
 }

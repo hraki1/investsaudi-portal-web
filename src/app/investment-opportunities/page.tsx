@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/opportunities/Hero";
 import PathInvesting from "@/components/sections/opportunities/PathInvesting";
+import TrustedCompanies from "@/components/sections/opportunities/TrustedCompanies";
 import ScrollProgressIndicator from "@/components/ui/ScrollProgressIndicator";
 
 export default function InvestmentOpportunities() {
@@ -8,6 +9,7 @@ export default function InvestmentOpportunities() {
       <ScrollProgressIndicator />
       <Hero />
       <PathInvesting />
+      <TrustedCompanies />
     </div>
   );
 }

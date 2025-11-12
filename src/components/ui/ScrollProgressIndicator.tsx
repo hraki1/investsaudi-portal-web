@@ -48,7 +48,7 @@ export default function ScrollProgressIndicator({
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const isDarkBackground = progress >= 0.6;
+  const isDarkBackground = progress >= 0.5;
 
   return (
     <div
