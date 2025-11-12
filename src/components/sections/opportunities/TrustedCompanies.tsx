@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { Autoplay, FreeMode } from "swiper/modules";
+import { Autoplay, FreeMode, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { CgArrowTopRight } from "react-icons/cg";
@@ -96,27 +96,35 @@ function LogoRow({ companies, reverse = false }: LogoRowProps) {
     <div className="w-full">
       <div className="relative left-1/2 w-screen -translate-x-1/2 cursor-pointer select-none overflow-hidden">
         <Swiper
-          className="px-4 sm:px-6 lg:px-8"
-          modules={[Autoplay, FreeMode]}
+          className="trusted-companies-swiper px-4 sm:px-6 lg:px-8"
+          modules={[Navigation, Autoplay, Pagination, FreeMode]}
           slidesPerView="auto"
-          spaceBetween={24}
-          loop
-          allowTouchMove={false}
-          freeMode={{ enabled: true, momentum: false }}
-          speed={25000}
+          speed={6000}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
-            pauseOnMouseEnter: false,
             reverseDirection: reverse,
+            // pauseOnMouseEnter: true,
           }}
+          allowTouchMove={true}
+          loopAdditionalSlides={companies.length}
+          breakpoints={{
+            320: { slidesPerView: 3.2, spaceBetween: 16 },
+            480: { slidesPerView: 3.2, spaceBetween: 18 },
+            640: { slidesPerView: 4.2, spaceBetween: 20 },
+            768: { slidesPerView: 5, spaceBetween: 24 },
+            1024: { slidesPerView: 5.5, spaceBetween: 24 },
+            1280: { slidesPerView: 6.5, spaceBetween: 24 },
+          }}
+          loop
+          freeMode={{ enabled: true, momentum: false, momentumBounce: false }}
         >
           {[...companies, ...companies].map((company, idx) => (
             <SwiperSlide
               key={`${company.name}-${idx}`}
-              style={{ width: "240px", maxWidth: "260px" }}
+              className="trusted-companies-slide"
             >
-              <div className="flex h-28 items-center justify-center rounded-3xl  bg-white">
+              <div className="flex h-28 items-center justify-center rounded-3xl bg-white px-5 md:px-6">
                 <img
                   src={company.logo}
                   alt={company.alt ?? `${company.name} logo`}

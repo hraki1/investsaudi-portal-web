@@ -1,3 +1,17 @@
+.trusted-companies-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.trusted-companies-swiper .trusted-companies-slide {
+  width: clamp(160px, 22vw, 260px) !important;
+  max-width: 260px !important;
+}
+
+@media (max-width: 640px) {
+  .trusted-companies-swiper .trusted-companies-slide {
+    width: clamp(140px, 60vw, 220px) !important;
+  }
+}
 @import "tailwindcss";
 
 body {
