@@ -97,24 +97,24 @@ const Card: React.FC<CardProps> = ({
 
                     <div className="grid grid-cols-5 gap-4 items-start">
                         <dl className='flex flex-col-reverse items-start'>
-                            <dt className="font-medium text-base">Expected investment size</dt>
-                            <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{investment}</dd>
+                            <dt className="font-medium text-sm">Expected investment size</dt>
+                            <dd className="font-semibold text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{investment}</dd>
                         </dl>
                         <dl className='flex flex-col-reverse items-start'>
-                            <dt className="font-medium text-base">Jobs Created</dt>
-                            <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{jobsCreated}</dd>
+                            <dt className="font-medium text-sm">Jobs Created</dt>
+                            <dd className="font-semibold text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{jobsCreated}</dd>
                         </dl>
                         <dl className='flex flex-col-reverse items-start'>
-                            <dt className="font-medium text-base">GDP Impact</dt>
-                            <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{GDPImpact}</dd>
+                            <dt className="font-medium text-sm">GDP Impact</dt>
+                            <dd className="font-semibold text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{GDPImpact}</dd>
                         </dl>
                         <dl className='flex flex-col-reverse items-start'>
-                            <dt className="font-medium text-base">Expected IRR</dt>
-                            <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{IRR}</dd>
+                            <dt className="font-medium text-sm">Expected IRR</dt>
+                            <dd className="font-semibold text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{IRR}</dd>
                         </dl>
                         <dl className='flex flex-col-reverse items-start'>
-                            <dt className="font-medium text-base">Payback Period</dt>
-                            <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{paybackPeriod}</dd>
+                            <dt className="font-medium text-sm">Payback Period</dt>
+                            <dd className="font-semibold text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{paybackPeriod}</dd>
                         </dl>
                     </div>
 

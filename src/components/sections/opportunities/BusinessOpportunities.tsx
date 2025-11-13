@@ -1,3 +1,4 @@
+import Badge from "./ActiveBadge";
 import Card from "./Card";
 import Search from "./Search";
 
@@ -12,7 +13,8 @@ export default async function BusinessOpportunities() {
   return (
     <section className="bg-darkBlue mx-auto p-8 ">
       <div className="max-w-7xl mx-auto flex flex-col gap-7 space-4">
-        <h1 className="text-white text-5xl font-bold">Opportunities your business can capitalise on</h1>
+        <Badge />
+        <h1 className="text-white text-5xl font-bold text-center">Opportunities your business can capitalise on</h1>
         {/* <p className="text-white">Explore various business opportunities available.</p> */}
         <div className="my-4">
           <Search placeholder="Search business opportunities..." />
