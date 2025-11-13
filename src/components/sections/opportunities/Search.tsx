@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CiMoneyBill } from 'react-icons/ci';
-import { FiSearch, FiFilter, FiMapPin, FiDollarSign, FiTrendingUp, FiCalendar, FiTarget } from 'react-icons/fi';
+import { FiSearch, FiFilter, FiMapPin } from 'react-icons/fi';
+import { MdOutlineFactory } from 'react-icons/md';
 
 interface SearchProps {
     onSearch?: (searchTerm: string) => void;
@@ -118,6 +119,7 @@ const Search: React.FC<SearchProps> = ({
                         shadow-sm
                         hover:shadow-md
                         whitespace-nowrap
+                        text-white
                     "
                 >
                     <FiFilter className="h-4 w-4" />
@@ -139,7 +141,7 @@ const Search: React.FC<SearchProps> = ({
                         onChange={handleInvestmentChange}
                         className="
                             w-full 
-                            pl-10 pr-8 py-3                             
+                            pl-10 pr-8 py-3
                             border border-gray-100/20 
                             rounded-lg                            
                             focus:outline-none 
@@ -152,18 +154,18 @@ const Search: React.FC<SearchProps> = ({
                             appearance-none
                         "
                     >
-                        <option value="">Investment size</option>
-                        <option value="small">$1M - $50M</option>
-                        <option value="medium">$50M - $500M</option>
-                        <option value="large">$500M - $2B</option>
-                        <option value="mega">$2B+</option>
+                        <option value="" className="bg-white text-gray-900">Investment size</option>
+                        <option value="small" className="bg-white text-gray-900">$1M - $50M</option>
+                        <option value="medium" className="bg-white text-gray-900">$50M - $500M</option>
+                        <option value="large" className="bg-white text-gray-900">$500M - $2B</option>
+                        <option value="mega" className="bg-white text-gray-900">$2B+</option>
                     </select>
                 </div>
 
                 {/* Sector Filter */}
                 <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
-                        <FiTrendingUp className="h-4 w-4 text-gray-400" />
+                        <MdOutlineFactory className="h-4 w-4 text-gray-400" />
                     </div>
                     <select
                         value={sector}
@@ -171,10 +173,8 @@ const Search: React.FC<SearchProps> = ({
                         className="
                             w-full 
                             pl-10 pr-8 py-3
-                             
                             border border-gray-100/20 
                             rounded-lg 
-                            
                             focus:outline-none 
                             focus:ring-2 
                             focus:ring-blue-500 
@@ -185,13 +185,13 @@ const Search: React.FC<SearchProps> = ({
                             appearance-none
                         "
                     >
-                        <option value="">All Sectors</option>
-                        <option value="energy">Energy</option>
-                        <option value="technology">Technology</option>
-                        <option value="manufacturing">Manufacturing</option>
-                        <option value="tourism">Tourism</option>
-                        <option value="healthcare">Healthcare</option>
-                        <option value="infrastructure">Infrastructure</option>
+                        <option value="" className="bg-white text-gray-900">All Sectors</option>
+                        <option value="energy" className="bg-white text-gray-900">Energy</option>
+                        <option value="technology" className="bg-white text-gray-900">Technology</option>
+                        <option value="manufacturing" className="bg-white text-gray-900">Manufacturing</option>
+                        <option value="tourism" className="bg-white text-gray-900">Tourism</option>
+                        <option value="healthcare" className="bg-white text-gray-900">Healthcare</option>
+                        <option value="infrastructure" className="bg-white text-gray-900">Infrastructure</option>
                     </select>
                 </div>
 
@@ -205,7 +205,7 @@ const Search: React.FC<SearchProps> = ({
                         onChange={handleLocationChange}
                         className="
                             w-full 
-                            pl-10 pr-8 py-3                             
+                            pl-10 pr-8 py-3
                             border border-gray-100/20 
                             rounded-lg                            
                             focus:outline-none 
@@ -218,12 +218,12 @@ const Search: React.FC<SearchProps> = ({
                             appearance-none
                         "
                     >
-                        <option value="">By Region</option>
-                        <option value="riyadh">Riyadh</option>
-                        <option value="jeddah">Jeddah</option>
-                        <option value="dammam">Dammam</option>
-                        <option value="neom">NEOM</option>
-                        <option value="kaec">KAEC</option>
+                        <option value="" className="bg-white text-gray-900">By Region</option>
+                        <option value="riyadh" className="bg-white text-gray-900">Riyadh</option>
+                        <option value="jeddah" className="bg-white text-gray-900">Jeddah</option>
+                        <option value="dammam" className="bg-white text-gray-900">Dammam</option>
+                        <option value="neom" className="bg-white text-gray-900">NEOM</option>
+                        <option value="kaec" className="bg-white text-gray-900">KAEC</option>
                     </select>
                 </div>
 
@@ -246,8 +246,8 @@ const Search: React.FC<SearchProps> = ({
                         hover:shadow-md
                     "
                 >
-                    <FiCalendar className="h-4 w-4" />
-                    Sort
+                    <img src="/logos/gov.svg" alt="Sort Icon" className="h-4 w-4" />
+                    Govt. Opportunities
                 </button>
 
                 {/* Clear Filters Button */}
@@ -269,8 +269,8 @@ const Search: React.FC<SearchProps> = ({
                         hover:shadow-md
                     "
                 >
-                    <FiTarget className="h-4 w-4" />
-                    Clear
+                    <img src="/logos/feras.svg" alt="Sort Icon" className="h-4 w-4" />
+                    Feras Opportunities
                 </button>
             </div>
         </div>
