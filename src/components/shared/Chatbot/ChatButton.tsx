@@ -31,15 +31,7 @@ export default function ChatButton({ isOpen, onToggle }: ChatButtonProps) {
             onClick={onToggle}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="
-              bg-white text-gray-800
-              px-4 md:px-6 py-2 md:py-3 rounded-full
-              shadow-lg hover:shadow-xl
-              font-medium text-xs md:text-sm
-              items-center gap-2
-              whitespace-nowrap
-              hidden md:flex
-            "
+            className="bg-white text-gray-800 px-4 md:px-6 py-2 md:py-3 rounded-full shadow-lg hover:shadow-xl font-medium text-xs md:text-sm items-center gap-2 whitespace-nowrap hidden md:flex"
           >
             <span>{t("chat.button_text", "Chat with us")}</span>
           </motion.button>
@@ -51,13 +43,7 @@ export default function ChatButton({ isOpen, onToggle }: ChatButtonProps) {
         onClick={onToggle}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="
-          relative
-          w-16 h-16 md:w-14 md:h-14 rounded-full
-          bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500
-          flex items-center justify-center
-          shadow-lg hover:shadow-xl
-        "
+        className="relative w-16 h-16 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 flex items-center justify-center shadow-lg hover:shadow-xl"
       >
         {/* Chat icon */}
         <motion.div
@@ -75,14 +61,7 @@ export default function ChatButton({ isOpen, onToggle }: ChatButtonProps) {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0, opacity: 0 }}
               transition={{ type: "spring", stiffness: 500, damping: 30 }}
-              className="
-                absolute -top-1 -right-1
-                bg-red-500 text-white
-                rounded-full w-6 h-6
-                flex items-center justify-center
-                text-xs font-bold
-                shadow-md 
-              "
+              className="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold shadow-md"
             >
               <motion.span
                 animate={{ scale: [1, 1.2, 1] }}

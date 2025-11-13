@@ -16,12 +16,14 @@ import SupportAndContact from "@/components/sections/landingPage/SupportAndConta
 import Talent from "@/components/sections/landingPage/Talent";
 // import Chatbot from "@/components/shared/Chatbot";
 import Unlocking from "@/components/sections/landingPage/Unlocking";
+// import TrustedCompanies from "@/components/sections/opportunities/TrustedCompanies";
 
 export default function Home() {
   return (
     <main>
       <HeroContainer />
       {/* <InvestorServices /> */}
+      {/* <TrustedCompanies /> */}
       <SuccessStories />
       {/* <Hero />
         <Seamless Investor Services /> */}
