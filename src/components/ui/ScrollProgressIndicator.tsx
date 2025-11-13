@@ -11,6 +11,46 @@ const STROKE_WIDTH = 10;
 const RADIUS = (CIRCLE_SIZE - STROKE_WIDTH) / 2;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
+const clamp = (value: number, min = 0, max = 1) =>
+  Math.min(max, Math.max(min, value));
+
+const hexToRgb = (hex: string): [number, number, number] => {
+  const normalized = hex.replace("#", "");
+  const expanded =
+    normalized.length === 3
+      ? normalized
+          .split("")
+          .map((char) => `${char}${char}`)
+          .join("")
+      : normalized;
+
+  const r = parseInt(expanded.slice(0, 2), 16);
+  const g = parseInt(expanded.slice(2, 4), 16);
+  const b = parseInt(expanded.slice(4, 6), 16);
+
+  return [r, g, b];
+};
+
+const rgbToHex = ([r, g, b]: [number, number, number]) =>
+  `#${[r, g, b]
+    .map((channel) => channel.toString(16).padStart(2, "0"))
+    .join("")}`;
+
+const interpolateColor = (start: string, end: string, factor: number) => {
+  const [r1, g1, b1] = hexToRgb(start);
+  const [r2, g2, b2] = hexToRgb(end);
+
+  const clampedFactor = clamp(factor);
+
+  const result: [number, number, number] = [
+    Math.round(r1 + (r2 - r1) * clampedFactor),
+    Math.round(g1 + (g2 - g1) * clampedFactor),
+    Math.round(b1 + (b2 - b1) * clampedFactor),
+  ];
+
+  return rgbToHex(result);
+};
+
 export default function ScrollProgressIndicator({
   className = "",
 }: ScrollProgressIndicatorProps) {
@@ -48,7 +88,7 @@ export default function ScrollProgressIndicator({
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const isDarkBackground = progress >= 0.5;
+  const textColor = interpolateColor("#FFFFFF", "#1F2937", progress);
 
   return (
     <div
@@ -106,9 +146,8 @@ export default function ScrollProgressIndicator({
 
         <div className="absolute inset-[14px] flex flex-col items-center justify-center rounded-full  text-center shadow-[0_16px_32px_-28px_rgba(15,23,42,0.4)] transition group-hover:scale-[1.03] group-active:scale-95">
           <span
-            className={`bukra-medium text-[12px] leading-tight ${
-              isDarkBackground ? "text-[#1F2937]" : "text-white"
-            }`}
+            className="bukra-medium text-[12px] leading-tight transition-colors duration-300"
+            style={{ color: textColor }}
           >
             Scroll to
             <br />

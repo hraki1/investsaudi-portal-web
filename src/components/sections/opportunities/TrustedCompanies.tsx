@@ -2,7 +2,9 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import Marquee from "react-fast-marquee";
+import { Autoplay, FreeMode } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import { CgArrowTopRight } from "react-icons/cg";
 
 type TrustedCompany = {
@@ -92,17 +94,38 @@ type LogoRowProps = {
 function LogoRow({ companies, reverse = false }: LogoRowProps) {
   return (
     <div className="w-full">
-      <div className="trusted-companies-marquee relative left-1/2 w-screen -translate-x-1/2 select-none overflow-hidden px-4 sm:px-6 lg:px-8">
-        <Marquee
-          direction={reverse ? "right" : "left"}
-          speed={40}
-          pauseOnHover
-          gradient={false}
-          className="flex items-center gap-6"
+      <div className="relative left-1/2 w-screen -translate-x-1/2 cursor-pointer select-none overflow-hidden">
+        <Swiper
+          className="px-4 sm:px-6 lg:px-8"
+          modules={[Autoplay, FreeMode]}
+          slidesPerView="auto"
+          spaceBetween={24}
+          loop
+          allowTouchMove
+          freeMode={{ enabled: true, momentum: false }}
+          speed={10000}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+            reverseDirection: reverse,
+          }}
+          breakpoints={{
+            320: { slidesPerView: 3.2, spaceBetween: 12 },
+            480: { slidesPerView: 3.2, spaceBetween: 12 },
+            640: { slidesPerView: 3.2, spaceBetween: 14 },
+            768: { slidesPerView: 4, spaceBetween: 16 },
+            1024: { slidesPerView: 5, spaceBetween: 16 },
+            1280: { slidesPerView: 6, spaceBetween: 16 },
+            1536: { slidesPerView: 8, spaceBetween: 16 },
+          }}
         >
-          {companies.map((company) => (
-            <div key={company.name} className="trusted-company-card">
-              <div className="flex h-28 items-center justify-center rounded-3xl bg-white px-5 md:px-6">
+          {[...companies, ...companies].map((company, idx) => (
+            <SwiperSlide
+              key={`${company.name}-${idx}`}
+              style={{ width: "240px", maxWidth: "260px" }}
+            >
+              <div className="flex h-28 items-center justify-center rounded-3xl  bg-white">
                 <img
                   src={company.logo}
                   alt={company.alt ?? `${company.name} logo`}
@@ -110,9 +133,9 @@ function LogoRow({ companies, reverse = false }: LogoRowProps) {
                   loading="lazy"
                 />
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </Marquee>
+        </Swiper>
       </div>
     </div>
   );
