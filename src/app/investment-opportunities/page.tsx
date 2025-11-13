@@ -10,11 +10,11 @@ export default function InvestmentOpportunities() {
     <div className="relative">
       <ScrollProgressIndicator />
       <Hero />
-      <PathInvesting />
+      {/* <PathInvesting /> */}
       <TrustedPartners />
-      <div className="mx-auto">
+      {/* <div className="mx-auto">
         <BusinessOpportunities />
-      </div>
+      </div> */}
       <TrustedCompanies />
     </div>
   );
