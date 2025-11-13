@@ -1,14 +1,11 @@
-.trusted-companies-swiper .swiper-wrapper {
-  transition-timing-function: linear !important;
-}
-
-.trusted-companies-swiper .trusted-companies-slide {
+.trusted-companies-marquee .trusted-company-card {
   width: clamp(160px, 22vw, 260px) !important;
   max-width: 260px !important;
+  margin-right: 1.5rem;
 }
 
 @media (max-width: 640px) {
-  .trusted-companies-swiper .trusted-companies-slide {
+  .trusted-companies-marquee .trusted-company-card {
     width: clamp(140px, 60vw, 220px) !important;
   }
 }

@@ -54,15 +54,14 @@ interface ClusterImage {
 
 const circleImages: ClusterImage[] = [
   {
-    src: "/opportunities/1.png",
+    src: "/investment-opportunities/PathInvesting/1.png",
     alt: "Invest Saudi advisors collaborating",
-    className:
-      "-left-6 -top-14 sm:-left-10 sm:-top-20 xl:-left-12 xl:-top-24",
+    className: "-left-6 -top-14 sm:-left-10 sm:-top-20 xl:-left-12 xl:-top-24",
     size: 267,
     zIndex: 10,
   },
   {
-    src: "/opportunities/2.png",
+    src: "/investment-opportunities/PathInvesting/2.png",
     alt: "Investor engaging with advisor",
     className:
       "top-[18%] -right-6 sm:top-[22%] sm:-right-8 xl:-right-12 xl:top-[24%]",
@@ -70,7 +69,7 @@ const circleImages: ClusterImage[] = [
     zIndex: 20,
   },
   {
-    src: "/opportunities/3.png",
+    src: "/investment-opportunities/PathInvesting/3.png",
     alt: "Saudi Arabia skyline with flag",
     className:
       "-left-6 -bottom-14 sm:-left-10 sm:-bottom-20 xl:-left-12 xl:-bottom-26",
@@ -81,38 +80,30 @@ const circleImages: ClusterImage[] = [
 ];
 
 function PathInvestingImageCluster({
-  images,
+  image,
   className = "",
 }: {
-  images: ClusterImage[];
+  image: ClusterImage;
   className?: string;
 }) {
   return (
-    <div
-      className={`relative mx-auto flex h-[240px] w-[240px] items-center justify-center sm:h-[280px] sm:w-[280px] lg:h-[340px] lg:w-[340px] ${className}`}
-    >
-      <div className="pointer-events-none absolute inset-4 rounded-[28px]" />
-      {images.map(({ src, alt, className, size, zIndex, border }, index) => (
-        <div
-          key={index}
-          className={`absolute flex items-center justify-center rounded-full ${
-            border ?? "border-14"
-          } border-white ${className}`}
-          style={{
-            width: `clamp(168px, 55vw, ${size}px)`,
-            height: `clamp(168px, 55vw, ${size}px)`,
-            zIndex,
-          }}
-        >
-          <Image
-            alt={alt}
-            src={src}
-            width={size}
-            height={size}
-            className="h-full w-full rounded-full object-cover"
-          />
-        </div>
-      ))}
+    <div>
+      <div
+        className={` flex items-center h-[240px] w-[240px] justify-center sm:h-[280px] sm:w-[280px] lg:h-[340px] lg:w-[340px] rounded-full ${"border-16"} border-white`}
+        style={{
+          width: `clamp(168px, 55vw, 240px)`,
+          height: `clamp(168px, 55vw, 240px)`,
+          zIndex: 1,
+        }}
+      >
+        <Image
+          alt="Discover"
+          src={image.src}
+          width={240}
+          height={240}
+          className="h-full w-full rounded-full object-cover"
+        />
+      </div>
     </div>
   );
 }
@@ -120,18 +111,22 @@ function PathInvestingImageCluster({
 function StepCard({
   step,
   className = "",
+  isRight = false,
 }: {
   step: Step;
   className?: string;
+  isRight?: boolean;
 }) {
   return (
     <div
-      className={`relative w-full max-w-[360px] rounded-[24px] border border-white/70 bg-linear-to-br px-6 py-6 text-left shadow-[0_24px_48px_-24px_rgba(15,23,42,0.35)] backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-28px_rgba(15,23,42,0.35)] ${step.gradient} ${className}`}
+      className={`relative w-full max-w-[360px] rounded-[24px] bg-linear-to-${
+        isRight ? "r" : "l"
+      } from-white/0 to-white/50 p-4 text-left ] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_30px_60px_-28px_rgba(15,23,42,0.35)]  ${className}`}
     >
-      <div
+      {/* <div
         className={`absolute inset-y-6 left-0 w-[6px] rounded-full bg-linear-to-b ${step.accentBar}`}
-      />
-      <div className="ml-5 sm:ml-6">
+      /> */}
+      <div className={`ml-5 sm:ml-6 ${isRight && "text-right"} `}>
         <div className="mb-3 inline-flex items-center gap-2">
           <span
             className="text-[24px] font-semibold sm:text-[28px]"
@@ -141,7 +136,6 @@ function StepCard({
           </span>
           <div
             className="h-1 w-7 rounded-full sm:w-9"
-            style={{ backgroundColor: step.underlineColor }}
           />
         </div>
         <h3 className="bukra-bold text-2xl leading-tight text-[#1F2937] sm:text-[32px]">
@@ -192,25 +186,43 @@ export default function PathInvesting() {
           </p>
         </div>
 
-        <div className="mx-auto my-12 grid w-full max-w-5xl gap-9 justify-items-center md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:items-start xl:grid-cols-[minmax(0,360px)_minmax(0,1fr)_minmax(0,360px)] xl:items-center">
-          <div className="flex w-full max-w-[360px] flex-col items-center gap-7 md:justify-self-end xl:items-start xl:justify-self-start">
+        {/* content */}
+        <div>
+          {/* 1 */}
+          <div
+            className="flex items-center"
+            style={{ transform: "translate(-220px ,115px)" }}
+          >
+            {/* step */}
             <StepCard step={steps[0]} />
-            <StepCard step={steps[2]} className="md:hidden xl:block" />
+
+            {/* image cluster */}
+            <PathInvestingImageCluster image={circleImages[0]} />
           </div>
 
-          <PathInvestingImageCluster
-            images={circleImages}
-            className="md:col-span-2 md:max-w-[360px] md:justify-self-center xl:col-span-1"
-          />
+          {/* 2 */}
+          <div
+            className="flex items-center"
+            style={{ transform: "translate(287px, 10px)" }}
+          >
+            {/* image cluster */}
+            <PathInvestingImageCluster image={circleImages[1]} />
 
-          <div className="flex w-full max-w-[360px] items-center justify-center md:col-start-2 md:row-start-1 md:justify-self-start xl:col-start-3 xl:items-start">
-            <StepCard step={steps[1]} className="md:max-w-none xl:ml-8" />
+            {/* step */}
+            <StepCard step={steps[1]} isRight />
           </div>
 
-          <StepCard
-            step={steps[2]}
-            className="hidden w-full max-w-[360px] md:col-span-2 md:mx-auto md:block xl:hidden"
-          />
+          {/* 3 */}
+          <div
+            className="flex items-center"
+            style={{ transform: "translate(-220px, -120px)" }}
+          >
+            {/* step */}
+            <StepCard step={steps[2]} />
+
+            {/* image cluster */}
+            <PathInvestingImageCluster image={circleImages[2]} />
+          </div>
         </div>
 
         <button className="bukra-medium inline-flex w-full max-w-xs items-center justify-center gap-3 rounded-full bg-linear-to-r from-[#0AB6A3] to-[#129B97] px-9 py-3 text-base text-white shadow-[0_18px_38px_-18px_rgba(10,182,163,0.75)] transition hover:opacity-90 sm:max-w-sm md:max-w-max">
