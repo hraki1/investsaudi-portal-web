@@ -9,6 +9,42 @@
     width: clamp(140px, 60vw, 220px) !important;
   }
 }
+
+/* Filter Animation Classes */
+.filter-enter {
+  animation: slideDown 0.3s ease-in-out forwards;
+}
+
+.filter-exit {
+  animation: slideUp 0.3s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 200px;
+  }
+  to {
+    transform: translateY(-10px);
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
 @import "tailwindcss";
 
 body {

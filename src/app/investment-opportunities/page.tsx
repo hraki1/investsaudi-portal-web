@@ -12,9 +12,9 @@ export default function InvestmentOpportunities() {
       <Hero />
       {/* <PathInvesting /> */}
       <TrustedPartners />
-      {/* <div className="mx-auto">
+      <div className="mx-auto">
         <BusinessOpportunities />
-      </div> */}
+      </div>
       <TrustedCompanies />
     </div>
   );
