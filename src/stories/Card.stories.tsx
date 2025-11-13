@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { useEffect, useState } from 'react';
 import Card from '../components/sections/opportunities/Card';
+import { Project, getProject, getProjects, getStaticProjectData, getAllStaticProjectsData } from '../lib/data/projects';
 
 const meta: Meta<typeof Card> = {
   title: 'Components/Card',
@@ -35,139 +37,185 @@ const meta: Meta<typeof Card> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const sampleCardData = {
-  coverImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=400&fit=crop&crop=building',
-  coverImageAlt: 'Modern building complex',
-  title: 'Smart City Development Project',
-  category: 'Technology & Infrastructure',
-  location: 'Riyadh, Saudi Arabia',
-  description: 'A comprehensive smart city development project focusing on sustainable urban planning, advanced infrastructure, and innovative technology integration to create a modern living environment.',
-  investment: '$2.5B USD',
-  jobsCreated: '15,000+',
-  GDPImpact: '+2.3%',
-  IRR: '18.5%',
-  paybackPeriod: '7-9 years',
-  twitter: '@smartcity_ksa',
-  phone: '+966 11 234 5678',
-  email: 'info@smartcity.sa'
+// This simulates a Next.js server component that fetches data server-side
+const ServerSideProjectCard = ({ projectId, order }: { projectId: number; order: number }) => {
+  const [project, setProject] = useState<Project | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // In a real Next.js app, this data would be fetched server-side
+    const fetchServerSideData = async () => {
+      try {
+        const data = await getStaticProjectData(projectId);
+        setProject(data);
+      } catch (error) {
+        console.error('Failed to fetch project:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchServerSideData();
+  }, [projectId]);
+
+  if (loading) {
+    return (
+      <div className="bg-white rounded-xl p-8 animate-pulse">
+        <div className="flex gap-6">
+          <div className="w-1/3 h-48 bg-gray-200 rounded-lg"></div>
+          <div className="flex-1 space-y-4">
+            <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+            <div className="h-6 bg-gray-200 rounded w-3/4"></div>
+            <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+            <div className="space-y-2">
+              <div className="h-3 bg-gray-200 rounded"></div>
+              <div className="h-3 bg-gray-200 rounded"></div>
+              <div className="h-3 bg-gray-200 rounded w-5/6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!project) {
+    return (
+      <div className="bg-white rounded-xl p-8 text-center">
+        <p className="text-gray-500">Failed to load project data</p>
+      </div>
+    );
+  }
+
+  return <Card {...project} order={order} />;
 };
 
-export const ImageLeft: Story = {
-  args: {
-    ...sampleCardData,
-    order: 2, // Even number = image on left
+// This simulates a Next.js page that fetches multiple projects server-side
+const ServerSideMultipleCards = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // In a real Next.js app, this would happen server-side at build time or request time
+    const fetchAllServerSideData = async () => {
+      try {
+        const data = await getAllStaticProjectsData();
+        setProjects(data.slice(0, 3)); // Get first 3 projects
+      } catch (error) {
+        console.error('Failed to fetch projects:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAllServerSideData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="space-y-6">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="bg-white rounded-xl p-8 animate-pulse">
+            <div className="flex gap-6">
+              <div className="w-1/3 h-48 bg-gray-200 rounded-lg"></div>
+              <div className="flex-1 space-y-4">
+                <div className="h-4 bg-gray-200 rounded w-1/4"></div>
+                <div className="h-6 bg-gray-200 rounded w-3/4"></div>
+                <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+                <div className="space-y-2">
+                  <div className="h-3 bg-gray-200 rounded"></div>
+                  <div className="h-3 bg-gray-200 rounded"></div>
+                  <div className="h-3 bg-gray-200 rounded w-5/6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      {projects.map((project, index) => (
+        <Card key={project.id} {...project} order={index + 1} />
+      ))}
+    </div>
+  );
+};
+
+export const SmartCityProject: Story = {
+  render: () => <ServerSideProjectCard projectId={1} order={2} />,
+  parameters: {
+    docs: {
+      description: {
+        story: 'Smart City Development Project fetched server-side - Image positioned on left (even order)',
+      },
+    },
   },
 };
 
-export const ImageRight: Story = {
-  args: {
-    ...sampleCardData,
-    order: 1, // Odd number = image on right
-  },
-};
-
-export const EnergyProject: Story = {
-  args: {
-    coverImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=500&h=400&fit=crop&crop=center',
-    coverImageAlt: 'Solar panel installation',
-    order: 4,
-    title: 'Renewable Energy Hub',
-    category: 'Energy & Sustainability',
-    location: 'NEOM, Saudi Arabia',
-    description: 'Large-scale renewable energy project combining solar, wind, and hydrogen production technologies to create a sustainable energy ecosystem for the future.',
-    investment: '$5.8B USD',
-    jobsCreated: '25,000+',
-    GDPImpact: '+4.1%',
-    IRR: '22.3%',
-    paybackPeriod: '5-7 years',
-    twitter: '@neom_energy',
-    phone: '+966 50 987 6543',
-    email: 'energy@neom.sa'
+export const EnergyProjectFromAPI: Story = {
+  render: () => <ServerSideProjectCard projectId={2} order={1} />,
+  parameters: {
+    docs: {
+      description: {
+        story: 'Renewable Energy Hub fetched server-side - Image positioned on right (odd order)',
+      },
+    },
   },
 };
 
 export const ManufacturingProject: Story = {
-  args: {
-    coverImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=400&fit=crop&crop=center',
-    coverImageAlt: 'Industrial manufacturing facility',
-    order: 3,
-    title: 'Advanced Manufacturing Complex',
-    category: 'Manufacturing & Industry',
-    location: 'King Abdullah Economic City',
-    description: 'State-of-the-art manufacturing facility focusing on automotive components, electronics, and advanced materials production with Industry 4.0 technologies.',
-    investment: '$1.2B USD',
-    jobsCreated: '8,500+',
-    GDPImpact: '+1.8%',
-    IRR: '16.7%',
-    paybackPeriod: '6-8 years',
-    twitter: '@kaec_manufacturing',
-    phone: '+966 12 345 6789',
-    email: 'manufacturing@kaec.sa'
+  render: () => <ServerSideProjectCard projectId={3} order={4} />,
+  parameters: {
+    docs: {
+      description: {
+        story: 'Advanced Manufacturing Complex fetched server-side - Image positioned on left (even order)',
+      },
+    },
   },
 };
 
 export const WithCustomContent: Story = {
-  args: {
-    ...sampleCardData,
-    order: 2,
-  },
-  render: (args) => (
-    <Card {...args}>
-      <div className="space-y-4">
-        <h3 className="text-2xl font-bold text-blue-600">Custom Card Content</h3>
-        <p className="text-gray-600">
-          This card demonstrates how you can pass custom children content instead of
-          using the default CardDetails component.
-        </p>
-        <div className="bg-blue-50 p-4 rounded-lg">
-          <p className="text-blue-800 font-medium">
-            Custom content can include any React components, styled sections,
-            or interactive elements.
+  render: () => {
+    const [project, setProject] = useState<Project | null>(null);
+    
+    useEffect(() => {
+      getStaticProjectData(1)
+        .then(data => setProject(data))
+        .catch(error => console.error('Failed to fetch project:', error));
+    }, []);
+
+    if (!project) {
+      return <div className="bg-white rounded-xl p-8">Loading...</div>;
+    }
+
+    return (
+      <Card {...project} order={2}>
+        <div className="space-y-4">
+          <h3 className="text-2xl font-bold text-blue-600">Custom Card Content</h3>
+          <p className="text-gray-600">
+            This card demonstrates how you can pass custom children content instead of
+            using the default CardDetails component, while fetching data server-side.
           </p>
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <p className="text-blue-800 font-medium">
+              Project: {project.title} - {project.category}
+            </p>
+          </div>
         </div>
-      </div>
-    </Card>
-  ),
+      </Card>
+    );
+  },
 };
 
 export const MultipleCards: Story = {
-  render: () => (
-    <div className="space-y-6">
-      <Card {...sampleCardData} order={1} />
-      <Card
-        coverImage="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=500&h=400&fit=crop&crop=center"
-        coverImageAlt="Solar installation"
-        order={2}
-        title="Solar Energy Initiative"
-        category="Renewable Energy"
-        location="Al-Ula, Saudi Arabia"
-        description="Innovative solar energy project designed to power local communities while preserving the natural landscape and heritage sites."
-        investment="$890M USD"
-        jobsCreated="5,200+"
-        GDPImpact="+1.2%"
-        IRR="19.8%"
-        paybackPeriod="4-6 years"
-        twitter="@alula_solar"
-        phone="+966 14 555 0123"
-        email="solar@alula.sa"
-      />
-      <Card
-        coverImage="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=400&fit=crop&crop=center"
-        coverImageAlt="Tourism development"
-        order={3}
-        title="Heritage Tourism Development"
-        category="Tourism & Entertainment"
-        location="Diriyah, Saudi Arabia"
-        description="Cultural tourism project that combines historical preservation with modern amenities to create world-class visitor experiences."
-        investment="$3.2B USD"
-        jobsCreated="12,000+"
-        GDPImpact="+2.7%"
-        IRR="15.4%"
-        paybackPeriod="8-10 years"
-        twitter="@diriyah_heritage"
-        phone="+966 11 789 4561"
-        email="tourism@diriyah.sa"
-      />
-    </div>
-  ),
+  render: () => <ServerSideMultipleCards />,
+  parameters: {
+    docs: {
+      description: {
+        story: 'Multiple investment project cards fetched server-side with alternating layouts',
+      },
+    },
+  },
 };

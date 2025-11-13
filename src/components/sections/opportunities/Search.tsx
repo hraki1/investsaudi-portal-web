@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import { CiMoneyBill } from 'react-icons/ci';
 import { FiSearch, FiFilter, FiMapPin } from 'react-icons/fi';

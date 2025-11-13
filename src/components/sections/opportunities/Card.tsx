@@ -29,100 +29,6 @@ interface CardProps extends CardDetailsProps {
     className?: string;
 }
 
-const CardDetails: React.FC<CardDetailsProps> = ({
-    title,
-    category,
-    location,
-    description,
-    investment,
-    jobsCreated,
-    GDPImpact,
-    IRR,
-    paybackPeriod,
-    twitter,
-    phone,
-    email
-}) => {
-    const handleShareEmail = () => {
-        const subject = encodeURIComponent(`Check out this investment opportunity: ${title}`);
-        const body = encodeURIComponent(`Hi,\n\nI thought you might be interested in this investment opportunity:\n\nTitle: ${title}\nCategory: ${category}\nLocation: ${location}\nDescription: ${description}\nInvestment: ${investment}\nJobs Created: ${jobsCreated}\nGDP Impact: ${GDPImpact}\nIRR: ${IRR}\nPayback Period: ${paybackPeriod}\n\nYou can contact them at:\nEmail: ${email}\nPhone: ${phone}\nTwitter: ${twitter}\n\nBest regards.`);
-        window.open(`mailto:?subject=${subject}&body=${body}`);
-    };
-    const handleSharePhone = () => {
-        alert(`Contact Phone Number: ${phone}`);
-    }
-    const handleShareSocial = () => {
-        const shareText = `Check out this investment opportunity: ${title} in ${location}. Description: ${description}`;
-        const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(window.location.href)}`;
-        window.open(shareUrl, '_blank');
-    }
-    const handleShareTwitter = () => {
-        const tweetText = `Check out this investment opportunity: ${title} in ${location}. Description: ${description}`;
-        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(window.location.href)}`;
-        window.open(twitterUrl, '_blank');
-    }
-    return (
-        <div className="space-y-4 text-white">
-            <div className="space-y-2">
-                <h3 className="text-2xl font-semibold ">{title}</h3>
-                <div className="flex flex-row gap-4">
-                    <div className="text-sm tracking-wide flex flex-row gap-2 items-center"><MdOutlineFactory size="1.70em" color="var(--foundation-green)" />{category}</div>
-                    <div className="text-sm flex flex-row gap-2 items-center"><CiLocationOn size="1.70em" color="var(--foundation-green)" />{location}</div>
-                </div>
-            </div>
-
-            <p className="text-base leading-relaxed">{description}</p>
-
-            <div className="grid grid-cols-5 gap-4 items-start">
-                <dl className='flex flex-col-reverse items-start'>
-                    <dt className="font-medium text-base">Expected investment size</dt>
-                    <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{investment}</dd>
-                </dl>
-                <dl className='flex flex-col-reverse items-start'>
-                    <dt className="font-medium text-base">Jobs Created</dt>
-                    <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{jobsCreated}</dd>
-                </dl>
-                <dl className='flex flex-col-reverse items-start'>
-                    <dt className="font-medium text-base">GDP Impact</dt>
-                    <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{GDPImpact}</dd>
-                </dl>
-                <dl className='flex flex-col-reverse items-start'>
-                    <dt className="font-medium text-base">Expected IRR</dt>
-                    <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{IRR}</dd>
-                </dl>
-                <dl className='flex flex-col-reverse items-start'>
-                    <dt className="font-medium text-base">Payback Period</dt>
-                    <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{paybackPeriod}</dd>
-                </dl>
-            </div>
-
-            <ul className="space-4 flex flex-row gap-4 pt-4 flex-wrap">
-                <li>
-                    <ShareButton onClick={handleShareEmail}>
-                        <FiMail size={16} />
-                    </ShareButton>
-                </li>
-                <li>
-                    <ShareButton onClick={handleSharePhone}>
-                        <MdOutlinePhoneInTalk size={16} />
-                    </ShareButton>
-                </li>
-                <li>
-                    <ShareButton onClick={handleShareSocial}>
-                        <IoShareSocialOutline size={16} />
-                    </ShareButton>
-                </li>
-                <li>
-                    <ShareButton onClick={handleShareTwitter}>
-                        <FaXTwitter size={16} />
-                    </ShareButton>
-                </li>
-
-            </ul>
-        </div>
-    );
-};
-
 const Card: React.FC<CardProps> = ({
     coverImage,
     coverImageAlt = '',
@@ -144,20 +50,24 @@ const Card: React.FC<CardProps> = ({
 }) => {
 
 
-    const cardDetailsProps: CardDetailsProps = {
-        title,
-        category,
-        location,
-        description,
-        investment,
-        jobsCreated,
-        GDPImpact,
-        IRR,
-        paybackPeriod,
-        twitter,
-        phone,
-        email
+    const handleShareEmail = () => {
+        const subject = encodeURIComponent(`Check out this investment opportunity: ${title}`);
+        const body = encodeURIComponent(`Hi,\n\nI thought you might be interested in this investment opportunity:\n\nTitle: ${title}\nCategory: ${category}\nLocation: ${location}\nDescription: ${description}\nInvestment: ${investment}\nJobs Created: ${jobsCreated}\nGDP Impact: ${GDPImpact}\nIRR: ${IRR}\nPayback Period: ${paybackPeriod}\n\nYou can contact them at:\nEmail: ${email}\nPhone: ${phone}\nTwitter: ${twitter}\n\nBest regards.`);
+        window.open(`mailto:?subject=${subject}&body=${body}`);
     };
+    const handleSharePhone = () => {
+        alert(`Contact Phone Number: ${phone}`);
+    }
+    const handleShareSocial = () => {
+        const shareText = `Check out this investment opportunity: ${title} in ${location}. Description: ${description}`;
+        const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(window.location.href)}`;
+        window.open(shareUrl, '_blank');
+    }
+    const handleShareTwitter = () => {
+        const tweetText = `Check out this investment opportunity: ${title} in ${location}. Description: ${description}`;
+        const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(window.location.href)}`;
+        window.open(twitterUrl, '_blank');
+    }
 
     const flexDirection = order % 2 === 0 ? 'flex-row' : 'flex-row-reverse';
 
@@ -174,7 +84,72 @@ const Card: React.FC<CardProps> = ({
 
 
             <div className="flex-1 p-6 ">
-                {children ? children : <CardDetails {...cardDetailsProps} />}
+                <div className="space-y-4 text-white">
+                    <div className="space-y-2">
+                        <h3 className="text-2xl font-semibold ">{title}</h3>
+                        <div className="flex flex-row gap-4">
+                            <div className="text-sm tracking-wide flex flex-row gap-2 items-center"><MdOutlineFactory size="1.70em" color="var(--foundation-green)" />{category}</div>
+                            <div className="text-sm flex flex-row gap-2 items-center"><CiLocationOn size="1.70em" color="var(--foundation-green)" />{location}</div>
+                        </div>
+                    </div>
+
+                    <p className="text-base leading-relaxed">{description}</p>
+
+                    <div className="grid grid-cols-5 gap-4 items-start">
+                        <dl className='flex flex-col-reverse items-start'>
+                            <dt className="font-medium text-base">Expected investment size</dt>
+                            <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{investment}</dd>
+                        </dl>
+                        <dl className='flex flex-col-reverse items-start'>
+                            <dt className="font-medium text-base">Jobs Created</dt>
+                            <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{jobsCreated}</dd>
+                        </dl>
+                        <dl className='flex flex-col-reverse items-start'>
+                            <dt className="font-medium text-base">GDP Impact</dt>
+                            <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{GDPImpact}</dd>
+                        </dl>
+                        <dl className='flex flex-col-reverse items-start'>
+                            <dt className="font-medium text-base">Expected IRR</dt>
+                            <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{IRR}</dd>
+                        </dl>
+                        <dl className='flex flex-col-reverse items-start'>
+                            <dt className="font-medium text-base">Payback Period</dt>
+                            <dd className="font-normal text-sm whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{paybackPeriod}</dd>
+                        </dl>
+                    </div>
+
+                    <ul className="space-4 flex flex-row gap-4 pt-4 flex-wrap">
+                        <li>
+                            <ShareButton
+                            // onClick={handleShareEmail}
+                            >
+                                <FiMail size={16} />
+                            </ShareButton>
+                        </li>
+                        <li>
+                            <ShareButton
+                            // onClick={handleSharePhone}
+                            >
+                                <MdOutlinePhoneInTalk size={16} />
+                            </ShareButton>
+                        </li>
+                        <li>
+                            <ShareButton
+                            // onClick={handleShareSocial}
+                            >
+                                <IoShareSocialOutline size={16} />
+                            </ShareButton>
+                        </li>
+                        <li>
+                            <ShareButton
+                            // onClick={handleShareTwitter}
+                            >
+                                <FaXTwitter size={16} />
+                            </ShareButton>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
 
         </div>

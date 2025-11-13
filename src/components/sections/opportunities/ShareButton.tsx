@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 
 interface ShareButtonProps {
@@ -7,9 +8,18 @@ interface ShareButtonProps {
 }
 
 const ShareButton: React.FC<ShareButtonProps> = ({ children, onClick, className = '' }) => {
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        event.stopPropagation();
+        if (onClick && typeof onClick === 'function') {
+            onClick();
+        }
+    };
+
     return (
-        <div
-            onClick={onClick}
+        <button
+            type="button"
+            onClick={handleClick}
             className={`
                 w-10 h-10 
                 rounded-full 
@@ -21,11 +31,14 @@ const ShareButton: React.FC<ShareButtonProps> = ({ children, onClick, className 
                 hover:cursor-pointer
                 text-white
                 bg-black/30
+                focus:outline-none
+                focus:ring-2
+                focus:ring-white/50
                 ${className}
             `}
         >
             {children}
-        </div>
+        </button>
     );
 };
 

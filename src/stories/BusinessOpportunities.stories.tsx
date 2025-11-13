@@ -51,7 +51,7 @@ export const DarkBackground: Story = {
 export const WithCustomStyling: Story = {
   decorators: [
     (Story) => (
-      <div className="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+      <div className="from-blue-50 to-indigo-100 min-h-screen">
         <div className="container mx-auto px-4 py-12">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <Story />
