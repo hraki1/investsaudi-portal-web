@@ -53,6 +53,7 @@ body {
 
 :root {
   --foundation-blue-dark: rgba(0, 26, 42, 1);
+  --foundation-green: #00A7A2;
 }
 
 @layer components {
@@ -66,6 +67,14 @@ body {
   
   .border-darkBlue {
     border-color: var(--foundation-blue-dark);
+  }
+
+  .bg-foundation-green {
+    background-color: var(--foundation-green);
+  }
+
+  .text-foundation-green {
+    color: var(--foundation-green);
   }
 }
 

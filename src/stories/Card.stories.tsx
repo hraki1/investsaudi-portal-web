@@ -9,10 +9,8 @@ const meta: Meta<typeof Card> = {
   },
   decorators: [
     (Story) => (
-      <div className="bg-gray-50 p-8">
-        <div className="max-w-4xl mx-auto">
-          <Story />
-        </div>
+      <div className="bg-darkBlue p-8 min-h-screen flex items-center justify-center">
+        <Story />
       </div>
     ),
   ],
@@ -118,12 +116,12 @@ export const WithCustomContent: Story = {
       <div className="space-y-4">
         <h3 className="text-2xl font-bold text-blue-600">Custom Card Content</h3>
         <p className="text-gray-600">
-          This card demonstrates how you can pass custom children content instead of 
+          This card demonstrates how you can pass custom children content instead of
           using the default CardDetails component.
         </p>
         <div className="bg-blue-50 p-4 rounded-lg">
           <p className="text-blue-800 font-medium">
-            Custom content can include any React components, styled sections, 
+            Custom content can include any React components, styled sections,
             or interactive elements.
           </p>
         </div>
@@ -136,7 +134,7 @@ export const MultipleCards: Story = {
   render: () => (
     <div className="space-y-6">
       <Card {...sampleCardData} order={1} />
-      <Card 
+      <Card
         coverImage="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=500&h=400&fit=crop&crop=center"
         coverImageAlt="Solar installation"
         order={2}
@@ -153,7 +151,7 @@ export const MultipleCards: Story = {
         phone="+966 14 555 0123"
         email="solar@alula.sa"
       />
-      <Card 
+      <Card
         coverImage="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=400&fit=crop&crop=center"
         coverImageAlt="Tourism development"
         order={3}
