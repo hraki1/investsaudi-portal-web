@@ -62,6 +62,32 @@ body {
     url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.svg#F29LT Bukra Md")format("svg");
 }
 
+:root {
+  --foundation-blue-dark: rgba(0, 26, 42, 1);
+  --foundation-green: #00A7A2;
+}
+
+@layer components {
+  .bg-darkBlue {
+    background-color: var(--foundation-blue-dark);
+  }
+  
+  .text-darkBlue {
+    color: var(--foundation-blue-dark);
+  }
+  
+  .border-darkBlue {
+    border-color: var(--foundation-blue-dark);
+  }
+
+  .bg-foundation-green {
+    background-color: var(--foundation-green);
+  }
+
+  .text-foundation-green {
+    color: var(--foundation-green);
+  }
+}
 
 .bukra-light {
   font-family: "F29LT Bukra Lt";
