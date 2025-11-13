@@ -3,7 +3,7 @@ import Card from "./Card";
 import Search from "./Search";
 
 export default async function BusinessOpportunities() {
-  const Projects = await fetch("http://localhost:3000/api/projects").then(res => res.json());
+  const Projects = await fetch("https://investsaudi-portal-web-yakk.vercel.app/api/projects").then(res => res.json());
 
   if (!Projects) {
     return <p>Loading...</p>;
