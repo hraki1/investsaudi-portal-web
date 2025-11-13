@@ -1,3 +1,4 @@
+import BusinessOpportunities from "@/components/sections/opportunities/BusinessOpportunities";
 import Hero from "@/components/sections/opportunities/Hero";
 import PathInvesting from "@/components/sections/opportunities/PathInvesting";
 import TrustedCompanies from "@/components/sections/opportunities/TrustedCompanies";
@@ -8,6 +9,9 @@ export default function InvestmentOpportunities() {
     <div className="relative">
       <ScrollProgressIndicator />
       <Hero />
+      <div className="mx-auto">
+        <BusinessOpportunities />
+      </div>
       {/* <PathInvesting /> */}
       <TrustedCompanies />
     </div>
