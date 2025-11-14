@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import WhySaudiInvest from "./WhySaudiInvest";
 import { useState } from "react";
 import WhereVisionBecomesInvestment from "./WhereVisionBecomesInvestment.";
+import BackgroundVideo from "@/components/ui/BackgroundVideo";
 
 export default function HeroContainer() {
   const isRTL = false;
@@ -15,13 +16,12 @@ export default function HeroContainer() {
   return (
     <main>
       <section className="min-h-screen flex flex-col items-end justify-end relative">
-        {/* background image */}
+        {/* background video */}
         <div className="absolute inset-0">
-          <Image
-            src="/Hero/Hero.png"
-            alt="Hero Background"
-            fill
-            className="object-cover"
+          <BackgroundVideo
+            src="/Hero/hero.mp4"
+            priority
+            className="w-full h-full"
           />
         </div>
         {/* overlay */}
