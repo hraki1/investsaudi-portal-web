@@ -20,7 +20,7 @@ export default function HeroContainer() {
         <div className="absolute inset-0">
           <BackgroundVideo
             src="/Hero/hero.mp4"
-            // poster="/Hero/hero-poster.jpg"
+            poster="/Hero/hero-poster.png"
             priority
             className="w-full h-full"
           />
