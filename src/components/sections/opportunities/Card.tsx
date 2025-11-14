@@ -70,9 +70,9 @@ const Card: React.FC<CardProps> = ({
         window.open(twitterUrl, '_blank');
     }
 
-    const responsiveClasses = order % 2 === 0 
-    ? 'flex-col md:flex-row' 
-    : 'flex-col md:flex-row-reverse';
+    const responsiveClasses = order % 2 === 0
+        ? 'flex-col md:flex-row'
+        : 'flex-col md:flex-row-reverse';
 
 
     return (
@@ -86,9 +86,9 @@ const Card: React.FC<CardProps> = ({
             </div>
 
             <div className="flex-1 relative">
-                <GradientBackground />
-                
-                <div className="p-4 md:p-6">
+                <GradientBackground pos={order} />
+
+                <div className="p-4 md:p-6 relative z-10">
                     <div className="space-y-4 text-white">
                         <div className="space-y-2">
                             <h3 className="text-xl md:text-2xl font-semibold">{title}</h3>
@@ -172,9 +172,14 @@ const Card: React.FC<CardProps> = ({
     );
 };
 
-const GradientBackground: React.FC = () => {
+const GradientBackground: React.FC<{pos:number}> = ({pos}) => {
+    const grad1Pos = pos % 2 === 0 ? '-right-1/3' : '-left-1/3';
+    const grad2Pos = pos % 2 === 0 ? '-right-1/2' : '-left-1/2';
     return (
-        <div className="absolute w-full h-full z-50 bg-[radial-gradient(ellipse_at_bottom,var(--tw-gradient-stops))] from-emerald-500  to-transparent"></div>
+        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-1">            
+            <div className={`absolute -bottom-72 ${grad1Pos} w-full h-full rounded-full opacity-60 bg-teal-500 blur-3xl`} />
+            <div className={`absolute -bottom-72 ${grad2Pos} w-full h-full rounded-full opacity-60 bg-violet-500 blur-3xl`} />
+        </div>
     );
 }
 
