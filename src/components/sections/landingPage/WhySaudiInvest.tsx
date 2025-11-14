@@ -1,13 +1,44 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { TbArrowCurveRight } from "react-icons/tb";
 import { CgArrowTopRight } from "react-icons/cg";
 import i18n from "@/lib/i18n";
+import {
+  cardVariants,
+  cardContentVariants,
+  cardNumberVariants,
+  cardSuffixVariants,
+  cardTitleVariants,
+  cardDescriptionVariants,
+  titleSectionVariants,
+  titleVariants,
+  subtitleVariants,
+  quoteSectionVariants,
+  quoteCardVariants,
+  quoteTextVariants,
+  quoteHighlightVariants,
+  quoteFooterVariants,
+  quoteImageVariants,
+  quoteInfoVariants,
+  tabButtonVariants,
+  tabIndicatorVariants,
+  contentSectionVariants,
+  contentItemVariants,
+  contentIconVariants,
+  contentTextVariants,
+  contentDividerVariants,
+  tabContentVariants,
+  backgroundShapeAnimation,
+  shimmerAnimation,
+  pulseAnimation,
+  backgroundImageHover,
+} from "@/animations/variants";
 
 // Swiper styles will be added to CSS file
 
@@ -43,7 +74,7 @@ interface VisionQuoteContent {
 
 export default function WhySaudiInvest() {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState<"economy" | "society" | "nation">(
+  const [activeTab, setActiveTab] = useState<"economy" | "society" | "nation" | "talent" | "saudi">(
     "economy"
   );
 
@@ -413,115 +444,235 @@ export default function WhySaudiInvest() {
 
   const isRTL = i18n.language === "ar";
 
+  // Refs for scroll animations
+  const cardsContainerRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
+  const quoteRef = useRef<HTMLDivElement>(null);
+  const tabsRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  
+  // InView hooks
+  const cardsInView = useInView(cardsContainerRef, { once: true, amount: 0.1 });
+  const titleInView = useInView(titleRef, { once: true, amount: 0.3 });
+  const quoteInView = useInView(quoteRef, { once: true, amount: 0.3 });
+  const tabsInView = useInView(tabsRef, { once: true, amount: 0.2 });
+  const contentInView = useInView(contentRef, { once: true, amount: 0.2 });
+
   return (
     <section className="relative pt-12 md:pt-10">
       {/* Background Saudi Emblem Pattern */}
       <div className="container mx-auto px-3 relative z-50">
         {/* Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 mb-12 md:mb-16">
+        <div ref={cardsContainerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 mb-12 md:mb-16">
           {statCards.map((card, index) => (
-            <div
+            <motion.div
               key={index}
-              className=" relative p-6 md:p-8 overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg"
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              animate={cardsInView ? "visible" : "hidden"}
+              whileHover="hover"
+              className="relative p-6 md:p-8 overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg cursor-pointer group"
               style={{
                 background: `${card.gradientFrom}`,
               }}
             >
-              {/* Light effect at bottom right */}
-              <div
-                className="absolute bottom-0 right-0 w-full h-full pointer-events-none rounded-2xl overflow-hidden"
+              {/* Animated border glow on hover */}
+              <motion.div
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 pointer-events-none"
                 style={{
-                  background: `radial-gradient(ellipse 70% 50% at bottom right, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 25%, transparent 65%)`,
+                  boxShadow: "0 0 30px rgba(255, 255, 255, 0.1), inset 0 0 30px rgba(255, 255, 255, 0.05)",
                 }}
+                transition={{ duration: 0.6 }}
               />
 
-              {/* background image */}
-              <div className="absolute inset-0">
+              {/* Elegant animated shimmer effect */}
+              <motion.div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
+                style={{
+                  background: `linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 40%, transparent 60%, rgba(255, 255, 255, 0.08) 100%)`,
+                }}
+                animate={shimmerAnimation}
+              />
+
+              {/* Light effect at bottom right - refined pulse */}
+              <motion.div
+                className="absolute bottom-0 right-0 w-full h-full pointer-events-none rounded-2xl overflow-hidden"
+                style={{
+                  background: `radial-gradient(ellipse 70% 50% at bottom right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 30%, transparent 70%)`,
+                }}
+                animate={pulseAnimation}
+              />
+
+              {/* background image - smooth parallax zoom */}
+              <motion.div 
+                className="absolute inset-0"
+                whileHover={backgroundImageHover}
+              >
                 <img
                   src="/strategic/bg-card.png"
                   alt={card.title}
                   className="w-full h-1/2"
                 />
-              </div>
+              </motion.div>
 
               {/* card content */}
-              <div className="relative z-10">
+              <motion.div 
+                className="relative z-10"
+                custom={index}
+                variants={cardContentVariants}
+                initial="hidden"
+                animate={cardsInView ? "visible" : "hidden"}
+              >
                 <div className="flex items-center justify-center gap-2 mb-3">
-                  <div className="text-4xl md:text-5xl lg:text-[36px] bukra-bold text-white flex items-start">
+                  <motion.div 
+                    className="text-4xl md:text-5xl lg:text-[36px] bukra-bold text-white flex items-start"
+                    custom={index}
+                    variants={cardNumberVariants}
+                    initial="hidden"
+                    animate={cardsInView ? "visible" : "hidden"}
+                    whileHover="hover"
+                  >
                     {card.value}
                     {card.suffix && (
-                      <span className="text-2xl md:text-3xl lg:text-[28px] bukra-bold -mt-1">
+                      <motion.span 
+                        className="text-2xl md:text-3xl lg:text-[28px] bukra-bold -mt-1"
+                        custom={index}
+                        variants={cardSuffixVariants}
+                        initial="hidden"
+                        animate={cardsInView ? "visible" : "hidden"}
+                      >
                         {card.suffix}
-                      </span>
+                      </motion.span>
                     )}
-                  </div>
+                  </motion.div>
                 </div>
-                <h3 className="text-base md:text-xl text-center bukra-medium text-white mb-3">
+                <motion.h3 
+                  className="text-base md:text-xl text-center bukra-medium text-white mb-3"
+                  custom={index}
+                  variants={cardTitleVariants}
+                  initial="hidden"
+                  animate={cardsInView ? "visible" : "hidden"}
+                >
                   {card.title}
-                </h3>
-                <p className="text-xs md:text-sm opacity-80 text-white/80 text-center bukra-regular">
+                </motion.h3>
+                <motion.p 
+                  className="text-xs md:text-sm opacity-80 text-white/80 text-center bukra-regular"
+                  custom={index}
+                  variants={cardDescriptionVariants}
+                  initial="hidden"
+                  animate={cardsInView ? "visible" : "hidden"}
+                >
                   {card.description}
-                </p>
-              </div>
-            </div>
+                </motion.p>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
 
         {/* title */}
-        <div className="max-w-2xl space-y-4  mb-6 md:mb-10 lg:mt-26">
-          <h2
+        <motion.div 
+          ref={titleRef}
+          variants={titleSectionVariants}
+          initial="hidden"
+          animate={titleInView ? "visible" : "hidden"}
+          className="max-w-2xl space-y-4 mb-6 md:mb-10 lg:mt-26"
+        >
+          <motion.h2
             className={`text-3xl text-center ${
               isRTL ? "md:text-right" : "md:text-left"
             } md:text-5xl lg:text-[38px] bukra-medium bukra-bold text-white`}
+            variants={titleVariants}
+            initial="hidden"
+            animate={titleInView ? "visible" : "hidden"}
           >
             A Nation With A Bold Vision
-          </h2>
-          <p
+          </motion.h2>
+          <motion.p
             className={`text-base text-center md:text-lg lg:text-[20px] text-white/70 bukra-regular ${
               isRTL ? "md:text-right" : "md:text-left"
             }`}
+            variants={subtitleVariants}
+            initial="hidden"
+            animate={titleInView ? "visible" : "hidden"}
           >
             Unlocking game-changing opportunities for the world
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Main Content Grid */}
-        <div className="flex flex-col xl:flex-row gap-8 xl:gap-12 mb-16  ">
+        <div className="flex flex-col xl:flex-row gap-8 xl:gap-12 mb-16">
           {/* Left Column: Vision Quote & Crown Prince */}
-          <div className="flex-1 xl:max-w-[530px]   mb-10 xl:mb-0">
+          <motion.div 
+            ref={quoteRef}
+            variants={quoteSectionVariants}
+            initial="hidden"
+            animate={quoteInView ? "visible" : "hidden"}
+            className="flex-1 xl:max-w-[530px] mb-10 xl:mb-0"
+          >
             {/* Vision Quote */}
-            <div className="h-full w-full bg-black/60 backdrop-blur-2xl p-6 md:p-[40px] md:pb-[30px] rounded-2xl flex flex-col justify-between">
-              <p className="text-white/90 text-base md:text-[22px] leading-relaxed bukra-regular ">
-              {visionQuoteContent.quoteSegments.map((segment, index) =>
-                segment.highlight ? (
-                  <span key={index} className="text-[#00A7A2]">
-                    {segment.text}
-                  </span>
-                ) : (
-                  <span key={index}>{segment.text}</span>
-                )
-              )}
-              </p>
+            <motion.div 
+              className="h-full w-full bg-black/60 backdrop-blur-2xl p-6 md:p-[40px] md:pb-[30px] rounded-2xl flex flex-col justify-between"
+              variants={quoteCardVariants}
+              whileHover="hover"
+            >
+              <motion.p 
+                className="text-white/90 text-base md:text-[22px] leading-relaxed bukra-regular"
+                variants={quoteTextVariants}
+                initial="hidden"
+                animate={quoteInView ? "visible" : "hidden"}
+              >
+                {visionQuoteContent.quoteSegments.map((segment, index) =>
+                  segment.highlight ? (
+                    <motion.span 
+                      key={index} 
+                      className="text-[#00A7A2]"
+                      custom={index}
+                      variants={quoteHighlightVariants}
+                      initial="hidden"
+                      animate={quoteInView ? "visible" : "hidden"}
+                    >
+                      {segment.text}
+                    </motion.span>
+                  ) : (
+                    <span key={index}>{segment.text}</span>
+                  )
+                )}
+              </motion.p>
               {/* Crown Prince */}
-              <div className="flex justify-between items-start gap-4 md:gap-[15px] mt-8  ">
-                <div className="w-20 md:w-[134px] h-32 md:min-h-[168.5806427001953px] p-2  rounded-xl overflow-hidden shrink-0">
+              <motion.div 
+                className="flex justify-between items-start gap-4 md:gap-[15px] mt-8"
+                variants={quoteFooterVariants}
+                initial="hidden"
+                animate={quoteInView ? "visible" : "hidden"}
+              >
+                <motion.div 
+                  className="w-20 md:w-[134px] h-32 md:min-h-[168.5806427001953px] p-2 rounded-xl overflow-hidden shrink-0"
+                  variants={quoteImageVariants}
+                  whileHover="hover"
+                >
                   <img
-                  src={visionQuoteContent.leaderImageSrc}
-                  alt={visionQuoteContent.leaderImageAlt}
+                    src={visionQuoteContent.leaderImageSrc}
+                    alt={visionQuoteContent.leaderImageAlt}
                     className="w-full h-full object-cover"
                   />
-                </div>
-                <div className=" flex flex-col items-center text-white ">
+                </motion.div>
+                <motion.div 
+                  className="flex flex-col items-center text-white"
+                  variants={quoteInfoVariants}
+                  initial="hidden"
+                  animate={quoteInView ? "visible" : "hidden"}
+                >
                   <h3 className="text-base md:text-xl bukra-bold mb-1">
-                  {visionQuoteContent.leaderName}
+                    {visionQuoteContent.leaderName}
                   </h3>
                   <p className="text-xs md:text-[16px] text-white bukra-regular">
-                  {visionQuoteContent.leaderTitle}
+                    {visionQuoteContent.leaderTitle}
                   </p>
-                </div>
-              </div>
-            </div>
-          </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
 
           {/* right: Vision 2030 with Tabs */}
           <div className="flex flex-col lg:flex-row gap-6 md:gap-0 flex-1 items-start">
@@ -554,27 +705,67 @@ export default function WhySaudiInvest() {
             </div>
 
             {/* content */}
-            <div className="relative overflow-hidden bg-black/60 flex-1 backdrop-blur-sm p-6 md:p-8 2xl:py-[30px] 2xl:px-[30px] rounded-2xl">
-              <div className="space-y-3 md:space-y-6">
-                {tabContent[activeTab].items.map((item, idx) => (
-                  <div key={idx}>
-                    <div className="flex gap-5 animate-fade-in">
-                      <div className="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center ">
-                        {item.icon}
+            <motion.div 
+              ref={contentRef}
+              variants={contentSectionVariants}
+              initial="hidden"
+              animate={contentInView ? "visible" : "hidden"}
+              className="relative overflow-hidden bg-black/60 flex-1 backdrop-blur-sm p-6 md:p-8 2xl:py-[30px] 2xl:px-[30px] rounded-2xl"
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab}
+                  variants={tabContentVariants}
+                  initial="exit"
+                  animate="enter"
+                  exit="exit"
+                  className="space-y-3 md:space-y-6"
+                >
+                  {tabContent[activeTab].items.map((item, idx) => (
+                    <motion.div 
+                      key={idx}
+                      custom={idx}
+                      variants={contentItemVariants}
+                      initial="hidden"
+                      animate="visible"
+                    >
+                      <div className="flex gap-5">
+                        <motion.div 
+                          className="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center"
+                          variants={contentIconVariants}
+                          whileHover="hover"
+                        >
+                          {item.icon}
+                        </motion.div>
+                        <motion.p 
+                          className="md:min-w-[418px] text-white/80 text-base bukra-regular md:text-xl leading-relaxed"
+                          custom={idx}
+                          variants={contentTextVariants}
+                          initial="hidden"
+                          animate="visible"
+                        >
+                          {item.text}
+                        </motion.p>
                       </div>
-                      <p className="md:min-w-[418px] text-white/80 text-base bukra-regular md:text-xl leading-relaxed">
-                        {item.text}
-                      </p>
-                    </div>
-                    {idx < tabContent[activeTab].items.length - 1 && (
-                      <div className="mt-6 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"></div>
-                    )}
-                  </div>
-                ))}
-              </div>
+                      {idx < tabContent[activeTab].items.length - 1 && (
+                        <motion.div 
+                          className="mt-6 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"
+                          custom={idx}
+                          variants={contentDividerVariants}
+                          initial="hidden"
+                          animate="visible"
+                        />
+                      )}
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </AnimatePresence>
 
-              {/* shape background */}
-              <div className=" absolute -bottom-[120px] -right-[140px] w-[697.75px] h-[361px] rounded-full overflow-hidden">
+              {/* shape background with animation */}
+              {/* <motion.div 
+                className="absolute -bottom-[120px] -right-[140px] w-[697.75px] h-[361px] rounded-full overflow-hidden pointer-events-none"
+                animate={backgroundShapeAnimation}
+              >
                 <svg
                   width="562"
                   height="244"
@@ -612,8 +803,8 @@ export default function WhySaudiInvest() {
                     </filter>
                   </defs>
                 </svg>
-              </div>
-            </div>
+              </motion.div> */}
+            </motion.div>
           </div>
         </div>
 
