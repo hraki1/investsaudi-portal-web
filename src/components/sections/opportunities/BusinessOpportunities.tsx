@@ -40,11 +40,11 @@ export default async function BusinessOpportunities() {
 
         {/* Action Buttons */}
         <div className="flex items-center justify-center gap-4">
-          <button className="flex items-center cursor-pointer gap-2 text-base font-medium bg-transparent border-white text-white border rounded-full px-5 py-2 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <button className="flex items-center cursor-pointer gap-2 capitalize text-base font-medium bg-transparent border-white text-white border rounded-full px-5 py-2 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
             Explore investor services
             <GoArrowUpRight size={16} />
           </button>
-          <button className="flex items-center cursor-pointer gap-2 text-base font-medium bg-teal-600 text-white rounded-full px-5 py-2 transition-all duration-200 hover:bg-teal-400/80 shadow-lg hover:shadow-xl transform hover:scale-105">
+          <button className="flex items-center cursor-pointer gap-2 capitalize text-base font-medium bg-teal-600 text-white rounded-full px-5 py-2 transition-all duration-200 hover:bg-teal-400/80 shadow-lg hover:shadow-xl transform hover:scale-105">
             Explore sector
             <GoArrowUpRight size={16} />
           </button>
