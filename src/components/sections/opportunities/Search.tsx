@@ -138,7 +138,7 @@ const Search: React.FC<SearchProps> = ({
 
             {/* Filters Row */}
             <div className={`overflow-hidden transition-all duration-500 ease-out ${
-                showFilters ? 'max-h-96 opacity-100 mt-4 mb-2' : 'max-h-0 opacity-0 mt-0 mb-0'
+                showFilters ? 'max-h-96 opacity-100 mt-6 mb-2' : 'max-h-0 opacity-0 mt-0 mb-0'
             }`}>
                 <div className={`grid grid-cols-5 gap-4 text-white transform transition-all duration-500 ease-out ${
                     showFilters ? 'translate-y-0 scale-100' : '-translate-y-6 scale-95'
@@ -245,7 +245,7 @@ const Search: React.FC<SearchProps> = ({
                     className="
                         flex items-center justify-center gap-2
                         px-4 py-3                        
-                        hover:bg-gray-50
+                        hover:bg-teal-500
                         border border-gray-100/20
                         rounded-lg                        
                         font-medium
@@ -266,9 +266,9 @@ const Search: React.FC<SearchProps> = ({
                 <button
                     onClick={handleClearFilters}
                     className="
-                         flex items-center justify-center gap-2
+                        flex items-center justify-center gap-2
                         px-4 py-3                        
-                        hover:bg-gray-50
+                        hover:bg-teal-500
                         border border-gray-100/20
                         rounded-lg                       
                         font-medium

@@ -51,7 +51,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Basic pagination component with 5 pages, showing page 1',
+        story: 'Basic rounded pagination component with 5 pages, showing page 1. All buttons are rounded and navigation buttons show only icons.',
       },
     },
   },
@@ -85,7 +85,7 @@ export const ManyPages: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Pagination with many pages, demonstrating ellipsis behavior',
+        story: 'Rounded pagination with many pages, demonstrating ellipsis behavior with circular buttons',
       },
     },
   },

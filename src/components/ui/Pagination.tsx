@@ -87,13 +87,13 @@ const Pagination: React.FC<PaginationProps> = ({
   const visiblePages = getVisiblePages();
 
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-6">
+    <div className="flex flex-col items-center justify-center gap-4 py-6">
       {/* Results info */}
-      <div className="text-white/70 text-sm">
+      {/* <div className="text-white/70 text-sm">
         Showing <span className="font-medium text-white">{Math.min((currentPage - 1) * 6 + 1, totalItems)}</span> to{' '}
         <span className="font-medium text-white">{Math.min(currentPage * 6, totalItems)}</span> of{' '}
         <span className="font-medium text-white">{totalItems}</span> results
-      </div>
+      </div> */}
 
       {/* Pagination controls */}
       <div className="flex items-center gap-2">
@@ -103,8 +103,8 @@ const Pagination: React.FC<PaginationProps> = ({
             onClick={handleRefresh}
             disabled={isRefreshing || isLoading}
             className={`
-              flex items-center gap-2 px-3 py-2 text-sm
-              border border-gray-100/20 rounded-lg
+              flex hidden items-center justify-center w-10 h-10
+              border border-gray-100/20 rounded-full
               hover:bg-gray-100/10 transition-all duration-200
               text-white/80 hover:text-white
               disabled:opacity-50 disabled:cursor-not-allowed
@@ -113,7 +113,6 @@ const Pagination: React.FC<PaginationProps> = ({
             title="Refresh data"
           >
             <FiRotateCw className={`h-4 w-4 ${isRefreshing ? 'animate-spin' : ''}`} />
-            <span className="hidden sm:inline">Refresh</span>
           </button>
         )}
 
@@ -122,15 +121,14 @@ const Pagination: React.FC<PaginationProps> = ({
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage <= 1 || isPending || isLoading}
           className={`
-            flex items-center gap-1 px-3 py-2
-            border border-gray-100/20 rounded-lg
+            flex items-center justify-center w-10 h-10
+            border border-gray-100/20 rounded-full
             hover:bg-gray-100/10 transition-all duration-200
             text-white/80 hover:text-white
             disabled:opacity-50 disabled:cursor-not-allowed
           `}
         >
           <FiChevronLeft className="h-4 w-4" />
-          <span className="hidden sm:inline">Previous</span>
         </button>
 
         {/* Page numbers */}
@@ -141,13 +139,13 @@ const Pagination: React.FC<PaginationProps> = ({
               onClick={() => typeof page === 'number' ? handlePageChange(page) : undefined}
               disabled={page === '...' || isPending || isLoading}
               className={`
-                min-w-[40px] h-10 px-3 py-2 text-sm rounded-lg
+                w-10 h-10 flex items-center justify-center text-sm rounded-full
                 transition-all duration-200
                 ${page === currentPage
-                  ? 'bg-blue-500 text-white border border-blue-500'
+                  ? 'bg-violet-500 text-white border border-violet-500'
                   : page === '...'
                     ? 'text-white/50 cursor-default'
-                    : 'text-white/80 hover:text-white border border-gray-100/20 hover:bg-gray-100/10'
+                    : 'text-white/80 hover:text-white border border-gray-100/0 hover:bg-gray-100/10 cursor-pointer'
                 }
                 disabled:opacity-50 disabled:cursor-not-allowed
               `}
@@ -162,22 +160,21 @@ const Pagination: React.FC<PaginationProps> = ({
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage >= totalPages || isPending || isLoading}
           className={`
-            flex items-center gap-1 px-3 py-2
-            border border-gray-100/20 rounded-lg
+            flex items-center justify-center w-10 h-10
+            border border-gray-100/20 rounded-full
             hover:bg-gray-100/10 transition-all duration-200
             text-white/80 hover:text-white
             disabled:opacity-50 disabled:cursor-not-allowed
           `}
         >
-          <span className="hidden sm:inline">Next</span>
           <FiChevronRight className="h-4 w-4" />
         </button>
       </div>
 
       {/* Loading indicator */}
       {(isPending || isLoading) && (
-        <div className="absolute inset-0 bg-darkBlue/50 backdrop-blur-sm flex items-center justify-center rounded-lg">
-          <div className="flex items-center gap-3 bg-darkBlue/90 px-6 py-3 rounded-lg border border-gray-100/20">
+        <div className="absolute inset-0 bg-darkBlue/50 backdrop-blur-sm flex items-center justify-center rounded-2xl">
+          <div className="flex items-center gap-3 bg-darkBlue/90 px-6 py-3 rounded-full border border-gray-100/20">
             <div className="animate-spin rounded-full h-5 w-5 border-2 border-blue-500 border-t-transparent"></div>
             <span className="text-white text-sm">Loading...</span>
           </div>
