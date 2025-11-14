@@ -8,19 +8,28 @@ import { setLocale } from "@/lib/actions";
 export default function FooterLanguageSwitcher() {
   const { i18n } = useTranslation();
   const router = useRouter();
-  const [currentLang, setCurrentLang] = useState<string>(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("i18nextLng") || "en";
-    }
-    return "en";
-  });
+  // Start with "en" to ensure consistent server/client render
+  const [currentLang, setCurrentLang] = useState<string>("en");
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Only access localStorage after mount to avoid hydration mismatch
+    setIsMounted(true);
+    const savedLang = localStorage.getItem("i18nextLng") || "en";
+    setCurrentLang(savedLang);
+    i18n.changeLanguage(savedLang);
+    document.documentElement.dir = savedLang === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = savedLang;
+  }, [i18n]);
 
   useEffect(() => {
     // Sync i18n and document with current state
-    i18n.changeLanguage(currentLang);
-    document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
-    document.documentElement.lang = currentLang;
-  }, [currentLang, i18n]);
+    if (isMounted) {
+      i18n.changeLanguage(currentLang);
+      document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+      document.documentElement.lang = currentLang;
+    }
+  }, [currentLang, i18n, isMounted]);
 
   const toggleLanguage = async (newLang: string) => {
     setCurrentLang(newLang);

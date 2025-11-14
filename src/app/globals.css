@@ -858,3 +858,14 @@ box-shadow: 0px 1px 3px 0px #0A0D121A; */
 .phone-number-input:focus {
   outline: none;
 }
+
+/* Talent Hero Swiper Styles */
+.talent-hero-swiper {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.talent-hero-swiper .swiper-pagination {
+  display: none !important;
+}
