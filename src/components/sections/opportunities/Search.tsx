@@ -140,11 +140,11 @@ const Search: React.FC<SearchProps> = ({
             <div className={`overflow-hidden transition-all duration-500 ease-out ${
                 showFilters ? 'max-h-96 opacity-100 mt-6 mb-2' : 'max-h-0 opacity-0 mt-0 mb-0'
             }`}>
-                <div className={`grid grid-cols-5 gap-4 text-white transform transition-all duration-500 ease-out ${
+                <div className={`flex flex-col md:flex-row w-full gap-4 text-white transform transition-all duration-500 ease-out ${
                     showFilters ? 'translate-y-0 scale-100' : '-translate-y-6 scale-95'
                 }`}>
                     {/* Investment Size Filter */}
-                <div className="relative">
+                <div className="relative flex-1">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
                         <CiMoneyBill className="h-4 w-4 text-gray-400" />
                     </div>
@@ -175,7 +175,7 @@ const Search: React.FC<SearchProps> = ({
                 </div>
 
                 {/* Sector Filter */}
-                <div className="relative">
+                <div className="relative flex-1">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
                         <MdOutlineFactory className="h-4 w-4 text-gray-400" />
                     </div>
@@ -208,7 +208,7 @@ const Search: React.FC<SearchProps> = ({
                 </div>
 
                 {/* Location Filter */}
-                <div className="relative">
+                <div className="relative flex-1">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
                         <FiMapPin className="h-4 w-4 text-gray-400" />
                     </div>
@@ -244,7 +244,8 @@ const Search: React.FC<SearchProps> = ({
                     onClick={onSortChange}
                     className="
                         flex items-center justify-center gap-2
-                        px-4 py-3                        
+                        px-4 py-3
+                        flex-1                        
                         hover:bg-teal-500
                         border border-gray-100/20
                         rounded-lg                        
@@ -267,7 +268,8 @@ const Search: React.FC<SearchProps> = ({
                     onClick={handleClearFilters}
                     className="
                         flex items-center justify-center gap-2
-                        px-4 py-3                        
+                        px-4 py-3
+                        flex-1                        
                         hover:bg-teal-500
                         border border-gray-100/20
                         rounded-lg                       

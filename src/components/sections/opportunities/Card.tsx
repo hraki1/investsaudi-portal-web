@@ -70,12 +70,14 @@ const Card: React.FC<CardProps> = ({
         window.open(twitterUrl, '_blank');
     }
 
-    const flexDirection = order % 2 === 0 ? 'flex-row' : 'flex-row-reverse';
+    const responsiveClasses = order % 2 === 0 
+    ? 'flex-col md:flex-row' 
+    : 'flex-col md:flex-row-reverse';
+
 
     return (
-        <div className={`flex rounded-xl md:rounded-4xl border border-gray-100/20 overflow-hidden bg-black/5 ${className} ${flexDirection}`}>
-
-            <div className="w-1/3 shrink-0">
+        <div className={`flex ${responsiveClasses} rounded-xl md:rounded-4xl border border-gray-100/20 overflow-hidden bg-black/5 ${className}`}>
+            <div className="w-full md:w-1/3 h-48 md:h-auto shrink-0">
                 <img
                     src={coverImage}
                     alt={coverImageAlt}
@@ -83,47 +85,47 @@ const Card: React.FC<CardProps> = ({
                 />
             </div>
 
-
             <div className="flex-1 relative">
                 <GradientBackground />
-                <div className="p-6">
+                
+                <div className="p-4 md:p-6">
                     <div className="space-y-4 text-white">
                         <div className="space-y-2">
-                            <h3 className="text-2xl font-semibold ">{title}</h3>
-                            <div className="flex flex-row gap-4">
+                            <h3 className="text-xl md:text-2xl font-semibold">{title}</h3>
+                            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                                 <div className="text-sm tracking-wide flex flex-row gap-2 items-center"><MdOutlineFactory size="1.70em" color="var(--foundation-green)" />{category}</div>
                                 <div className="text-sm flex flex-row gap-2 items-center"><CiLocationOn size="1.70em" color="var(--foundation-green)" />{location}</div>
                             </div>
                         </div>
 
-                        <p className="text-base leading-relaxed">{description}</p>
+                        <p className="text-sm md:text-base leading-relaxed">{description}</p>
 
-                        <div className="grid grid-cols-5 gap-4 items-start">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4 items-start">
                             <dl className='flex flex-col-reverse items-start gap-2'>
-                                <dt className="font-medium text-sm">Expected investment size</dt>
-                                <dd className="font-semibold text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{investment}</dd>
+                                <dt className="font-medium text-xs md:text-sm">Expected investment size</dt>
+                                <dd className="font-semibold text-sm md:text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{investment}</dd>
                             </dl>
                             <dl className='flex flex-col-reverse items-start gap-2'>
-                                <dt className="font-medium text-sm">Jobs Created</dt>
-                                <dd className="font-semibold text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{jobsCreated}</dd>
+                                <dt className="font-medium text-xs md:text-sm">Jobs Created</dt>
+                                <dd className="font-semibold text-sm md:text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{jobsCreated}</dd>
                             </dl>
                             <dl className='flex flex-col-reverse items-start gap-2'>
-                                <dt className="font-medium text-sm">GDP Impact</dt>
-                                <dd className="font-semibold text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{GDPImpact}</dd>
+                                <dt className="font-medium text-xs md:text-sm">GDP Impact</dt>
+                                <dd className="font-semibold text-sm md:text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{GDPImpact}</dd>
                             </dl>
                             <dl className='flex flex-col-reverse items-start gap-2'>
-                                <dt className="font-medium text-sm">Expected IRR</dt>
-                                <dd className="font-semibold text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{IRR}</dd>
+                                <dt className="font-medium text-xs md:text-sm">Expected IRR</dt>
+                                <dd className="font-semibold text-sm md:text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{IRR}</dd>
                             </dl>
                             <dl className='flex flex-col-reverse items-start gap-2'>
-                                <dt className="font-medium text-sm">Payback Period</dt>
-                                <dd className="font-semibold text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{paybackPeriod}</dd>
+                                <dt className="font-medium text-xs md:text-sm">Payback Period</dt>
+                                <dd className="font-semibold text-sm md:text-base whitespace-nowrap text-overflow-ellipsis overflow-hidden">~{paybackPeriod}</dd>
                             </dl>
                         </div>
 
-                        <footer className="space-4 flex flex-row justify-between">
+                        <footer className="space-4 flex flex-col md:flex-row justify-between gap-4">
 
-                            <ul className="flex flex-row gap-4 pt-4 flex-wrap">
+                            <ul className="flex flex-row gap-3 md:gap-4 pt-2 md:pt-4 justify-between md:justify-start">
                                 <li>
                                     <ShareButton
                                     // onClick={handleShareEmail}
@@ -154,9 +156,9 @@ const Card: React.FC<CardProps> = ({
                                 </li>
 
                             </ul>
-                            <span className="flex items-center">
+                            <span className="flex items-center justify-center md:justify-start">
 
-                                <button className="text-base font-medium bg-teal-500 rounded-full px-3 py-2">I'm interested</button>
+                                <button className="text-sm md:text-base font-medium bg-teal-500 rounded-full px-3 py-2">I'm interested</button>
                                 <ShareButton className="ml-4">
                                     <GoArrowUpRight size={16} />
                                 </ShareButton>
