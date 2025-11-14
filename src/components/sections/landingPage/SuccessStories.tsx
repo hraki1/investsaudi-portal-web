@@ -150,7 +150,7 @@ export default function SuccessStories() {
 
         <div
           className={`relative z-10  container mx-auto ${
-            activeIndex === 0 && "ml-[-200px]"
+            activeIndex === 0 && "md:ml-[-200px]"
           } ${
             activeIndex === 1 && "transition-all duration-300"
           } px-4 min-[375px]:px-0 sm:px-6 md:px-8 lg:px-12 xl:px-16 overflow-visible`}

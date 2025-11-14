@@ -309,8 +309,7 @@ export default function Incentives() {
               />
               {/* Gradient Overlay */}
               <div
-                className="absolute inset-0 bg-[linear-gradient(269.96deg,rgba(0,167,162,0.4)_-0.73%,rgba(1,121,194,0.4)_37.74%,rgba(129,74,152,0.4)_76.21%)]
-"
+                className="absolute inset-0 bg-[linear-gradient(269.96deg,rgba(0,167,162,0.4)_-0.73%,rgba(1,121,194,0.4)_37.74%,rgba(129,74,152,0.4)_76.21%)]"
               ></div>
             </div>
 

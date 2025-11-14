@@ -57,7 +57,7 @@ export default function BackgroundVideo({
       loop
       muted
       playsInline
-      preload={priority ? "auto" : "metadata"}
+      preload={"auto"}
       className={`w-full h-full object-cover ${className}`}
       aria-hidden="true"
     />

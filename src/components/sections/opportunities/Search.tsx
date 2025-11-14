@@ -90,20 +90,7 @@ const Search: React.FC<SearchProps> = ({
                             value={searchTerm}
                             onChange={handleSearchChange}
                             placeholder={placeholder}
-                            className="
-                                w-full 
-                                pl-12 pr-4 py-3                                 
-                                border border-gray-100/20 
-                                rounded-lg                                 
-                                placeholder-gray-500
-                                focus:outline-none 
-                                focus:ring-2 
-                                focus:ring-blue-500 
-                                focus:border-transparent
-                                shadow-sm
-                                transition-all duration-200
-                                hover:shadow-md
-                            "
+                            className="w-full pl-12 pr-4 py-3 border border-gray-100/20 rounded-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm transition-all duration-200 hover:shadow-md"
                         />
                     </div>
                 </form>
@@ -111,24 +98,7 @@ const Search: React.FC<SearchProps> = ({
                 {/* Filter Button */}
                 <button
                     onClick={handleToggleFilters}
-                    className={`
-                        flex items-center gap-2
-                        px-4 py-3                        
-                        hover:bg-gray-100/40
-                        border border-gray-100/20
-                        rounded-lg                        
-                        font-medium
-                        transition-all duration-200
-                        focus:outline-none
-                        focus:ring-2
-                        focus:ring-blue-500
-                        focus:border-transparent
-                        shadow-sm
-                        hover:shadow-md
-                        whitespace-nowrap
-                        transform hover:scale-105
-                        ${showFilters ? 'bg-blue-500/20 border-blue-400/40 text-blue-100 scale-105' : 'text-white'}
-                    `}
+                    className={`flex items-center gap-2 px-4 py-3 hover:bg-gray-100/40 border border-gray-100/20 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm hover:shadow-md whitespace-nowrap transform hover:scale-105 ${showFilters ? 'bg-blue-500/20 border-blue-400/40 text-blue-100 scale-105' : 'text-white'}`}
                 >
                     <FiFilter className={`h-4 w-4 transition-transform duration-300 ${
                         showFilters ? 'rotate-180' : 'rotate-0'
@@ -151,20 +121,7 @@ const Search: React.FC<SearchProps> = ({
                     <select
                         value={investment}
                         onChange={handleInvestmentChange}
-                        className="
-                            w-full 
-                            pl-10 pr-8 py-3
-                            border border-gray-100/20 
-                            rounded-lg                            
-                            focus:outline-none 
-                            focus:ring-2 
-                            focus:ring-blue-500 
-                            focus:border-transparent
-                            shadow-sm
-                            transition-all duration-200
-                            hover:shadow-md
-                            appearance-none
-                        "
+                        className="w-full pl-10 pr-8 py-3 border border-gray-100/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm transition-all duration-200 hover:shadow-md appearance-none"
                     >
                         <option value="" className="bg-white text-gray-900">Investment size</option>
                         <option value="small" className="bg-white text-gray-900">$1M - $50M</option>
@@ -182,20 +139,7 @@ const Search: React.FC<SearchProps> = ({
                     <select
                         value={sector}
                         onChange={handleSectorChange}
-                        className="
-                            w-full 
-                            pl-10 pr-8 py-3
-                            border border-gray-100/20 
-                            rounded-lg 
-                            focus:outline-none 
-                            focus:ring-2 
-                            focus:ring-blue-500 
-                            focus:border-transparent
-                            shadow-sm
-                            transition-all duration-200
-                            hover:shadow-md
-                            appearance-none
-                        "
+                        className="w-full pl-10 pr-8 py-3 border border-gray-100/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm transition-all duration-200 hover:shadow-md appearance-none"
                     >
                         <option value="" className="bg-white text-gray-900">All Sectors</option>
                         <option value="energy" className="bg-white text-gray-900">Energy</option>
@@ -215,20 +159,7 @@ const Search: React.FC<SearchProps> = ({
                     <select
                         value={location}
                         onChange={handleLocationChange}
-                        className="
-                            w-full 
-                            pl-10 pr-8 py-3
-                            border border-gray-100/20 
-                            rounded-lg                            
-                            focus:outline-none 
-                            focus:ring-2 
-                            focus:ring-blue-500 
-                            focus:border-transparent
-                            shadow-sm
-                            transition-all duration-200
-                            hover:shadow-md
-                            appearance-none
-                        "
+                        className="w-full pl-10 pr-8 py-3 border border-gray-100/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm transition-all duration-200 hover:shadow-md appearance-none"
                     >
                         <option value="" className="bg-white text-gray-900">By Region</option>
                         <option value="riyadh" className="bg-white text-gray-900">Riyadh</option>
@@ -242,22 +173,7 @@ const Search: React.FC<SearchProps> = ({
                 {/* Sort Button */}
                 <button
                     onClick={onSortChange}
-                    className="
-                        flex items-center justify-center gap-2
-                        px-4 py-3
-                        flex-1                        
-                        hover:bg-teal-500
-                        border border-gray-100/20
-                        rounded-lg                        
-                        font-medium
-                        transition-all duration-200
-                        focus:outline-none
-                        focus:ring-2
-                        focus:ring-blue-500
-                        focus:border-transparent
-                        shadow-sm
-                        hover:shadow-md
-                    "
+                    className="flex items-center justify-center gap-2 px-4 py-3 flex-1 hover:bg-teal-500 border border-gray-100/20 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm hover:shadow-md"
                 >
                     <img src="/logos/gov.svg" alt="Sort Icon" className="h-4 w-4" />
                     Govt. Opportunities
@@ -266,22 +182,7 @@ const Search: React.FC<SearchProps> = ({
                 {/* Clear Filters Button */}
                 <button
                     onClick={handleClearFilters}
-                    className="
-                        flex items-center justify-center gap-2
-                        px-4 py-3
-                        flex-1                        
-                        hover:bg-teal-500
-                        border border-gray-100/20
-                        rounded-lg                       
-                        font-medium
-                        transition-all duration-200
-                        focus:outline-none
-                        focus:ring-2
-                        focus:ring-blue-500
-                        focus:border-transparent
-                        shadow-sm
-                        hover:shadow-md
-                    "
+                    className="flex items-center justify-center gap-2 px-4 py-3 flex-1 hover:bg-teal-500 border border-gray-100/20 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm hover:shadow-md"
                 >
                     <img src="/logos/feras.svg" alt="Sort Icon" className="h-4 w-4" />
                     Feras Opportunities

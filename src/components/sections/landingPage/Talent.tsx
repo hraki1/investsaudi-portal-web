@@ -272,7 +272,7 @@ export default function Talent() {
                       priority={slide.id === 1}
                     />
                     {/* overlay */}
-                    <div className=" absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_73.66%,rgba(0,0,0,0.6)_100%)]" />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_73.66%,rgba(0,0,0,0.6)_100%)]" />
                   </div>
                 </SwiperSlide>
               ))}
@@ -302,7 +302,7 @@ export default function Talent() {
 
           {/* World-Class Saudi Talent Section */}
           <div
-            className=" rounded-3xl p-5 md:p-5 mb-10 md:mb-12 shadow-sm"
+            className="rounded-3xl p-5 md:p-5 mb-10 md:mb-12 shadow-sm"
             style={{
               background: "linear-gradient(90deg, #D9F2F1 0%, #ECE4F0 100%)",
             }}
@@ -459,7 +459,7 @@ export default function Talent() {
                 </div>
 
                 <div
-                  className={` w-16 h-16 rounded-full shadow-md backdrop-blur-xl flex items-center justify-center mb-8 bg-[linear-gradient(135deg,#FEFEFE_14.73%,#FBFBFB_46.14%,#F1F1F1_69.88%,#E7E7E7_84.53%)]`}
+                  className="w-16 h-16 rounded-full shadow-md backdrop-blur-xl flex items-center justify-center mb-8 bg-[linear-gradient(135deg,#FEFEFE_14.73%,#FBFBFB_46.14%,#F1F1F1_69.88%,#E7E7E7_84.53%)]"
                 >
                   <span className="text-2xl">{card.icon}</span>
                 </div>
@@ -679,17 +679,6 @@ export default function Talent() {
           </div>
         </div>
       </section>
-      <style jsx global>{`
-        .talent-hero-swiper {
-          position: relative;
-          border-radius: 1.5rem;
-          overflow: hidden;
-        }
-
-        .talent-hero-swiper .swiper-pagination {
-          display: none !important;
-        }
-      `}</style>
     </>
   );
 }
