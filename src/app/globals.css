@@ -25,6 +25,7 @@
     opacity: 0;
     max-height: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -38,6 +39,7 @@
     opacity: 1;
     max-height: 200px;
   }
+
   to {
     transform: translateY(-10px);
     opacity: 0;
@@ -107,11 +109,11 @@ body {
   .bg-darkBlue {
     background-color: var(--foundation-blue-dark);
   }
-  
+
   .text-darkBlue {
     color: var(--foundation-blue-dark);
   }
-  
+
   .border-darkBlue {
     border-color: var(--foundation-blue-dark);
   }
@@ -298,37 +300,109 @@ body {
 .success-stories-swiper.stacked-cards .stacked-slide {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: left center;
+  /* Default style for all visible slides - makes all cards visible */
+  /* opacity: 0.90;
+  transform: scale(0.92); */
+  z-index: 7;
+  filter: brightness(0.94);
+  pointer-events: none;
 }
 
+/* Active card - leftmost and largest (position 1 of 8) */
 .success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-active {
-  transform: scale(1.05) !important;
-  opacity: 1;
-  z-index: 10;
-  filter: brightness(1);
+  transform: scale(1) !important;
+  opacity: 1 !important;
+  z-index: 18 !important;
+  filter: brightness(1) !important;
+  pointer-events: auto !important;
 }
 
+/* Next card - right of active (position 2 of 8) */
 .success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-next {
-  transform: scale(0.92) !important;
-  /* opacity: 0.85; */
-  z-index: 5;
-  filter: brightness(0.92);
+  transform: scale(0.96) !important;
+  /* opacity: 0.95;
+  filter: brightness(0.98); */
+  z-index: 16;
   pointer-events: none;
 }
 
+/* Next+1 card (position 3 of 8) */
+.success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-next + .swiper-slide {
+  transform: scale(0.92) !important;
+  /* opacity: 0.90;
+  filter: brightness(0.96); */
+  z-index: 14;
+  pointer-events: none;
+}
+
+/* Next+2 card (position 4 of 8) */
+.success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-next + .swiper-slide + .swiper-slide {
+  transform: scale(0.88) !important;
+  /* opacity: 0.85;
+  filter: brightness(0.94); */
+  z-index: 12;
+  pointer-events: none;
+}
+
+/* Next+3 card (position 5 of 8) */
+.success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide {
+  transform: scale(0.84) !important;
+  /* filter: brightness(0.94);
+  opacity: 0.90; */
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Next+4 card (position 6 of 8) */
+.success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
+  transform: scale(0.82) !important;
+  /* opacity: 0.82;
+  filter: brightness(0.91); */
+  z-index: 8;
+  pointer-events: none;
+}
+
+/* Next+5 card (position 7 of 8) */
+.success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
+  transform: scale(0.79) !important;
+  /* opacity: 80; */
+  z-index: 6;
+  /* filter: brightness(0.90);7 */
+  pointer-events: none;
+}
+
+/* Next+6 card (position 8 of 8 - last visible card) */
+.success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
+  transform: scale(0.75) !important;
+  /* opacity: 0.92;
+  filter: brightness(0.90); */
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* Previous card - left of active (position 8 of 8) */
 .success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-prev {
-  transform: scale(0.92) !important;
-  opacity: 0.80;
-  z-index: 5;
-  filter: brightness(0.92);
+  transform: scale(0.98) !important;
+  /* opacity: 0.97 !important;
+  filter: brightness(0.99) !important; */
+  z-index: 17 !important;
   pointer-events: none;
 }
 
-.success-stories-swiper.stacked-cards .stacked-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
-  transform: scale(0.8) !important;
-  opacity: 0.8;
-  filter: brightness(0.85);
-  z-index: 1;
-  pointer-events: none;
+/* Cards that are 2+ positions to the left of active (multiple previous cards) */
+/* These will inherit default styles but can be overridden for better visibility */
+.success-stories-swiper.stacked-cards .swiper-slide:has(+ .swiper-slide.swiper-slide-active) {
+  transform: scale(0.96) !important;
+  /* filter: brightness(0.98) !important;
+  opacity: 0.95 !important; */
+  z-index: 16 !important;
+}
+
+.success-stories-swiper.stacked-cards .swiper-slide:has(+ .swiper-slide:has(+ .swiper-slide.swiper-slide-active)) {
+  transform: scale(0.94) !important;
+  /* opacity: 0.93 !important;
+  filter: brightness(0.96) !important; */
+  z-index: 14 !important;
 }
 
 /* Success Stories Pagination */
@@ -402,32 +476,13 @@ body {
     transform-origin: center center !important;
   }
 
-  .success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-next,
-  .success-stories-swiper.stacked-cards .stacked-slide.swiper-slide-prev {
-    transform: scale(0.93) !important;
-    opacity: 0.88;
-  }
-
-  .success-stories-swiper.stacked-cards .stacked-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
-    transform: scale(0.90) !important;
-    opacity: 0.75;
-  }
-
-  .success-stories-swiper.stacked-cards {
-    padding: 20px 0 60px 0 !important;
-  }
-
-
-  .success-stories-swiper.stacked-cards .stacked-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
-    transform: scale(0.90) !important;
-    opacity: 0.75;
-  }
 }
 
 .success-stories-swiper .swiper-button-disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }
+
 
 /* Fade in animation */
 @keyframes fade-in {

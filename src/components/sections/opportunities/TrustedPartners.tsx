@@ -62,7 +62,7 @@ export default function TrustedPartners() {
           </p>
         </div>
 
-        <div className="mt-12 grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-6">
+        <div className="mt-12 grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-2">
           {partners.map((partner) => (
             <div
               key={partner.name}

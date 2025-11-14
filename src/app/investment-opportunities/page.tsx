@@ -9,8 +9,7 @@ export default function InvestmentOpportunities() {
   return (
     <div className="relative">
       <ScrollProgressIndicator />
-      <Hero />
-      {/* <PathInvesting /> */}
+      <Hero /> {/* <PathInvesting /> */}
       <TrustedPartners />
       <div className="mx-auto">
         <BusinessOpportunities />
