@@ -34,6 +34,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ children, onClick, className 
                 focus:outline-none
                 focus:ring-2
                 focus:ring-white/50
+                border border-white/20
                 ${className}
             `}
         >
