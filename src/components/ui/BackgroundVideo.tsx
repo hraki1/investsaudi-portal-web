@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 interface BackgroundVideoProps {
   src: string;
@@ -13,7 +13,7 @@ export default function BackgroundVideo({
   src,
   className = "",
   poster,
-  priority = false,
+  priority = true,
 }: BackgroundVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -57,7 +57,7 @@ export default function BackgroundVideo({
       loop
       muted
       playsInline
-      preload={"auto"}
+      preload={priority ? "auto" : "metadata"}
       className={`w-full h-full object-cover ${className}`}
       aria-hidden="true"
     />
