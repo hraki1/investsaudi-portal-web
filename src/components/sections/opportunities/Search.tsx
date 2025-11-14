@@ -32,6 +32,7 @@ const Search: React.FC<SearchProps> = ({
     const [location, setLocation] = useState('');
     const [investment, setInvestment] = useState('');
     const [sector, setSector] = useState('');
+    const [showFilters, setShowFilters] = useState(false);
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
@@ -69,6 +70,11 @@ const Search: React.FC<SearchProps> = ({
         onClearFilters?.();
     };
 
+    const handleToggleFilters = () => {
+        setShowFilters(!showFilters);
+        onFilter?.();
+    };
+
     return (
         <div className={`space-y-4 ${className}`}>
             {/* Search Bar Row */}
@@ -104,8 +110,8 @@ const Search: React.FC<SearchProps> = ({
 
                 {/* Filter Button */}
                 <button
-                    onClick={onFilter}
-                    className="
+                    onClick={handleToggleFilters}
+                    className={`
                         flex items-center gap-2
                         px-4 py-3                        
                         hover:bg-gray-100/40
@@ -120,19 +126,24 @@ const Search: React.FC<SearchProps> = ({
                         shadow-sm
                         hover:shadow-md
                         whitespace-nowrap
-                        text-white
-                    "
+                        transform hover:scale-105
+                        ${showFilters ? 'bg-blue-500/20 border-blue-400/40 text-blue-100 scale-105' : 'text-white'}
+                    `}
                 >
-                    <FiFilter className="h-4 w-4" />
-
+                    <FiFilter className={`h-4 w-4 transition-transform duration-300 ${
+                        showFilters ? 'rotate-180' : 'rotate-0'
+                    }`} />
                 </button>
             </div>
 
             {/* Filters Row */}
-            <div className="grid grid-cols-5 gap-4 text-white">
-
-
-                {/* Investment Size Filter */}
+            <div className={`overflow-hidden transition-all duration-500 ease-out ${
+                showFilters ? 'max-h-96 opacity-100 mt-6 mb-2' : 'max-h-0 opacity-0 mt-0 mb-0'
+            }`}>
+                <div className={`grid grid-cols-5 gap-4 text-white transform transition-all duration-500 ease-out ${
+                    showFilters ? 'translate-y-0 scale-100' : '-translate-y-6 scale-95'
+                }`}>
+                    {/* Investment Size Filter */}
                 <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none z-10">
                         <CiMoneyBill className="h-4 w-4 text-gray-400" />
@@ -234,7 +245,7 @@ const Search: React.FC<SearchProps> = ({
                     className="
                         flex items-center justify-center gap-2
                         px-4 py-3                        
-                        hover:bg-gray-50
+                        hover:bg-teal-500
                         border border-gray-100/20
                         rounded-lg                        
                         font-medium
@@ -255,9 +266,9 @@ const Search: React.FC<SearchProps> = ({
                 <button
                     onClick={handleClearFilters}
                     className="
-                         flex items-center justify-center gap-2
+                        flex items-center justify-center gap-2
                         px-4 py-3                        
-                        hover:bg-gray-50
+                        hover:bg-teal-500
                         border border-gray-100/20
                         rounded-lg                       
                         font-medium
@@ -273,6 +284,7 @@ const Search: React.FC<SearchProps> = ({
                     <img src="/logos/feras.svg" alt="Sort Icon" className="h-4 w-4" />
                     Feras Opportunities
                 </button>
+                </div>
             </div>
         </div>
     );
