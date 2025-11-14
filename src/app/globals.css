@@ -499,6 +499,34 @@ body {
   animation: fade-in 0.3s ease-in-out;
 }
 
+/* Shimmer animation for loading effects */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Bounce up down animation for loading dots */
+@keyframes bounce-up-down {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-up-down {
+  animation: bounce-up-down 1s ease-in-out infinite;
+}
+
 /* Slide up animation */
 @keyframes slide-up {
   from {
