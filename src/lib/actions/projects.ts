@@ -1,5 +1,7 @@
 'use server'
 
+import { getApiUrl } from '@/lib/api'; // Adjust the import path as needed
+
 export interface PaginationParams {
   page?: number;
   limit?: number;
@@ -43,7 +45,7 @@ export async function getProjects(params: PaginationParams = {}): Promise<Projec
     if (sector) searchParams.append('sector', sector);
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/projects/paginated?${searchParams}`,
+       getApiUrl(`/api/projects/paginated?${searchParams}`),
       {
         cache: 'no-store', // Ensure fresh data on each request
         headers: {
@@ -91,7 +93,7 @@ export async function refreshProjects(params: PaginationParams = {}): Promise<Pr
 
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/projects/paginated?${searchParams}`,
+      getApiUrl(`/api/projects/paginated?${searchParams}`),
       {
         cache: 'no-store',
         headers: {
