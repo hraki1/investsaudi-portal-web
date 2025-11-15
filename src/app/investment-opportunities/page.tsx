@@ -6,6 +6,7 @@ import TrustedCompanies from "@/components/sections/opportunities/TrustedCompani
 import ScrollProgressIndicator from "@/components/ui/ScrollProgressIndicator";
 import QRCard from "@/components/sections/opportunities/QRCards";
 import Blogs from "@/components/sections/landingPage/Blogs";
+import NeedMoreInfo from "@/components/sections/opportunities/NeedMoreInfo";
 
 export default function InvestmentOpportunities() {
   return (
@@ -16,9 +17,10 @@ export default function InvestmentOpportunities() {
         <BusinessOpportunities />
       </div>
       <TrustedCompanies />
-      <QRCard />
       <Blogs />
       <TrustedPartners />
+      <NeedMoreInfo />
+      <QRCard />
     </div>
   );
 }
