@@ -13,9 +13,9 @@ export default function InvestmentOpportunities() {
     <div className="relative">
       <ScrollProgressIndicator />
       <Hero />
-      <div className="mx-auto">
+      {/* <div className="mx-auto">
         <BusinessOpportunities />
-      </div>
+      </div> */}
       <TrustedCompanies />
       <Blogs />
       <TrustedPartners />
