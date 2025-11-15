@@ -242,10 +242,10 @@ export default function Hero() {
   return (
     <section
       id={hero.sectionId}
-      className="relative h-screen flex items-end overflow-hidden"
+      className="relative min-h-screen flex items-end overflow-hidden"
     >
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 ">
+      <div className="absolute inset-0">
         <img
           src={hero.backgroundImage.src}
           alt={hero.backgroundImage.alt}
@@ -254,111 +254,82 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
-      {/*  main content container */}
-      <div className="container mx-auto mb-20">
+      {/* Main content container */}
+      <div className="relative z-10 w-full container mx-auto px-4 sm:px-6 md:px-12 lg:px-12 pb-8 sm:pb-12 md:pb-20 lg:pb-[8vh]">
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-12 mb-20 md:mb-[8vh]">
-          <div className="max-w-4xl mb-4 md:mb-5">
-            <h1 className="text-3xl bukra-bold sm:text-4xl md:text-5xl lg:text-6xl font-extralight text-white mb-6 md:mb-0 leading-snug tracking-wide">
-              {t(hero.content.titleKey)}
-            </h1>
+        <div className="max-w-4xl mb-6 sm:mb-8 md:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl bukra-bold font-extralight text-white mb-4 sm:mb-5 md:mb-6 leading-tight sm:leading-snug tracking-wide">
+            {t(hero.content.titleKey)}
+          </h1>
 
-            <p className="text-sm md:text-[22px] bukra-regular text-white/90 mb-8 md:mb-0 leading-relaxed">
-              {t(hero.content.subtitleKey)}
-            </p>
-          </div>
-
-          {/* actions */}
-          <div className="flex flex-col justify-between items-center md:items-end sm:flex-row flex-wrap gap-6">
-            {/* highlight cards */}
-            <div className="flex flex-col sm:flex-row gap-4 min-w-[300px] sm:min-w-[420px] mb-5 sm:mb-0">
-              {highlightCards.map(
-                ({
-                  value,
-                  label,
-                  icon,
-                  borderGradient,
-                  backgroundColor,
-                  pattern,
-                }) => {
-                  return (
-                    <div
-                      key={label}
-                      className="relative  overflow-hidden flex min-w-[220px] flex-col gap-3 rounded-[17px] px-6 py-6 backdrop-blur-3xl"
-                      style={{
-                        background: `linear-gradient(to right, ${backgroundColor})`,
-                      }}
-                    >
-                      {/* background image */}
-                      <div className="absolute h-full w-[80%] top-0 right-0">
-                        <img
-                          src="/investment-opportunities/hero/image.png"
-                          alt={label}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="relative z-10 flex items-start justify-between">
-                        <div>
-                          <span className="bukra-bold text-3xl font-semibold tracking-wide text-white">
-                            {value}
-                          </span>
-                        </div>
-                        {icon && (
-                          <span className="flex h-10 w-10 items-center justify-center">
-                            {icon}
-                          </span>
-                        )}
-                      </div>
-                      <p className="relative z-10 bukra-regular text-sm md:text-[17.25px] text-white/90">
-                        {label}
-                      </p>
-                    </div>
-                  );
-                }
-              )}
-            </div>
-
-            {/* buttons */}
-            <div className="flex flex-col bukra-regular sm:flex-row flex-wrap gap-4">
-              {hero.actions.map((key) => (
-                <button
-                  key={key}
-                  className="flex justify-between gap-3 items-center px-4 py-2.5 rounded-4xl bg-transparent border border-white/80 text-white"
-                >
-                  {t(key)}
-                  <BsArrowUpRight className="size-4" />
-                </button>
-              ))}
-            </div>
-          </div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-[22px] bukra-regular text-white/90 leading-relaxed">
+            {t(hero.content.subtitleKey)}
+          </p>
         </div>
 
-        {/* Stats Section */}
-        {/* <div className="hidden md:block relative z-10 bg-black/30 backdrop-blur-sm px-4 border-t border-white/10  ">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-3">
-              {hero.stats.map((stat, index) => {
-                const IconComponent = iconComponents[stat.iconName];
+        {/* Actions */}
+        <div className="flex flex-col gap-6 sm:gap-8 md:flex-row md:justify-between md:items-end">
+          {/* Highlight cards */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+            {highlightCards.map(
+              ({
+                value,
+                label,
+                icon,
+                borderGradient,
+                backgroundColor,
+                pattern,
+              }) => {
                 return (
                   <div
-                    dir="ltr"
-                    key={index}
-                    className="rounded-lg p-2 flex items-center md:gap-5"
+                    key={label}
+                    className="relative overflow-hidden flex flex-col gap-2 sm:gap-3 rounded-[17px] px-4 sm:px-5 md:px-6 py-4 sm:py-5 md:py-6 backdrop-blur-3xl w-full sm:min-w-[180px] md:min-w-[200px] lg:min-w-[220px]"
+                    style={{
+                      background: `linear-gradient(to right, ${backgroundColor})`,
+                    }}
                   >
-                    {IconComponent && (
-                      <IconComponent className="w-10 h-10 text-white" />
-                    )}
-
-                    <div>
-                      <h3 className="text-white">{stat.title}</h3>
-                      <p className="text-white/70 text-base">
-                        {stat.description}
-                      </p>
+                    {/* Background image */}
+                    <div className="absolute h-full w-[80%] top-0 right-0 opacity-50 sm:opacity-100">
+                      <img
+                        src="/investment-opportunities/hero/image.png"
+                        alt={label}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
+                    <div className="relative z-10 flex items-start justify-between">
+                      <div>
+                        <span className="bukra-bold text-2xl sm:text-2xl md:text-3xl font-semibold tracking-wide text-white">
+                          {value}
+                        </span>
+                      </div>
+                      {icon && (
+                        <span className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center shrink-0">
+                          {icon}
+                        </span>
+                      )}
+                    </div>
+                    <p className="relative z-10 bukra-regular text-xs sm:text-sm md:text-base lg:text-[17.25px] text-white/90">
+                      {label}
+                    </p>
                   </div>
                 );
-              })}
-            </div>
-          </div> */}
+              }
+            )}
+          </div>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+            {hero.actions.map((key) => (
+              <button
+                key={key}
+                className="flex justify-between gap-3 items-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-4xl bg-transparent border border-white/80 text-white text-sm sm:text-base hover:bg-white/10 transition-colors w-full sm:w-auto"
+              >
+                <span className="bukra-regular">{t(key)}</span>
+                <BsArrowUpRight className="size-4 shrink-0" />
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
