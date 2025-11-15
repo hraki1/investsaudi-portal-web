@@ -32,7 +32,7 @@ interface Event {
 const events: Event[] = [
   {
     id: 1,
-    title: "Saudi-US Investment",
+    title: "Saudi-US Investment Conference",
     description:
       "Get ready to explore three unique zones that celebrate the cultural heritage of food through a rich, multisensory experience.",
     location: "MISA office, Riyadh, Saudi Arabia",
