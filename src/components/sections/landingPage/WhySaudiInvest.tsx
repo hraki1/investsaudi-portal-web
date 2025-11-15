@@ -601,7 +601,7 @@ export default function WhySaudiInvest() {
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="flex flex-col xl:flex-row gap-8 xl:gap-12 mb-16">
+        <div className="flex flex-col xl:flex-row gap-5 2xl:gap-12 mb-16">
           {/* Left Column: Vision Quote & Crown Prince */}
           <motion.div 
             ref={quoteRef}
@@ -612,7 +612,7 @@ export default function WhySaudiInvest() {
           >
             {/* Vision Quote */}
             <motion.div 
-              className="h-full w-full bg-black/60 backdrop-blur-2xl p-6 md:p-[40px] md:pb-[30px] rounded-2xl flex flex-col justify-between"
+              className="h-full w-full bg-black/60 backdrop-blur-2xl p-6 md:p-[30px] 2xl:p-[40px] md:pb-[30px] rounded-2xl flex flex-col justify-between"
               variants={quoteCardVariants}
               whileHover="hover"
             >
@@ -677,14 +677,14 @@ export default function WhySaudiInvest() {
           {/* right: Vision 2030 with Tabs */}
           <div className="flex flex-col lg:flex-row gap-6 md:gap-0 flex-1 items-start">
             {/* Tabs/Pillars */}
-            <div className="lg:max-w-[320px] xl:max-w-[360px] space-y-3  sm:mb-5 lg:mb-0 md:mt-10">
+            <div className="lg:max-w-[320px] xl:max-w-[300px] space-y-3  sm:mb-5 lg:mb-0 md:mt-10">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() =>
                     setActiveTab(tab.id as "economy" | "society" | "nation")
                   }
-                  className={`w-full text-left relative pl-6 rounded-l-xl transition-all duration-300 py-3 md:py-5 ${
+                  className={`w-full text-left relative pl-6 2xl:pl-6 rounded-l-xl transition-all duration-300 py-3 md:py-5 ${
                     activeTab === tab.id
                       ? activeButtonBgClass
                       : inactiveButtonHoverClass
@@ -697,7 +697,7 @@ export default function WhySaudiInvest() {
                         : "bg-transparent"
                     }`}
                   ></span>
-                  <h3 className="text-white font-light text-base md:text-lg lg:text-[20px] bukra-regular">
+                  <h3 className="text-white font-light text-base md:text-lg lg:text-[18px] 2xl:text-[20px] bukra-regular">
                     {tab.title}
                   </h3>
                 </button>
@@ -738,7 +738,7 @@ export default function WhySaudiInvest() {
                           {item.icon}
                         </motion.div>
                         <motion.p 
-                          className="md:min-w-[418px] text-white/80 text-base bukra-regular md:text-xl leading-relaxed"
+                          className="2xl:min-w-[418px] text-white/80 text-base bukra-regular md:text-[17px] 2xl:text-xl"
                           custom={idx}
                           variants={contentTextVariants}
                           initial="hidden"

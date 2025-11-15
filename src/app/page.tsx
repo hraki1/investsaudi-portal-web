@@ -9,38 +9,32 @@ import Opportunities from "@/components/sections/landingPage/Opportunities";
 import QRCard from "@/components/sections/landingPage/QRCards";
 import RegulatoryAgreement from "@/components/sections/landingPage/RegulatoryAgreement";
 import SeamlessInvestorServices from "@/components/sections/landingPage/SeamlessInvestorServices";
-// import StrategicDirection from "@/components/sections/StrategicDirection";
 import StrategicInvestorProgram from "@/components/sections/landingPage/StrategicInvestorProgram";
 import SuccessStories from "@/components/sections/landingPage/SuccessStories";
 import SupportAndContact from "@/components/sections/landingPage/SupportAndContact";
 import Talent from "@/components/sections/landingPage/Talent";
-// import Chatbot from "@/components/shared/Chatbot";
 import Unlocking from "@/components/sections/landingPage/Unlocking";
-// import TrustedCompanies from "@/components/sections/opportunities/TrustedCompanies";
+import Blogs from "@/components/sections/landingPage/Blogs";
 
 export default function Home() {
   return (
     <main>
       <HeroContainer />
-      {/* <InvestorServices /> */}
-      {/* <TrustedCompanies /> */}
-      <SuccessStories />
-      {/* <Hero />
-        <Seamless Investor Services /> */}
       <Unlocking />
       <Opportunities />
       <SeamlessInvestorServices />
-      <StrategicInvestorProgram />
-      <Events />
+      <SuccessStories />
       <Talent />
       <Incentives />
-      <NationalPrograms />
-      <InvestorMatchmaking />
-      <Miza />
       <RegulatoryAgreement />
+      <Miza />
+      <NationalPrograms />
+      <StrategicInvestorProgram />
+      <InvestorMatchmaking />
+      <Events />
+      <Blogs />
       <SupportAndContact />
       <QRCard />
-      {/* <Chatbot /> */}
     </main>
   );
 }
