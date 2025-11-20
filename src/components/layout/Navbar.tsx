@@ -22,26 +22,26 @@ export default function Navbar() {
         <div className=" mx-auto px-4 sm:px-4 lg:px-5 py-3 md:py-3">
           <div className="flex items-center justify-between lg:my-2">
             {/* Logo */}
-            <Link to="/" className="flex items-center">
+            <a href="/" className="flex items-center">
               <img
                 src="/Navbar/logo.png"
                 alt="logo"
                 className="h-8 md:h-[50px] w-auto object-contain"
               />
-            </Link>
+            </a>
 
             {/* Navigation Links - Desktop */}
             <div className="hidden lg:flex items-center gap-5 lg:gap-5 xl:gap-6 rtl:space-x-reverse">
               {navigationLinks.map((link, index) => (
                 <div key={index} className="flex items-center gap-1">
                   {link.href ? (
-                    <Link
-                      to={link.href}
+                    <a
+                      href={link.href}
                       className="text-white font-normal text-sm md:text-base bukra-regular tracking-wide capitalize"
                       style={{ textDecoration: "none !important" }}
                     >
                       {link.label}
-                    </Link>
+                    </a>
                   ) : (
                     <span className="text-white font-normal text-sm md:text-base bukra-regular tracking-wide capitalize">
                       {link.label}
