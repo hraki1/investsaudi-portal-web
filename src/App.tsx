@@ -3,13 +3,13 @@ import "./App.css";
 import Layout from "./components/layout/Layout";
 import { lazy, Suspense } from "react";
 import Loading from "./components/ui/loading";
+import Home from "./pages/Home";
 
-const Home = lazy(() => import("./pages/Home"));
 const InvestmentOpportunities = lazy(
   () => import("./pages/InvestmentOpportunities")
 );
 const Sectors = lazy(() => import("./pages/Sectors"));
-
+const Earth = lazy(() => import("./pages/Earth"));
 function App() {
   const router = createBrowserRouter([
     {
@@ -22,6 +22,7 @@ function App() {
           element: <InvestmentOpportunities />,
         },
         { path: "sectors", element: <Sectors /> },
+        { path: "earth", element: <Earth /> },
       ],
     },
   ]);

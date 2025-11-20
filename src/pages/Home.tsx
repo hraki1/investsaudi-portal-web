@@ -1,4 +1,3 @@
-
 // Critical above-the-fold components - load immediately
 import Hero from "../components/sections/landingPage/Hero";
 import HeroContainer from "@/components/sections/landingPage/HeroContainer";
@@ -27,21 +26,21 @@ export default function Home() {
     <main>
       <Hero />
       <HeroContainer />
-        <Unlocking />
-        <Opportunities />
-        <SeamlessInvestorServices />
-        <SuccessStories />
-        <Talent />
-        <Incentives />
-        <RegulatoryAgreement />
-        <Miza />
-        <NationalPrograms />
-        <StrategicInvestorProgram />
-        <InvestorMatchmaking />
-        <Events />
-        <Blogs />
-        <SupportAndContact />
-        <QRCard />
+      <Unlocking />
+      <Opportunities />
+      <SeamlessInvestorServices />
+      <SuccessStories />
+      <Talent />
+      <Incentives />
+      <RegulatoryAgreement />
+      <Miza />
+      <NationalPrograms />
+      <StrategicInvestorProgram />
+      <InvestorMatchmaking />
+      <Events />
+      <Blogs />
+      <SupportAndContact />
+      <QRCard />
     </main>
   );
 }
