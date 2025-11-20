@@ -1,48 +1,24 @@
-import { lazy, Suspense } from "react";
 
 // Critical above-the-fold components - load immediately
 import Hero from "../components/sections/landingPage/Hero";
 import HeroContainer from "@/components/sections/landingPage/HeroContainer";
-import Loading from "@/components/ui/loading";
+import Blogs from "@/components/sections/landingPage/Blogs";
+import Events from "@/components/sections/landingPage/Events";
+import Incentives from "@/components/sections/landingPage/Incentives";
+import InvestorMatchmaking from "@/components/sections/landingPage/InvestorMatchmaking";
+import Miza from "@/components/sections/landingPage/Miza";
+import NationalPrograms from "@/components/sections/landingPage/NationalPrograms";
+import Opportunities from "@/components/sections/landingPage/Opportunities";
+import RegulatoryAgreement from "@/components/sections/landingPage/RegulatoryAgreement";
+import SeamlessInvestorServices from "@/components/sections/landingPage/SeamlessInvestorServices";
+import StrategicInvestorProgram from "@/components/sections/landingPage/StrategicInvestorProgram";
+import SupportAndContact from "@/components/sections/landingPage/SupportAndContact";
+import Talent from "@/components/sections/landingPage/Talent";
+import Unlocking from "@/components/sections/landingPage/Unlocking";
+import QRCard from "@/components/sections/opportunities/QRCards";
+import SuccessStories from "@/components/sections/opportunities/SuccessStories";
 
 // import HeroContainer from "../components/sections/landingPage/HeroContainer";
-
-// Lazy load all other components for better performance
-const Unlocking = lazy(
-  () => import("../components/sections/landingPage/Unlocking")
-);
-const Opportunities = lazy(
-  () => import("../components/sections/landingPage/Opportunities")
-);
-const SeamlessInvestorServices = lazy(
-  () => import("../components/sections/landingPage/SeamlessInvestorServices")
-);
-const SuccessStories = lazy(
-  () => import("../components/sections/landingPage/SuccessStories")
-);
-const Talent = lazy(() => import("../components/sections/landingPage/Talent"));
-const Incentives = lazy(
-  () => import("../components/sections/landingPage/Incentives")
-);
-const RegulatoryAgreement = lazy(
-  () => import("../components/sections/landingPage/RegulatoryAgreement")
-);
-const Miza = lazy(() => import("../components/sections/landingPage/Miza"));
-const NationalPrograms = lazy(
-  () => import("../components/sections/landingPage/NationalPrograms")
-);
-const StrategicInvestorProgram = lazy(
-  () => import("../components/sections/landingPage/StrategicInvestorProgram")
-);
-const InvestorMatchmaking = lazy(
-  () => import("../components/sections/landingPage/InvestorMatchmaking")
-);
-const Events = lazy(() => import("../components/sections/landingPage/Events"));
-const Blogs = lazy(() => import("../components/sections/landingPage/Blogs"));
-const SupportAndContact = lazy(
-  () => import("../components/sections/landingPage/SupportAndContact")
-);
-const QRCard = lazy(() => import("../components/sections/landingPage/QRCards"));
 
 // Simple loading placeholder for lazy components
 
@@ -51,7 +27,6 @@ export default function Home() {
     <main>
       <Hero />
       <HeroContainer />
-      <Suspense fallback={<Loading />}>
         <Unlocking />
         <Opportunities />
         <SeamlessInvestorServices />
@@ -67,7 +42,6 @@ export default function Home() {
         <Blogs />
         <SupportAndContact />
         <QRCard />
-      </Suspense>
     </main>
   );
 }
