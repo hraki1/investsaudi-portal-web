@@ -109,7 +109,7 @@ export default function Hero() {
             src={hero.backgroundImage.src}
             alt={hero.backgroundImage.alt}
             className="object-cover w-full h-full"
-            loading="lazy"
+            loading="eager"
           />
         </div>
         {/* overlay */}
