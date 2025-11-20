@@ -1,12 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
-"use client";
+
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import {
   HiMagnifyingGlass,
-  HiArrowRight,
-  HiFunnel,
-  HiArrowLeft,
 } from "react-icons/hi2";
 import {
   investmentProjectsData,
@@ -14,7 +10,6 @@ import {
 } from "@/data/investmentProjects";
 import InvestmentProjectCard from "./InvestmentProjectCard";
 import SaudiMapInvestmentProjects from "./saudiMap-investment-projects";
-import { CiFilter } from "react-icons/ci";
 import { TbFilter } from "react-icons/tb";
 import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 

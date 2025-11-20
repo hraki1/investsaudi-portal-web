@@ -1,15 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   HiXMark,
-  HiEnvelope,
-  HiShare,
-  HiArrowRight,
-  HiClock,
-  HiPhone,
 } from "react-icons/hi2";
 
 export interface InvestmentProjectModalProps {
@@ -31,10 +26,12 @@ export default function InvestmentProjectModal({
   location,
   description,
 }: InvestmentProjectModalProps) {
-  // Generate opportunity number from id
-  const opportunityNumber = `01-25-${String(id).padStart(6, "0")}-${
-    Math.floor(Math.random() * 9000) + 1000
-  }`;
+  // Generate opportunity number from id (deterministic suffix based on id)
+  const opportunityNumber = useMemo(() => {
+    // Generate a deterministic 4-digit suffix (1000-9999) based on id
+    const suffix = ((id * 7919) % 9000) + 1000; // Using prime number for better distribution
+    return `01-25-${String(id).padStart(6, "0")}-${suffix}`;
+  }, [id]);
 
   // Map zoom state
   const [zoom, setZoom] = useState(16);
@@ -175,10 +172,8 @@ export default function InvestmentProjectModal({
     },
   ];
 
-  // Portal root state
-  const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
+  // Portal root state (lazy initializer to avoid effect setState)
+  const [portalRoot] = useState<HTMLElement>(() => {
     // Get or create portal root
     let root = document.getElementById("root-modal");
     if (!root) {
@@ -186,8 +181,8 @@ export default function InvestmentProjectModal({
       root.id = "root-modal";
       document.body.appendChild(root);
     }
-    setPortalRoot(root);
-  }, []);
+    return root;
+  });
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -200,8 +195,6 @@ export default function InvestmentProjectModal({
       document.body.style.overflow = "unset";
     };
   }, [isOpen]);
-
-  if (!portalRoot) return null;
 
   return createPortal(
     <AnimatePresence>

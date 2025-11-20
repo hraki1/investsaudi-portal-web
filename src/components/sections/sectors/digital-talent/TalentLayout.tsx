@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { ICTWorkforceData, SectorReadySkillsData, TalentEcosystemData } from '@/data/talentData';
 import { GoArrowUpRight } from 'react-icons/go';
 
@@ -121,11 +120,10 @@ const TalentCard: React.FC<TalentCardProps> = ({ talent }) => {
     <div className="font-bukra flex flex-col overflow-hidden h-full">
       {/* Image Section */}
       <div className="relative h-48 overflow-hidden border-tr rounded-tr-4xl">
-        <Image
+          <img
           src={talent.image}
           alt={talent.title}
-          fill
-          className="object-cover"
+          className="object-cover w-full h-full"
         />
 
       </div>

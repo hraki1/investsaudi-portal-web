@@ -1,14 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import {
-  HiXMark,
-  HiEnvelope,
-  HiPhone,
-  HiShare,
-  HiArrowRight,
-} from "react-icons/hi2";
-import InvestmentProjectModal from "./InvestmentProjectModal";
 
 export interface InvestmentProjectCardProps {
   id: number;
@@ -23,7 +15,10 @@ export interface InvestmentProjectCardProps {
   paybackPeriod: string;
 }
 
-export default function InvestmentProjectCard({
+import InvestmentProjectModal from "./InvestmentProjectModal";
+import { LuArrowRight } from "react-icons/lu";
+
+  export default function InvestmentProjectCard({
   id,
   title,
   type,
@@ -284,7 +279,7 @@ export default function InvestmentProjectCard({
               onClick={handleOpenModal}
               className="w-10 h-10 rounded-full bg-[#00A7A2] text-white flex items-center justify-center hover:bg-[#008B86] transition-colors"
             >
-              <HiArrowRight className="w-5 h-5" />
+              <LuArrowRight className="w-5 h-5" />
             </button>
           </div>
         </div>

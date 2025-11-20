@@ -1,4 +1,3 @@
-import { title } from "process";
 
 export interface TalentData {
   title: string;

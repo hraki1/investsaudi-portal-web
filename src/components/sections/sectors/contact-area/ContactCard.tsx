@@ -1,9 +1,7 @@
 "use client";
 
 import React from 'react';
-import { IconType } from 'react-icons';
 import { IoCall, IoMail } from 'react-icons/io5';
-import Image from 'next/image';
 
 interface ContactCardProps {
     title: string;
@@ -42,7 +40,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
                         boxShadow: '0 4px 6px -1px var(--Colors-Effects-Shadows-shadow-md_01, rgba(10, 13, 18, 0.10)), 0 2px 4px -2px var(--Colors-Effects-Shadows-shadow-md_02, rgba(10, 13, 18, 0.06))'
                     }}
                 >
-                    <Image src={icon} alt={`${title} icon`} width={24} height={24} />
+                    <img src={icon} alt={`${title} icon`} width={24} height={24} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 bukra-bold">
                     {title}
@@ -88,8 +86,8 @@ const ContactCard: React.FC<ContactCardProps> = ({
                 </div>
 
                 {/* QR Code */}
-                <div className="flex-shrink-0">
-                    <Image
+                <div className="shrink-0">
+                        <img
                         src={qrCode}
                         alt="QR Code"
                         width={80}

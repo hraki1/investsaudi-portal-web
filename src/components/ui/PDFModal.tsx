@@ -1,7 +1,6 @@
 import React from 'react';
 import Modal from './Modal';
 import { IoMdClose } from 'react-icons/io';
-import { MdDownload } from 'react-icons/md';
 import { FiMail } from 'react-icons/fi';
 import { MdOutlinePhoneInTalk } from 'react-icons/md';
 import { IoShareSocialOutline } from 'react-icons/io5';
