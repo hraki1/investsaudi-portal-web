@@ -3,7 +3,9 @@ import "./App.css";
 import Layout from "./components/layout/Layout";
 import { lazy, Suspense } from "react";
 import Loading from "./components/ui/loading";
-import Home from "./pages/Home";
+
+// Lazy load all pages for code splitting
+const Home = lazy(() => import("./pages/Home"));
 
 // Lazy load all pages for code splitting
 const InvestmentOpportunities = lazy(
