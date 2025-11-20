@@ -1,0 +1,1878 @@
+﻿const sectors: Sectors = {
+  leftSectors: [
+    {
+      id: "advanced-manufacturing",
+      title: "Advanced Manufacturing",
+      side: "left",
+      description:
+        "Saudi Arabia's advanced manufacturing sector is emerging as a leader in innovation and industrial growth. With a focus on cutting-edge technologies, a skilled workforce, and a supportive investment climate, the sector is becoming a key player in global manufacturing, offering competitive advantages in terms of location, incentives, and technological advancements.",
+      strategySummary:
+        "In late 2022, the Saudi government revealed details of the country's latest National Industrial Strategy (NIS). The NIS is Saudi Arabia's comprehensive roadmap for accelerating the diversification of its industrial base to increase non-oil exports, encourage privatization, attract more foreign investment.",
+      strategyCta: "Download Strategy",
+      opportunities: [
+        {
+          id: "opportunity-commercial-digital-banking",
+          icon: (
+            <span>
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.6528 16.9C11.63 17.0537 11.5967 17.2057 11.5531 17.355C11.5022 17.5332 11.437 17.7071 11.3581 17.875C11.3362 17.9199 11.3036 17.9588 11.2632 17.9882C11.2228 18.0176 11.1758 18.0367 11.1263 18.0438C11.0768 18.0509 11.0263 18.0458 10.9793 18.0289C10.9322 18.012 10.89 17.9839 10.8563 17.9469C9.65462 16.6044 8.23104 15.4785 6.6478 14.6185C6.56682 14.5747 6.47257 14.5624 6.38305 14.5837C6.29352 14.6051 6.215 14.6587 6.16248 14.7342C6.10995 14.8098 6.0871 14.9021 6.09829 14.9934C6.10948 15.0848 6.15392 15.1688 6.22313 15.2295C7.55939 16.3814 8.77969 17.6614 9.8666 19.051C9.89414 19.0877 9.91332 19.1299 9.92277 19.1747C9.93223 19.2195 9.93173 19.2659 9.92132 19.3105C9.9109 19.3552 9.89083 19.397 9.86251 19.433C9.83419 19.469 9.79831 19.4984 9.7574 19.519C9.2621 19.7635 8.72167 19.9032 8.16993 19.9294C7.61818 19.9556 7.06696 19.8677 6.55073 19.6711C2.3604 18.1588 3.07107 15.0431 0.553401 13.4528C0.518698 13.4349 0.489262 13.4083 0.46801 13.3756C0.446758 13.3428 0.434427 13.3051 0.432238 13.2662C0.430048 13.2272 0.438077 13.1883 0.455529 13.1534C0.472981 13.1185 0.49925 13.0888 0.531734 13.0671C1.59773 12.4908 5.07307 10.8918 8.70873 12.2005C9.55667 12.5074 10.2953 13.0575 10.8321 13.7821L11.6528 16.9Z"
+                  fill="#8BA820"
+                />
+                <path
+                  d="M13.5031 18.3345C13.4661 18.4327 13.4655 18.541 13.5015 18.6396C13.5374 18.7383 13.6074 18.8208 13.6989 18.8722C14.7135 19.3859 15.8575 19.5874 16.9865 19.4514C18.1155 19.3155 19.1789 18.8481 20.0425 18.1083C25.2078 13.9483 22.6988 9.87927 25.4808 6.41217C25.5205 6.37038 25.5486 6.31891 25.5621 6.26289C25.5756 6.20687 25.5742 6.14828 25.558 6.09298C25.5417 6.03769 25.5112 5.98763 25.4696 5.94782C25.4279 5.90802 25.3765 5.87986 25.3205 5.86617C23.5395 5.56284 17.8715 4.9735 13.3778 8.57494C10.7887 10.664 10.0711 14.3682 11.7117 16.9972C11.7398 17.0433 11.7797 17.0811 11.8273 17.1068C11.8748 17.1325 11.9284 17.1451 11.9824 17.1433C12.0364 17.1415 12.0889 17.1255 12.1347 17.0968C12.1805 17.0681 12.2178 17.0277 12.2429 16.9799C12.8193 15.8623 14.4586 12.9438 16.7496 11.0493C16.8259 10.9862 16.9227 10.9533 17.0217 10.9569C17.1206 10.9604 17.2148 11.0002 17.2864 11.0686C17.358 11.1369 17.402 11.2292 17.4101 11.3279C17.4182 11.4266 17.3898 11.5248 17.3303 11.6039C15.7341 13.6494 14.4448 15.9168 13.5031 18.3345Z"
+                  fill="#9CC824"
+                />
+              </svg>
+            </span>
+          ),
+          title: "Commercial And Digital Banking",
+          location: "Al-Madinah",
+          investmentSize: "Investment Size:",
+          value: "$220 Million",
+          highlight:
+            "Saudi Arabia's advanced manufacturing sector is emerging as a leader in innovation and industrial growth. With a focus on cutting-edge technologies, a skilled workforce, and a supportive investment climate...",
+        },
+        {
+          id: "opportunity-industrial-automation-platforms",
+          title: "Industrial Automation Platforms",
+          location: "Riyadh",
+          investmentSize: "Investment Size:",
+          value: "$175 Million",
+          highlight:
+            "Automation-focused platforms enabling predictive maintenance, smart logistics, and large-scale production efficiencies for regional manufacturers.",
+        },
+      ],
+      keyNumbers: [
+        {
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clipPath="url(#clip0_116_8473)">
+                <path
+                  d="M13.4737 10.8587L11.111 10.3129V2.66667H11.9999C14.2053 2.66667 15.9999 4.46133 15.9999 6.66667C15.9999 6.78454 16.0467 6.89759 16.1301 6.98094C16.2134 7.06429 16.3265 7.11111 16.4444 7.11111C16.5622 7.11111 16.6753 7.06429 16.7586 6.98094C16.842 6.89759 16.8888 6.78454 16.8888 6.66667C16.8888 3.97156 14.695 1.77778 11.9999 1.77778H11.111V0.444444C11.111 0.32657 11.0642 0.213524 10.9809 0.130175C10.8975 0.0468253 10.7845 0 10.6666 0C10.5487 0 10.4357 0.0468253 10.3523 0.130175C10.269 0.213524 10.2221 0.32657 10.2221 0.444444V1.77778H8.84881C7.68104 1.77895 6.56143 2.24337 5.73569 3.06911C4.90996 3.89485 4.44554 5.01445 4.44436 6.18222C4.44086 7.17936 4.77724 8.14792 5.39806 8.92822C6.01888 9.70853 6.88706 10.254 7.85947 10.4747L10.2221 11.0204V18.6667H9.33325C8.27275 18.6655 7.25602 18.2437 6.50612 17.4938C5.75623 16.7439 5.33443 15.7272 5.33325 14.6667C5.33325 14.5488 5.28643 14.4357 5.20308 14.3524C5.11973 14.269 5.00668 14.2222 4.88881 14.2222C4.77093 14.2222 4.65789 14.269 4.57454 14.3524C4.49119 14.4357 4.44436 14.5488 4.44436 14.6667C4.44436 17.3618 6.63814 19.5556 9.33325 19.5556H10.2221V20.8889C10.2221 21.0068 10.269 21.1198 10.3523 21.2032C10.4357 21.2865 10.5487 21.3333 10.6666 21.3333C10.7845 21.3333 10.8975 21.2865 10.9809 21.2032C11.0642 21.1198 11.111 21.0068 11.111 20.8889V19.5556H12.4844C13.6521 19.5544 14.7717 19.09 15.5975 18.2642C16.4232 17.4385 16.8876 16.3189 16.8888 15.1511C16.8923 14.154 16.5559 13.1854 15.9351 12.4051C15.3143 11.6248 14.4461 11.0793 13.4737 10.8587ZM8.05859 9.60889C7.28249 9.43283 6.58958 8.99752 6.09414 8.37474C5.59869 7.75196 5.33031 6.97892 5.33325 6.18311C5.33443 5.25109 5.70519 4.35758 6.36423 3.69854C7.02327 3.0395 7.91679 2.66873 8.84881 2.66756H10.2221V10.1084L8.05859 9.60889ZM12.4844 18.6667H11.111V11.2258L13.2746 11.7253C14.0507 11.9014 14.7436 12.3367 15.239 12.9595C15.7345 13.5823 16.0029 14.3553 15.9999 15.1511C15.9987 16.0831 15.628 16.9766 14.9689 17.6357C14.3099 18.2947 13.4164 18.6655 12.4844 18.6667Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_116_8473">
+                  <rect width="21.3333" height="21.3333" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          ),
+          iconBg: "#00A7A2",
+          id: "key-number-gdp-contribution",
+          value: "$30 - BN",
+          label:
+            "Projected 2030 GDP contribution for machinery and equipment industry",
+        },
+        {
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.6667 12.4444C18.6667 11.464 17.8693 10.6667 16.8889 10.6667H15.1111C14.1307 10.6667 13.3333 11.464 13.3333 12.4444C11.8631 12.4444 10.6667 13.6409 10.6667 15.1111V18.6667C10.6667 20.1369 11.8631 21.3333 13.3333 21.3333H18.6667C20.1369 21.3333 21.3333 20.1369 21.3333 18.6667V15.1111C21.3333 13.6409 20.1369 12.4444 18.6667 12.4444ZM15.1111 11.5556H16.8889C17.3787 11.5556 17.7778 11.9547 17.7778 12.4444H14.2222C14.2222 11.9547 14.6213 11.5556 15.1111 11.5556ZM20.4444 18.6667C20.4444 19.6471 19.6471 20.4444 18.6667 20.4444H13.3333C12.3529 20.4444 11.5556 19.6471 11.5556 18.6667V16.8889H15.5556V18.2222C15.5556 18.3401 15.6024 18.4531 15.6857 18.5365C15.7691 18.6198 15.8821 18.6667 16 18.6667C16.1179 18.6667 16.2309 18.6198 16.3143 18.5365C16.3976 18.4531 16.4444 18.3401 16.4444 18.2222V16.8889H20.4444V18.6667ZM20.4444 16H11.5556V15.1111C11.5556 14.1307 12.3529 13.3333 13.3333 13.3333H18.6667C19.6471 13.3333 20.4444 14.1307 20.4444 15.1111V16ZM8 10.6667C10.9413 10.6667 13.3333 8.27467 13.3333 5.33333C13.3333 2.392 10.9413 0 8 0C5.05867 0 2.66667 2.392 2.66667 5.33333C2.66667 8.27467 5.05867 10.6667 8 10.6667ZM8 0.888889C10.4507 0.888889 12.4444 2.88267 12.4444 5.33333C12.4444 7.784 10.4507 9.77778 8 9.77778C5.54933 9.77778 3.55556 7.784 3.55556 5.33333C3.55556 2.88267 5.54933 0.888889 8 0.888889ZM9.77333 13.0311C9.76562 13.0891 9.7464 13.1451 9.7168 13.1956C9.68721 13.2461 9.64783 13.2902 9.60097 13.3253C9.55412 13.3604 9.50073 13.3858 9.44394 13.4C9.38714 13.4142 9.32808 13.4169 9.27022 13.408C8.92312 13.3582 8.57289 13.3332 8.22222 13.3333C4.17867 13.3333 0.888889 16.6231 0.888889 20.6667V20.8889C0.888889 21.0068 0.842064 21.1198 0.758714 21.2032C0.675365 21.2865 0.562318 21.3333 0.444444 21.3333C0.32657 21.3333 0.213524 21.2865 0.130175 21.2032C0.0468253 21.1198 0 21.0068 0 20.8889V20.6667C0 16.1324 3.688 12.4444 8.22222 12.4444C8.61511 12.4444 9.01067 12.4729 9.39644 12.528C9.63911 12.5636 9.808 12.7884 9.77333 13.0311Z"
+                fill="white"
+              />
+            </svg>
+          ),
+          iconBg: "#814A98",
+
+          id: "key-number-mena-ranking",
+          value: "4th",
+          label: "Largest manufacturing hub in the MENA region by 2035",
+        },
+        {
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.29919 21.3316C8.95032 21.3338 8.60607 21.2518 8.29566 21.0926C7.98524 20.9333 7.71782 20.7016 7.51608 20.4169C7.31094 20.1347 7.17692 19.8071 7.12538 19.4621C7.07385 19.117 7.10634 18.7646 7.22008 18.4347L9.03519 13.3316H4.78097L3.68941 14.9956C3.4875 15.3042 3.21176 15.5575 2.8872 15.7326C2.56264 15.9077 2.19952 15.999 1.83074 15.9983C1.53649 15.9986 1.24649 15.928 0.985385 15.7923C0.724277 15.6566 0.49977 15.4599 0.330932 15.2189C0.162095 14.978 0.0539158 14.6998 0.0155822 14.408C-0.0227513 14.1163 0.00989348 13.8196 0.110744 13.5432L1.1143 10.672L0.0511884 7.88715C-0.089256 7.16804 0.0796328 6.49693 0.481411 6.01338C0.653745 5.80041 0.871564 5.62872 1.11889 5.5109C1.36622 5.39309 1.63679 5.33212 1.91074 5.33249C2.65919 5.33249 3.35163 5.70404 3.76408 6.32804L4.87074 7.99915H9.0343L7.22186 2.90315C7.10675 2.57263 7.07331 2.21916 7.12439 1.87292C7.17547 1.52667 7.30955 1.19792 7.51519 0.914709C7.71693 0.630079 7.98435 0.398315 8.29477 0.239084C8.60518 0.0798523 8.94943 -0.00214744 9.2983 4.27485e-05C10.2201 4.27485e-05 11.0672 0.502265 11.509 1.31204L15.3374 8.00004H18.5392C19.9001 8.00004 21.0823 8.9556 21.2885 10.2223C21.4165 11.0054 21.1979 11.7965 20.6903 12.3938C20.1827 12.9912 19.4423 13.3334 18.6583 13.3334H15.3383L11.5054 20.0294C11.2885 20.4247 10.9692 20.7543 10.581 20.9838C10.1929 21.2132 9.7501 21.334 9.29919 21.3334V21.3316ZM4.54097 12.4427H9.66541C9.73655 12.4428 9.80662 12.46 9.86973 12.4929C9.93283 12.5257 9.98714 12.5732 10.0281 12.6314C10.069 12.6896 10.0954 12.7567 10.105 12.8272C10.1146 12.8977 10.1071 12.9695 10.0832 13.0365L8.05919 18.7263C7.92586 19.1236 7.98986 19.5529 8.23786 19.8987C8.48586 20.2445 8.87252 20.4427 9.2983 20.4427C9.89474 20.4427 10.4432 20.1174 10.7294 19.5929L14.6939 12.6658C14.7328 12.598 14.789 12.5416 14.8568 12.5024C14.9245 12.4632 15.0014 12.4426 15.0796 12.4427H18.6574C19.1801 12.4427 19.6743 12.2143 20.0121 11.816C20.1814 11.6183 20.3049 11.3855 20.3738 11.1344C20.4426 10.8833 20.4551 10.6201 20.4103 10.3636C20.2734 9.52182 19.4681 8.88715 18.5383 8.88715H15.0787C15.0005 8.88722 14.9236 8.86662 14.8559 8.82744C14.7881 8.78827 14.7319 8.7319 14.693 8.66404L10.7347 1.74404C10.5947 1.48523 10.3875 1.26901 10.1348 1.11819C9.88213 0.967373 9.59344 0.887554 9.29919 0.887154C8.87341 0.887154 8.48674 1.08538 8.23874 1.43115C7.99074 1.77693 7.92586 2.20715 8.06274 2.61071L10.0841 8.29426C10.108 8.36127 10.1155 8.43303 10.1059 8.50352C10.0963 8.57401 10.0699 8.64117 10.029 8.69935C9.98803 8.75753 9.93372 8.80503 9.87061 8.83787C9.80751 8.8707 9.73744 8.88791 9.6663 8.88804H4.63341C4.55999 8.88805 4.4877 8.86987 4.42302 8.83513C4.35834 8.80038 4.30327 8.75016 4.26274 8.68893L3.02363 6.81871C2.61741 6.20538 1.66097 5.9876 1.16497 6.58227C1.04656 6.73043 0.961782 6.90257 0.916504 7.08675C0.871226 7.27093 0.866531 7.46276 0.902744 7.64893L2.00141 10.5076C2.0388 10.6055 2.04037 10.7135 2.00586 10.8125L0.947188 13.8436C0.838744 14.1414 0.879633 14.4552 1.05741 14.7103C1.23519 14.9654 1.51608 15.1112 1.8263 15.1112C2.04833 15.112 2.26706 15.0575 2.46265 14.9524C2.65823 14.8473 2.82448 14.695 2.9463 14.5094L4.16941 12.6454C4.20982 12.5837 4.26494 12.533 4.3298 12.498C4.39466 12.4629 4.46723 12.4445 4.54097 12.4445V12.4427Z"
+                fill="white"
+              />
+            </svg>
+          ),
+          iconBg: "#A01E64",
+
+          id: "key-number-growth",
+          value: "15%",
+          label: "Expected growth in the sector over the next decade",
+        },
+      ],
+      background: {
+        image: "/unlocking/engin.png",
+        gradient:
+          "linear-gradient(180deg, rgba(0, 166, 160, 0.88) 0%, rgba(16, 34, 70, 0.95) 100%)",
+      },
+    },
+    {
+      id: "aerospace",
+      title: "Aero Space",
+      side: "left",
+      description:
+        "Saudi Arabia is rapidly scaling its aerospace and defense ecosystem, combining manufacturing capability with advanced maintenance, repair, and overhaul services to support both regional and global fleets.",
+      strategySummary:
+        "The Kingdom's Aerospace Industrial Strategy prioritizes localized production, supply-chain resilience, and partnerships with global OEMs to establish Saudi Arabia as a regional hub for aviation innovation.",
+      strategyCta: "Download Aerospace Blueprint",
+      opportunities: [
+        {
+          id: "opportunity-mro-campus",
+          title: "Integrated MRO Campus",
+          location: "Riyadh",
+          investmentSize: "Investment Size:",
+          value: "$310 Million",
+          highlight:
+            "A centralized maintenance, repair, and overhaul facility supporting commercial and defense fleets with advanced tooling and predictive maintenance technology.",
+        },
+        {
+          id: "opportunity-space-tech-incubator",
+          title: "Space-Tech Incubator",
+          location: "King Abdullah Economic City",
+          investmentSize: "Investment Size:",
+          value: "$145 Million",
+          highlight:
+            "An incubator offering specialized labs for satellite payload development, launch services, and downstream applications in observation and communications.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-aerospace-labor",
+          label: "Skilled aerospace professionals expected by 2030",
+          value: "18K",
+          iconBg: "#0E4D92",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 2.75C6.99594 2.75 3.66669 6.07925 3.66669 10.0833C3.66669 14.0874 6.99594 17.4167 11 17.4167C15.0041 17.4167 18.3334 14.0874 18.3334 10.0833C18.3334 6.07925 15.0041 2.75 11 2.75ZM11 3.91667C14.3617 3.91667 17.1667 6.72166 17.1667 10.0833C17.1667 13.445 14.3617 16.25 11 16.25C7.6383 16.25 4.83335 13.445 4.83335 10.0833C4.83335 6.72166 7.6383 3.91667 11 3.91667Z"
+                fill="white"
+              />
+              <path
+                d="M10.0834 6.41663L6.41669 9.62496V10.5416L10.0834 11.9166L11.4584 15.5833H12.375L15.5834 11.9166V11L11.9167 9.62496L10.5417 5.95829H10.0834V6.41663Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-aerospace-export",
+          label: "Projected aerospace exports by 2035",
+          value: "$8 BN",
+          iconBg: "#00A7A2",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.66669 7.33329L9.16669 5.04163L12.8334 6.41663L18.3334 4.58329L12.8334 11.9166L9.16669 10.5416L3.66669 12.375L6.41669 8.70829L3.66669 7.33329Z"
+                fill="white"
+              />
+              <path
+                d="M3.66669 14.2084L9.16669 12.375L12.8334 13.75L18.3334 11.9167L15.5834 17.4167L12.8334 16.0417L9.16669 17.4167L3.66669 14.2084Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-aerospace-hubs",
+          label: "Dedicated aerospace innovation districts underway",
+          value: "5",
+          iconBg: "#3B82F6",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 2.75L4.58337 6.41667V15.5833L11 19.25L17.4167 15.5833V6.41667L11 2.75ZM11 4.39583L15.7917 7.16458V15.0896L11 17.8333L6.20837 15.0896V7.16458L11 4.39583Z"
+                fill="white"
+              />
+              <path
+                d="M10.5417 7.79163H11.4584V14.2083H10.5417V7.79163Z"
+                fill="white"
+              />
+              <path
+                d="M7.33337 10.0834H14.6667V11H7.33337V10.0834Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/aero-space.png",
+        gradient:
+          "linear-gradient(180deg, rgba(10, 35, 64, 0.8) 0%, rgba(12, 49, 88, 0.95) 100%)",
+      },
+    },
+    {
+      id: "agriculture-food",
+      title: "Agriculture & Food",
+      side: "left",
+      description:
+        "The agriculture and food ecosystem is modernizing to secure food resilience, introduce climate-smart farming, and expand downstream processing for regional and global markets.",
+      strategySummary:
+        "Saudi Arabia's Food Security Strategy advances controlled-environment farming, value-added processing, and resilient cold-chain logistics supported by public-private partnerships.",
+      strategyCta: "View Food Security Plan",
+      opportunities: [
+        {
+          id: "opportunity-controlled-environment-farms",
+          title: "Controlled-Environment Farms",
+          location: "Al-Qassim",
+          investmentSize: "Investment Size:",
+          value: "$260 Million",
+          highlight:
+            "High-efficiency hydroponic and aeroponic farms designed to deliver year-round premium produce with optimized water consumption.",
+        },
+        {
+          id: "opportunity-smart-cold-chain",
+          title: "Smart Cold-Chain Network",
+          location: "Jeddah",
+          investmentSize: "Investment Size:",
+          value: "$190 Million",
+          highlight:
+            "IoT-enabled distribution hubs and reefer fleets that maintain product integrity from farm to export markets.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-agri-irrigation",
+          label: "Reduction in water usage via smart irrigation pilots",
+          value: "35%",
+          iconBg: "#1B7F5E",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 2.75C7.79408 5.81733 5.5 9.43891 5.5 12.375C5.5 15.5591 8.04091 18.3333 11 18.3333C13.9591 18.3333 16.5 15.5591 16.5 12.375C16.5 9.43891 14.2059 5.81733 11 2.75ZM11 4.40091C13.5125 7.064 15.3333 10.2445 15.3333 12.375C15.3333 14.8774 13.3664 16.9167 11 16.9167C8.63358 16.9167 6.66667 14.8774 6.66667 12.375C6.66667 10.2445 8.48742 7.064 11 4.40091Z"
+                fill="white"
+              />
+              <path
+                d="M11 9.16663C9.50608 10.6605 8.70837 11.885 8.70837 12.8333C8.70837 14.0571 9.77619 15.125 11 15.125C12.2239 15.125 13.2917 14.0571 13.2917 12.8333C13.2917 11.885 12.494 10.6605 11 9.16663Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-agri-smes",
+          label: "SMEs supported through agri-tech grants since 2022",
+          value: "420+",
+          iconBg: "#00A7A2",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.04169 5.95829H7.33335V9.16663H5.04169V5.95829Z"
+                fill="white"
+              />
+              <path
+                d="M9.62502 5.95829H11.9167V12.375H9.62502V5.95829Z"
+                fill="white"
+              />
+              <path
+                d="M14.2084 5.95829H16.5V14.6666H14.2084V5.95829Z"
+                fill="white"
+              />
+              <path
+                d="M4.12502 15.5833H17.4167V16.5H4.12502V15.5833Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-agri-processing",
+          label: "New food processing zones coming online by 2027",
+          value: "7",
+          iconBg: "#3F8B4A",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.41669 4.125H15.5834V5.04167H6.41669V4.125Z"
+                fill="white"
+              />
+              <path
+                d="M4.12502 6.41663H17.875V7.33329H4.12502V6.41663Z"
+                fill="white"
+              />
+              <path
+                d="M5.04169 8.70829H16.9584V9.62496H5.04169V8.70829Z"
+                fill="white"
+              />
+              <path d="M6.41669 11H15.5834V11.9167H6.41669V11Z" fill="white" />
+              <path
+                d="M7.33335 13.2916H14.6667V14.2083H7.33335V13.2916Z"
+                fill="white"
+              />
+              <path
+                d="M8.70835 15.5833H13.2917V16.5H8.70835V15.5833Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/energy.png",
+        gradient:
+          "linear-gradient(180deg, rgba(20, 78, 56, 0.82) 0%, rgba(7, 46, 31, 0.94) 100%)",
+      },
+    },
+    {
+      id: "energy",
+      title: "Energy",
+      side: "left",
+      description:
+        "Building on legacy strength in hydrocarbons, Saudi Arabia is accelerating investments in renewables, hydrogen, and carbon management to lead the global energy transition.",
+      strategySummary:
+        "The National Energy Strategy advances integrated value chains across solar, wind, and clean fuels while leveraging carbon capture and storage to decarbonize heavy industry.",
+      strategyCta: "Access Energy Roadmap",
+      opportunities: [
+        {
+          id: "opportunity-green-hydrogen-hub",
+          title: "Green Hydrogen Hub",
+          location: "NEOM",
+          investmentSize: "Investment Size:",
+          value: "$450 Million",
+          highlight:
+            "Electrolysis-powered hydrogen production with integrated export terminals addressing global demand for clean fuels.",
+        },
+        {
+          id: "opportunity-grid-modernization",
+          title: "National Grid Modernization",
+          location: "Eastern Province",
+          investmentSize: "Investment Size:",
+          value: "$320 Million",
+          highlight:
+            "Deployment of smart substations, AI-enabled load balancing, and energy storage systems to support renewable integration.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-energy-renewables",
+          label: "Renewable capacity targeted for 2030",
+          value: "58.7 GW",
+          iconBg: "#FDBA3B",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 3.20837L12.4584 7.79171H17.4167L13.4167 10.5417L14.875 15.125L11 12.375L7.12502 15.125L8.58335 10.5417L4.58335 7.79171H9.54169L11 3.20837Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-energy-carbon",
+          label: "Annual COâ‚‚ abatement via CCUS projects by 2035",
+          value: "44 MT",
+          iconBg: "#1F2937",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.0834 4.58337C7.08091 4.58337 4.58337 7.08091 4.58337 10.0834C4.58337 13.0859 7.08091 15.5834 10.0834 15.5834H11.9167C14.9192 15.5834 17.4167 13.0859 17.4167 10.0834C17.4167 7.08091 14.9192 4.58337 11.9167 4.58337H10.0834Z"
+                fill="white"
+              />
+              <path
+                d="M8.70837 7.33337H13.2917V8.25004H8.70837V7.33337Z"
+                fill="#1F2937"
+              />
+              <path
+                d="M8.70837 9.62504H12.375V10.5417H8.70837V9.62504Z"
+                fill="#1F2937"
+              />
+              <path
+                d="M9.62506 11.9167H12.3751V12.8334H9.62506V11.9167Z"
+                fill="#1F2937"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-energy-investment",
+          label: "Committed capital to clean energy supply chains",
+          value: "$180 BN",
+          iconBg: "#2563EB",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.12506 5.95837H17.8751V6.87504H4.12506V5.95837Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 8.70837H15.5834V9.62504H6.41669V8.70837Z"
+                fill="white"
+              />
+              <path
+                d="M8.70831 11.4584H13.2916V12.375H8.70831V11.4584Z"
+                fill="white"
+              />
+              <path
+                d="M10.5417 14.2084H11.4584V17.4167H10.5417V14.2084Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/information.png",
+        gradient:
+          "linear-gradient(180deg, rgba(58, 30, 12, 0.82) 0%, rgba(15, 7, 2, 0.92) 100%)",
+      },
+    },
+    {
+      id: "environment-services",
+      title: "Environment Services",
+      side: "left",
+      description:
+        "Environmental services are central to Saudi Arabia's sustainability transformation, driving circular-economy initiatives, waste-to-value projects, and natural capital restoration.",
+      strategySummary:
+        "The Saudi Green Initiative deploys nationwide programs for recycling, water reuse, and ecological restoration with robust incentives for private-sector participation.",
+      strategyCta: "Download Sustainability Agenda",
+      opportunities: [
+        {
+          id: "opportunity-advanced-recycling",
+          title: "Advanced Recycling Complex",
+          location: "Dammam",
+          investmentSize: "Investment Size:",
+          value: "$210 Million",
+          highlight:
+            "A materials recovery facility combining chemical recycling with AI sorting to reclaim plastics, metals, and organics at scale.",
+        },
+        {
+          id: "opportunity-desalination-reuse",
+          title: "Desalination & Water Reuse Network",
+          location: "Jubail",
+          investmentSize: "Investment Size:",
+          value: "$270 Million",
+          highlight:
+            "Hybrid desalination units paired with industrial water reuse systems delivering efficient resource management for coastal cities.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-environment-waste",
+          label: "Municipal waste diversion target by 2030",
+          value: "82%",
+          iconBg: "#047857",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.33331 4.58337H14.6666L15.5833 6.41671H6.41665L7.33331 4.58337Z"
+                fill="white"
+              />
+              <path
+                d="M5.95831 7.33337H16.0416L15.125 17.4167H6.87498L5.95831 7.33337Z"
+                fill="white"
+              />
+              <path
+                d="M9.16669 9.16663H10.0834V15.5833H9.16669V9.16663Z"
+                fill="#047857"
+              />
+              <path
+                d="M11.9167 9.16663H12.8334V15.5833H11.9167V9.16663Z"
+                fill="#047857"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-environment-restoration",
+          label: "Hectares of restored ecosystems under SGI programs",
+          value: "10M",
+          iconBg: "#0F766E",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 2.75C7.31833 5.78083 5.04169 9.75371 5.04169 12.8333C5.04169 15.9417 7.53335 18.3333 11 18.3333C14.4667 18.3333 16.9584 15.9417 16.9584 12.8333C16.9584 9.75371 14.6817 5.78083 11 2.75ZM11 4.34506C13.8875 6.85162 15.7917 10.1971 15.7917 12.8333C15.7917 15.2933 13.8684 16.9167 11 16.9167C8.13169 16.9167 6.20835 15.2933 6.20835 12.8333C6.20835 10.1971 8.11252 6.85162 11 4.34506Z"
+                fill="white"
+              />
+              <path
+                d="M10.5417 7.33337H11.4584V14.6667H10.5417V7.33337Z"
+                fill="#0F766E"
+              />
+              <path
+                d="M8.70831 10.0834H13.2916V11H8.70831V10.0834Z"
+                fill="#0F766E"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-environment-investment",
+          label: "Capital mobilized for circular-economy ventures",
+          value: "$24 BN",
+          iconBg: "#10B981",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.33333 4.125H14.6667V5.04167H7.33333V4.125Z"
+                fill="white"
+              />
+              <path
+                d="M4.58331 7.33337H11V8.25004H4.58331V7.33337Z"
+                fill="white"
+              />
+              <path
+                d="M11.9167 7.33337H17.4167V8.25004H11.9167V7.33337Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 9.625H12.8334V10.5417H6.41669V9.625Z"
+                fill="white"
+              />
+              <path
+                d="M13.75 9.625H17.4167V10.5417H13.75V9.625Z"
+                fill="white"
+              />
+              <path d="M5.5 11.9166H15.125V12.8333H5.5V11.9166Z" fill="white" />
+              <path
+                d="M6.41669 14.2084H13.75V15.125H6.41669V14.2084Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/information.png",
+        gradient:
+          "linear-gradient(180deg, rgba(12, 69, 64, 0.82) 0%, rgba(5, 28, 32, 0.94) 100%)",
+      },
+    },
+    {
+      id: "financial-services",
+      title: "Financial Services",
+      side: "left",
+      description:
+        "Riyadh is positioning itself as a leading regional financial center, scaling digital banking, capital market sophistication, and fintech innovation aligned with Vision 2030.",
+      strategySummary:
+        "The Financial Sector Development Program expands open banking, deepens capital markets, and attracts global financial institutions through progressive regulation.",
+      strategyCta: "Read Financial Development Program",
+      opportunities: [
+        {
+          id: "opportunity-open-banking-platform",
+          title: "Open Banking Platform",
+          location: "Riyadh",
+          investmentSize: "Investment Size:",
+          value: "$210 Million",
+          highlight:
+            "APIs, compliance tooling, and analytics enabling banks and fintechs to deliver tailored financial products in real time.",
+        },
+        {
+          id: "opportunity-sukuk-clearinghouse",
+          title: "Digital Sukuk Clearinghouse",
+          location: "King Abdullah Financial District",
+          investmentSize: "Investment Size:",
+          value: "$165 Million",
+          highlight:
+            "Blockchain-enabled issuance, custody, and settlement infrastructure catering to Sharia-compliant debt instruments.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-fintech-licenses",
+          label: "Fintech licenses granted since sandbox launch",
+          value: "150+",
+          iconBg: "#1E3A8A",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.04169 4.58337H16.9584V5.50004H5.04169V4.58337Z"
+                fill="white"
+              />
+              <path
+                d="M4.125 7.33337H17.875V16.0417H4.125V7.33337Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 9.16663H8.70835V13.75H6.41669V9.16663Z"
+                fill="#1E3A8A"
+              />
+              <path
+                d="M10.5417 9.16663H12.8334V13.75H10.5417V9.16663Z"
+                fill="#1E3A8A"
+              />
+              <path
+                d="M14.6667 9.16663H16.9584V13.75H14.6667V9.16663Z"
+                fill="#1E3A8A"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-finance-aum",
+          label: "Assets under management goal for 2030",
+          value: "$1.6 TN",
+          iconBg: "#2563EB",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.41669 4.58337H15.5834L17.4167 7.33337H4.58335L6.41669 4.58337Z"
+                fill="white"
+              />
+              <path d="M5.5 7.33337H16.5V17.4167H5.5V7.33337Z" fill="white" />
+              <path
+                d="M7.33331 9.625H10.0833V14.2083H7.33331V9.625Z"
+                fill="#2563EB"
+              />
+              <path
+                d="M11.9167 9.625H14.6667V14.2083H11.9167V9.625Z"
+                fill="#2563EB"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-finance-inclusion",
+          label: "Adult population with access to digital banking",
+          value: "94%",
+          iconBg: "#0EA5E9",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.125 6.41671H17.875V15.5834H4.125V6.41671Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 8.25004H15.5834V13.7501H6.41669V8.25004Z"
+                fill="#0EA5E9"
+              />
+              <path
+                d="M9.16669 16.5H12.8334V17.4167H9.16669V16.5Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/human.png",
+        gradient:
+          "linear-gradient(180deg, rgba(29, 45, 70, 0.8) 0%, rgba(10, 15, 39, 0.94) 100%)",
+      },
+    },
+    {
+      id: "human-capital-innovation",
+      title: "Human Capital & Innovation",
+      side: "left",
+      description:
+        "Vision 2030 prioritizes a knowledge-based economy by cultivating talent, fostering R&D, and nurturing startups that commercialize frontier technologies.",
+      strategySummary:
+        "National human capital programs accelerate upskilling, digital literacy, and research collaboration while expanding innovation districts across the Kingdom.",
+      strategyCta: "Explore Talent Programs",
+      opportunities: [
+        {
+          id: "opportunity-ai-research-campus",
+          title: "AI Research Campus",
+          location: "Riyadh",
+          investmentSize: "Investment Size:",
+          value: "$185 Million",
+          highlight:
+            "A campus integrating compute infrastructure, venture labs, and corporate partnerships to accelerate applied AI solutions.",
+        },
+        {
+          id: "opportunity-edtech-platform",
+          title: "Adaptive EdTech Platform",
+          location: "Dammam",
+          investmentSize: "Investment Size:",
+          value: "$95 Million",
+          highlight:
+            "Personalized learning platform delivering competency-based curricula for STEM disciplines and professional re-skilling.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-innovation-research",
+          label: "Annual R&D spending commitment by 2030",
+          value: "2.5% GDP",
+          iconBg: "#7C3AED",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 3.66663C8.60748 3.66663 6.41669 5.85742 6.41669 8.24996C6.41669 9.63496 7.11086 10.8666 8.16669 11.625V14.2083H9.16669L10.5417 18.3333H11.4584L12.8334 14.2083H13.8334V11.625C14.8892 10.8666 15.5834 9.63496 15.5834 8.24996C15.5834 5.85742 13.3926 3.66663 11 3.66663Z"
+                fill="white"
+              />
+              <path
+                d="M9.16669 8.70829H12.8334V9.62496H9.16669V8.70829Z"
+                fill="#7C3AED"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-innovation-startups",
+          label: "Active startups supported by national accelerators",
+          value: "3,200+",
+          iconBg: "#6D28D9",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.33331 5.5H14.6666L16.0416 8.70833H5.95831L7.33331 5.5Z"
+                fill="white"
+              />
+              <path d="M5.5 8.70837H16.5V16.0417H5.5V8.70837Z" fill="white" />
+              <path
+                d="M7.79169 10.5417H9.62502V14.2084H7.79169V10.5417Z"
+                fill="#6D28D9"
+              />
+              <path
+                d="M10.5417 10.5417H12.375V14.2084H10.5417V10.5417Z"
+                fill="#6D28D9"
+              />
+              <path
+                d="M13.2917 10.5417H15.125V14.2084H13.2917V10.5417Z"
+                fill="#6D28D9"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-innovation-talents",
+          label: "Graduates from digital upskilling programs since 2020",
+          value: "120K",
+          iconBg: "#4C1D95",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 3.66663L4.12502 6.41663L11 9.16663L17.875 6.41663L11 3.66663Z"
+                fill="white"
+              />
+              <path
+                d="M5.04169 8.70837H6.41669V12.8334H5.04169V8.70837Z"
+                fill="white"
+              />
+              <path
+                d="M15.5833 8.70837H16.9583V12.8334H15.5833V8.70837Z"
+                fill="white"
+              />
+              <path
+                d="M7.33331 12.8334H14.6666V16.0417H7.33331V12.8334Z"
+                fill="#4C1D95"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/human.png",
+        gradient:
+          "linear-gradient(180deg, rgba(36, 22, 73, 0.82) 0%, rgba(6, 12, 33, 0.94) 100%)",
+      },
+    },
+    {
+      id: "information-communication-technology",
+      title: "Information & Communication Technology",
+      side: "left",
+      description:
+        "Saudi Arabia is expanding its digital infrastructure, cloud capabilities, and cybersecurity posture to power smart government, industry 4.0, and next-generation consumer services.",
+      strategySummary:
+        "The Digital Transformation Strategy promotes hyperscale data centers, 5G densification, and secure-by-design platforms with strong incentives for global tech leaders.",
+      strategyCta: "See Digital Strategy",
+      opportunities: [
+        {
+          id: "opportunity-hyperscale-data-center",
+          title: "Hyperscale Data Center",
+          location: "Riyadh",
+          investmentSize: "Investment Size:",
+          value: "$600 Million",
+          highlight:
+            "Tier IV sustainable data campus delivering sovereign cloud services with advanced cooling and renewable integration.",
+        },
+        {
+          id: "opportunity-cybersecurity-lab",
+          title: "Cybersecurity Testing Lab",
+          location: "Dhahran",
+          investmentSize: "Investment Size:",
+          value: "$140 Million",
+          highlight:
+            "Accredited facility for penetration testing, IoT hardening, and managed security training serving critical infrastructure operators.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-ict-5g",
+          label: "Population covered by 5G nationwide",
+          value: "85%",
+          iconBg: "#155E75",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.04169 6.41663H16.9584V7.33329H5.04169V6.41663Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 8.70837H15.5834V9.62504H6.41669V8.70837Z"
+                fill="white"
+              />
+              <path d="M7.33331 11H14.6666V11.9167H7.33331V11Z" fill="white" />
+              <path
+                d="M8.70831 13.2916H13.2916V14.2083H8.70831V13.2916Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-ict-investment",
+          label: "ICT sector investment committed through 2030",
+          value: "$137 BN",
+          iconBg: "#0EA5E9",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.58331 5.95837H17.4166V6.87504H4.58331V5.95837Z"
+                fill="white"
+              />
+              <path
+                d="M6.87498 8.70837H15.125V9.62504H6.87498V8.70837Z"
+                fill="white"
+              />
+              <path
+                d="M8.70831 11.4584H13.2916V12.375H8.70831V11.4584Z"
+                fill="white"
+              />
+              <path
+                d="M10.0833 14.2084H11.9166V17.4167H10.0833V14.2084Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-ict-talent",
+          label: "Digital workforce roles added since 2016",
+          value: "260K",
+          iconBg: "#1D4ED8",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.41669 4.125H15.5834V5.04167H6.41669V4.125Z"
+                fill="white"
+              />
+              <path
+                d="M5.5 6.41663H10.0833V7.33329H5.5V6.41663Z"
+                fill="white"
+              />
+              <path
+                d="M11.9167 6.41663H16.5V7.33329H11.9167V6.41663Z"
+                fill="white"
+              />
+              <path
+                d="M4.58331 8.70837H17.4166V17.4167H4.58331V8.70837Z"
+                fill="white"
+              />
+              <path
+                d="M6.87498 10.5417H9.16665V15.125H6.87498V10.5417Z"
+                fill="#1D4ED8"
+              />
+              <path
+                d="M12.8333 10.5417H15.125V15.125H12.8333V10.5417Z"
+                fill="#1D4ED8"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/information.png",
+        gradient:
+          "linear-gradient(180deg, rgba(4, 71, 76, 0.82) 0%, rgba(1, 29, 28, 0.95) 100%)",
+      },
+    },
+  ],
+  rightSectors: [
+    {
+      id: "mining-metals",
+      title: "Mining & Metals",
+      side: "right",
+      description:
+        "Saudi Arabia is unlocking vast mineral reserves, enabling advanced processing, and attracting downstream fabricated metals industries under a transparent mining framework.",
+      strategySummary:
+        "The National Industrial Development and Logistics Program accelerates exploration, green mining practices, and localized value chains from ore to finished products.",
+      strategyCta: "Review Mining Strategy",
+      opportunities: [
+        {
+          id: "opportunity-critical-minerals",
+          title: "Critical Minerals Exploration Block",
+          location: "Arabian Shield",
+          investmentSize: "Investment Size:",
+          value: "$380 Million",
+          highlight:
+            "Exploration and development rights for nickel, lithium, and rare earth deposits backed by streamlined concession processes.",
+        },
+        {
+          id: "opportunity-rolled-aluminum",
+          title: "Rolled Aluminum Complex",
+          location: "Ras Al-Khair",
+          investmentSize: "Investment Size:",
+          value: "$290 Million",
+          highlight:
+            "Integrated smelting and rolling facility producing specialty alloys for automotive and construction sectors.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-mining-resource",
+          label: "Estimated mineral resource value across the Kingdom",
+          value: "$1.3 TN",
+          iconBg: "#92400E",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 4.125L4.125 8.70833L11 17.4167L17.875 8.70833L11 4.125Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 8.70837H15.5834L11 14.6667L6.41669 8.70837Z"
+                fill="#92400E"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-mining-licenses",
+          label: "Exploration licenses awarded since 2021",
+          value: "145",
+          iconBg: "#B45309",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.41669 4.58337H15.5834V5.50004H6.41669V4.58337Z"
+                fill="white"
+              />
+              <path d="M5.5 6.87496H16.5V7.79163H5.5V6.87496Z" fill="white" />
+              <path
+                d="M4.58331 9.16663H17.4166V17.4166H4.58331V9.16663Z"
+                fill="white"
+              />
+              <path
+                d="M7.33331 10.5417H9.62498V15.125H7.33331V10.5417Z"
+                fill="#B45309"
+              />
+              <path
+                d="M12.375 10.5417H14.6667V15.125H12.375V10.5417Z"
+                fill="#B45309"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-mining-jobs",
+          label: "Jobs to be created through mining clusters",
+          value: "200K",
+          iconBg: "#F97316",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.58331 6.41663H17.4166L15.5833 17.4166H6.41665L4.58331 6.41663Z"
+                fill="white"
+              />
+              <path
+                d="M7.33331 8.70837H14.6666L13.75 15.125H8.24998L7.33331 8.70837Z"
+                fill="#F97316"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/metal.png",
+        gradient:
+          "linear-gradient(180deg, rgba(58, 40, 21, 0.8) 0%, rgba(21, 11, 5, 0.94) 100%)",
+      },
+    },
+    {
+      id: "petrochemicals-conversion",
+      title: "Petrochemicals & Conversion",
+      side: "right",
+      description:
+        "Saudi Arabia leverages abundant feedstocks and world-class infrastructure to drive petrochemical expansion and advanced conversion industries for high-value products.",
+      strategySummary:
+        "Integrated clusters connect upstream producers with specialty chemicals, advanced polymers, and conversion facilities, creating diversified revenue streams.",
+      strategyCta: "Access Petrochemicals Portfolio",
+      opportunities: [
+        {
+          id: "opportunity-specialty-polymers",
+          title: "Specialty Polymers Facility",
+          location: "Jubail",
+          investmentSize: "Investment Size:",
+          value: "$320 Million",
+          highlight:
+            "Production of high-performance polymers for automotive, aerospace, and medical applications with global distribution.",
+        },
+        {
+          id: "opportunity-downstream-packaging",
+          title: "Downstream Packaging Park",
+          location: "Yanbu",
+          investmentSize: "Investment Size:",
+          value: "$210 Million",
+          highlight:
+            "An industrial park enabling packaging manufacturers to tap into polymer supply with circular recycling capabilities.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-petrochem-capacity",
+          label: "Planned petrochemical capacity addition by 2030",
+          value: "70 MT",
+          iconBg: "#991B1B",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.33331 3.66663H14.6666L17.4166 7.33329L11 18.3333L4.58331 7.33329L7.33331 3.66663Z"
+                fill="white"
+              />
+              <path
+                d="M8.70831 6.41663H13.2916L11 10.9999L8.70831 6.41663Z"
+                fill="#991B1B"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-petrochem-investment",
+          label: "Committed downstream investment pipeline",
+          value: "$36 BN",
+          iconBg: "#B91C1C",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.58331 6.41671H17.4166V7.33337H4.58331V6.41671Z"
+                fill="white"
+              />
+              <path
+                d="M6.87498 8.70837H9.16665V15.125H6.87498V8.70837Z"
+                fill="white"
+              />
+              <path
+                d="M10.9999 8.70837H13.2916V15.125H10.9999V8.70837Z"
+                fill="#B91C1C"
+              />
+              <path
+                d="M15.125 8.70837H17.4166V15.125H15.125V8.70837Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-petrochem-export",
+          label: "Share of global petrochemical exports targeted",
+          value: "10%",
+          iconBg: "#DC2626",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 3.66663C7.05083 3.66663 3.66669 7.05079 3.66669 11C3.66669 14.9491 7.05083 18.3333 11 18.3333C14.9492 18.3333 18.3334 14.9491 18.3334 11C18.3334 7.05079 14.9492 3.66663 11 3.66663Z"
+                fill="white"
+              />
+              <path
+                d="M11 5.95837C13.6807 5.95837 15.8751 8.15279 15.8751 10.8334C15.8751 13.514 13.6807 15.7084 11 15.7084C8.31936 15.7084 6.12502 13.514 6.12502 10.8334C6.12502 8.15279 8.31936 5.95837 11 5.95837Z"
+                fill="#DC2626"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/conversion.png",
+        gradient:
+          "linear-gradient(180deg, rgba(62, 18, 21, 0.82) 0%, rgba(21, 3, 6, 0.94) 100%)",
+      },
+    },
+    {
+      id: "pharma-biotech",
+      title: "Pharma & Biotech",
+      side: "right",
+      description:
+        "Saudi Arabia is nurturing a thriving life sciences ecosystem focused on biologics, vaccines, and advanced therapies to improve regional health resilience.",
+      strategySummary:
+        "Government-led initiatives catalyze biomanufacturing, clinical research, and public-private partnerships to accelerate innovation and localization.",
+      strategyCta: "Download Life Sciences Blueprint",
+      opportunities: [
+        {
+          id: "opportunity-biologics-plant",
+          title: "Biologics Manufacturing Plant",
+          location: "Riyadh",
+          investmentSize: "Investment Size:",
+          value: "$250 Million",
+          highlight:
+            "A GMP-certified facility producing monoclonal antibodies and biosimilars for regional and export markets.",
+        },
+        {
+          id: "opportunity-gene-therapy-center",
+          title: "Gene Therapy Center",
+          location: "Jeddah",
+          investmentSize: "Investment Size:",
+          value: "$180 Million",
+          highlight:
+            "Clinical-grade labs and vector manufacturing supporting rare disease treatments and academic partnerships.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-pharma-market",
+          label: "Projected pharmaceutical market size by 2030",
+          value: "$50 BN",
+          iconBg: "#1E40AF",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.41669 6.41663H15.5834V7.33329H6.41669V6.41663Z"
+                fill="white"
+              />
+              <path d="M5.5 8.70837H16.5V14.2084H5.5V8.70837Z" fill="white" />
+              <path
+                d="M7.79169 10.5417H9.62502V12.375H7.79169V10.5417Z"
+                fill="#1E40AF"
+              />
+              <path
+                d="M12.375 10.5417H14.2083V12.375H12.375V10.5417Z"
+                fill="#1E40AF"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-pharma-trials",
+          label: "Clinical trials registered in the Kingdom (2024)",
+          value: "420",
+          iconBg: "#2563EB",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.33331 4.125H14.6666L15.5833 6.41667H6.41665L7.33331 4.125Z"
+                fill="white"
+              />
+              <path d="M5.5 6.41663H16.5V15.5833H5.5V6.41663Z" fill="white" />
+              <path
+                d="M8.70831 8.70837H10.9999V13.2917H8.70831V8.70837Z"
+                fill="#2563EB"
+              />
+              <path
+                d="M11.9167 8.70837H14.2084V13.2917H11.9167V8.70837Z"
+                fill="#2563EB"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-pharma-workforce",
+          label: "Specialized biotech workforce expansion by 2030",
+          value: "28K",
+          iconBg: "#3B82F6",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 4.58337C8.79469 4.58337 6.99998 6.37808 6.99998 8.58337C6.99998 10.7887 8.79469 12.5834 11 12.5834C13.2053 12.5834 15 10.7887 15 8.58337C15 6.37808 13.2053 4.58337 11 4.58337Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 14.2084C6.41669 12.319 8.90419 10.9999 11 10.9999C13.0958 10.9999 15.5834 12.319 15.5834 14.2084V16.5H6.41669V14.2084Z"
+                fill="white"
+              />
+              <path
+                d="M9.16669 8.58337C9.16669 7.30846 10.2254 6.25 11.5 6.25C12.7749 6.25 13.8334 7.30846 13.8334 8.58337C13.8334 9.85829 12.7749 10.9167 11.5 10.9167C10.2254 10.9167 9.16669 9.85829 9.16669 8.58337Z"
+                fill="#3B82F6"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/pharma.png",
+        gradient:
+          "linear-gradient(180deg, rgba(13, 49, 82, 0.8) 0%, rgba(2, 17, 36, 0.94) 100%)",
+      },
+    },
+    {
+      id: "real-estate-construction",
+      title: "Real Estate & Construction",
+      side: "right",
+      description:
+        "Saudi Arabia is reshaping its urban landscape through giga-projects, mixed-use districts, and resilient housing that elevate livability while attracting global investors.",
+      strategySummary:
+        "The Housing Program and National Urban Strategy coordinate land activation, sustainable building codes, and public-private partnerships to accelerate high-quality delivery across residential, commercial, and community assets.",
+      strategyCta: "Access Built Environment Roadmap",
+      opportunities: [
+        {
+          id: "opportunity-transit-oriented-district",
+          title: "Transit-Oriented District",
+          location: "Riyadh",
+          investmentSize: "Investment Size:",
+          value: "$520 Million",
+          highlight:
+            "A high-density mixed-use precinct linking metro, retail, and Grade A offices with walkable public realms and integrated smart services.",
+        },
+        {
+          id: "opportunity-green-housing-alliance",
+          title: "Green Housing Alliance",
+          location: "Jeddah",
+          investmentSize: "Investment Size:",
+          value: "$340 Million",
+          highlight:
+            "Large-scale residential community featuring modular construction, net-zero homes, and community amenities anchored by ESG-certified developers.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-realestate-housing",
+          label: "New homes targeted for delivery by 2030",
+          value: "660K",
+          iconBg: "#8B5CF6",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.66663 9.16663L11 4.125L18.3333 9.16663V17.4166H3.66663V9.16663Z"
+                fill="white"
+              />
+              <path
+                d="M7.33331 11.4584H9.62498V17.4167H7.33331V11.4584Z"
+                fill="#8B5CF6"
+              />
+              <path
+                d="M12.375 11.4584H14.6666V17.4167H12.375V11.4584Z"
+                fill="#8B5CF6"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-realestate-investment",
+          label: "Capital mobilized for real estate projects since 2021",
+          value: "$1.1 TN",
+          iconBg: "#7C3A0C",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.58331 6.41663H17.4166V17.4166H4.58331V6.41663Z"
+                fill="white"
+              />
+              <path
+                d="M6.87498 8.70837H9.16665V15.125H6.87498V8.70837Z"
+                fill="#7C3A0C"
+              />
+              <path
+                d="M10.9999 8.70837H13.2916V15.125H10.9999V8.70837Z"
+                fill="#7C3A0C"
+              />
+              <path
+                d="M5.04163 17.4166H16.9583V18.3333H5.04163V17.4166Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-realestate-infrastructure",
+          label: "Kilometers of infrastructure corridors under development",
+          value: "1,200+",
+          iconBg: "#A16207",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.125 6.87496H17.875V15.5833H4.125V6.87496Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 9.16663H15.5834V10.0833H6.41669V9.16663Z"
+                fill="#A16207"
+              />
+              <path
+                d="M6.41669 11.4584H15.5834V12.375H6.41669V11.4584Z"
+                fill="#A16207"
+              />
+              <path
+                d="M6.41669 13.75H15.5834V14.6667H6.41669V13.75Z"
+                fill="#A16207"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/real-estate.png",
+        gradient:
+          "linear-gradient(180deg, rgba(49, 31, 64, 0.82) 0%, rgba(15, 5, 21, 0.94) 100%)",
+      },
+    },
+    {
+      id: "tourism-quality-life",
+      title: "Tourism & Quality of Life",
+      side: "right",
+      description:
+        "From the Red Sea to AlUla, Saudi Arabia is crafting immersive destinations and lifestyle experiences that balance cultural heritage with luxury hospitality.",
+      strategySummary:
+        "The National Tourism Strategy empowers destination development companies, heritage restoration, and entertainment ventures through targeted incentives and integrated visitor journeys.",
+      strategyCta: "Download Tourism Masterplan",
+      opportunities: [
+        {
+          id: "opportunity-redsea-eco-resort",
+          title: "Red Sea Eco Resort Cluster",
+          location: "Red Sea Coast",
+          investmentSize: "Investment Size:",
+          value: "$410 Million",
+          highlight:
+            "Carbon-neutral island resort with marine conservation labs, experiential hospitality, and premium branded residences.",
+        },
+        {
+          id: "opportunity-urban-entertainment-district",
+          title: "Urban Entertainment District",
+          location: "Jeddah",
+          investmentSize: "Investment Size:",
+          value: "$260 Million",
+          highlight:
+            "Integrated leisure precinct combining esports arenas, cultural venues, gastronomy halls, and curated retail streets.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-tourism-arrivals",
+          label: "International visitors targeted by 2030",
+          value: "150M",
+          iconBg: "#0EA5E9",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.66669 11L11 4.125L18.3334 11L11 17.875L3.66669 11Z"
+                fill="white"
+              />
+              <path
+                d="M11 6.87496L15.5834 11L11 15.125L6.41669 11L11 6.87496Z"
+                fill="#0EA5E9"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-tourism-gdp",
+          label: "Tourism GDP contribution target by 2030",
+          value: "10%",
+          iconBg: "#0284C7",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.58331 5.95837H17.4166V6.87504H4.58331V5.95837Z"
+                fill="white"
+              />
+              <path
+                d="M6.87498 8.70837H9.16665V15.125H6.87498V8.70837Z"
+                fill="#0284C7"
+              />
+              <path d="M11 8.70837H13.2916V15.125H11V8.70837Z" fill="white" />
+              <path
+                d="M15.125 8.70837H17.4166V15.125H15.125V8.70837Z"
+                fill="#0284C7"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-tourism-jobs",
+          label: "Jobs supported by the tourism ecosystem by 2030",
+          value: "1M+",
+          iconBg: "#0369A1",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 4.58337C8.7947 4.58337 7 6.37808 7 8.58337C7 10.7887 8.7947 12.5834 11 12.5834C13.2053 12.5834 15 10.7887 15 8.58337C15 6.37808 13.2053 4.58337 11 4.58337Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 14.2084C6.41669 12.319 8.90419 11 11 11C13.0958 11 15.5834 12.319 15.5834 14.2084V16.5H6.41669V14.2084Z"
+                fill="#0369A1"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/tourism.png",
+        gradient:
+          "linear-gradient(180deg, rgba(34, 53, 83, 0.82) 0%, rgba(10, 23, 41, 0.94) 100%)",
+      },
+    },
+    {
+      id: "transport-logistics",
+      title: "Transport & Logistics",
+      side: "right",
+      description:
+        "Saudi Arabia is positioning itself as a global logistics gateway by expanding multimodal connectivity, modern freight hubs, and smart supply-chain platforms.",
+      strategySummary:
+        "The National Transport and Logistics Strategy orchestrates port expansion, integrated rail, and aviation enhancements while fostering private investment in digital logistics solutions.",
+      strategyCta: "View Mobility & Logistics Strategy",
+      opportunities: [
+        {
+          id: "opportunity-integrated-logistics-park",
+          title: "Integrated Logistics Park",
+          location: "King Salman Park, Riyadh",
+          investmentSize: "Investment Size:",
+          value: "$480 Million",
+          highlight:
+            "Smart warehousing campus with bonded zones, automated fulfillment, and cold-chain infrastructure linked to major expressways.",
+        },
+        {
+          id: "opportunity-regional-air-cargo-hub",
+          title: "Regional Air Cargo Hub",
+          location: "Dammam",
+          investmentSize: "Investment Size:",
+          value: "$365 Million",
+          highlight:
+            "Next-generation airfreight terminal featuring digital customs clearance, pharma-ready storage, and e-commerce express facilities.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-transport-ranking",
+          label: "Global logistics performance ranking target",
+          value: "Top 10",
+          iconBg: "#0F766E",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.58331 6.41663H17.4166V15.5833H4.58331V6.41663Z"
+                fill="white"
+              />
+              <path
+                d="M6.87498 8.70837H15.125L12.375 13.2917H9.62502L6.87498 8.70837Z"
+                fill="#0F766E"
+              />
+              <path
+                d="M8.70831 14.2084H13.2916V15.125H8.70831V14.2084Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-transport-corridors",
+          label: "Kilometers of rail and road corridors committed",
+          value: "10,000+",
+          iconBg: "#0E7490",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.125 6.41663H17.875V7.33329H4.125V6.41663Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 8.70837H15.5834V9.62504H6.41669V8.70837Z"
+                fill="#0E7490"
+              />
+              <path d="M4.125 11H17.875V11.9167H4.125V11Z" fill="white" />
+              <path
+                d="M6.41669 13.2916H15.5834V14.2083H6.41669V13.2916Z"
+                fill="#0E7490"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-transport-cargo",
+          label: "Port and air cargo capacity planned by 2030",
+          value: "40M TEU",
+          iconBg: "#0891B2",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.66669 8.70837H18.3334V14.2084H3.66669V8.70837Z"
+                fill="white"
+              />
+              <path
+                d="M5.95831 10.5417H9.16665V12.375H5.95831V10.5417Z"
+                fill="#0891B2"
+              />
+              <path
+                d="M12.8333 10.5417H16.0416V12.375H12.8333V10.5417Z"
+                fill="#0891B2"
+              />
+              <path
+                d="M4.58331 14.2084H17.4166V15.125H4.58331V14.2084Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/transport.png",
+        gradient:
+          "linear-gradient(180deg, rgba(14, 59, 82, 0.82) 0%, rgba(6, 24, 32, 0.94) 100%)",
+      },
+    },
+    {
+      id: "healthcare-services",
+      title: "Healthcare Services",
+      side: "right",
+      description:
+        "Saudi Arabia is advancing integrated healthcare delivery with smart hospitals, preventative care networks, and private-sector partnerships that enhance patient outcomes.",
+      strategySummary:
+        "The Health Sector Transformation Program drives digital health adoption, value-based care models, and clinical capacity expansion through strategic PPPs and localized manufacturing.",
+      strategyCta: "Explore Health Transformation Agenda",
+      opportunities: [
+        {
+          id: "opportunity-digital-hospital-network",
+          title: "Digital Hospital Network",
+          location: "Eastern Province",
+          investmentSize: "Investment Size:",
+          value: "$430 Million",
+          highlight:
+            "Network of AI-enabled specialty hospitals integrating remote monitoring, precision diagnostics, and interoperable patient records.",
+        },
+        {
+          id: "opportunity-community-health-hubs",
+          title: "Community Health Hubs",
+          location: "Makkah Region",
+          investmentSize: "Investment Size:",
+          value: "$210 Million",
+          highlight:
+            "Primary care centers delivering preventative services, telemedicine suites, and rehabilitation programs anchored by private operators.",
+        },
+      ],
+      keyNumbers: [
+        {
+          id: "key-number-healthcare-beds",
+          label: "New hospital beds planned under Vision 2030",
+          value: "20K",
+          iconBg: "#047857",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.125 8.70837H17.875V16.5H4.125V8.70837Z"
+                fill="white"
+              />
+              <path
+                d="M6.41669 10.5417H15.5834V14.2084H6.41669V10.5417Z"
+                fill="#047857"
+              />
+              <path
+                d="M4.58331 16.5H17.4166V17.4167H4.58331V16.5Z"
+                fill="white"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-healthcare-digital",
+          label: "Population covered by unified digital health records",
+          value: "95%",
+          iconBg: "#059669",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.41669 4.58337H15.5834L17.4167 7.33337H4.58335L6.41669 4.58337Z"
+                fill="white"
+              />
+              <path d="M5.5 7.33337H16.5V17.4167H5.5V7.33337Z" fill="white" />
+              <path
+                d="M9.16669 9.625H12.8334V14.2083H9.16669V9.625Z"
+                fill="#059669"
+              />
+              <path
+                d="M7.33331 15.5834H14.6666V16.5H7.33331V15.5834Z"
+                fill="#059669"
+              />
+            </svg>
+          ),
+        },
+        {
+          id: "key-number-healthcare-ppp",
+          label: "PPP projects launched in healthcare since 2020",
+          value: "80+",
+          iconBg: "#0D9488",
+          icon: (
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 4.125L17.4167 7.79167V14.2083L11 17.875L4.58331 14.2083V7.79167L11 4.125Z"
+                fill="white"
+              />
+              <path
+                d="M8.70831 9.16663H13.2916V12.8333H8.70831V9.16663Z"
+                fill="#0D9488"
+              />
+              <path
+                d="M10.5417 6.87496H11.4584V8.70829H10.5417V6.87496Z"
+                fill="#0D9488"
+              />
+            </svg>
+          ),
+        },
+      ],
+      background: {
+        image: "/unlocking/transport.png",
+        gradient:
+          "linear-gradient(180deg, rgba(27, 75, 63, 0.82) 0%, rgba(4, 29, 25, 0.95) 100%)",
+      },
+    },
+  ],
+};

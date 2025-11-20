@@ -1,0 +1,575 @@
+export interface InvestmentProject {
+  id: number;
+  title: string;
+  type: string;
+  location: string;
+  description: string;
+  investmentSize: string;
+  jobCreation: string;
+  gdpImpact: string;
+  irr: string;
+  paybackPeriod: string;
+  category: string;
+  activity: string;
+  subActivity: string;
+  municipality: string;
+}
+
+export const investmentProjectsData: InvestmentProject[] = [
+  {
+    id: 1,
+    title: "Storage Tank and Pressure Vessel Manufacturing",
+    type: "Environment Services",
+    location: "Riyadh",
+    description: "Advanced manufacturing facility for storage tanks and pressure vessels serving the oil, gas, and petrochemical industries. State-of-the-art production lines with automated quality control systems.",
+    investmentSize: "~$800Mn",
+    jobCreation: "~14,400 Jobs",
+    gdpImpact: "~950-1,000 Mn",
+    irr: "~20-25%",
+    paybackPeriod: "~9.5 years",
+    category: "Manufacturing Activities",
+    activity: "Manufacturing",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Riyadh",
+  },
+  {
+    id: 2,
+    title: "Smart City Infrastructure Development",
+    type: "Technology & Infrastructure",
+    location: "Riyadh",
+    description: "Comprehensive smart city development project focusing on sustainable urban planning, advanced infrastructure, and innovative technology integration to create a modern living environment.",
+    investmentSize: "~$2.5B",
+    jobCreation: "~15,000 Jobs",
+    gdpImpact: "~2,300 Mn",
+    irr: "~18.5%",
+    paybackPeriod: "~7-9 years",
+    category: "General Services Activities",
+    activity: "Technology",
+    subActivity: "Software Development",
+    municipality: "Riyadh",
+  },
+  {
+    id: 3,
+    title: "Renewable Energy Hub",
+    type: "Energy & Sustainability",
+    location: "NEOM",
+    description: "Large-scale renewable energy project combining solar, wind, and hydrogen production technologies to create a sustainable energy ecosystem for the future.",
+    investmentSize: "~$5.8B",
+    jobCreation: "~25,000 Jobs",
+    gdpImpact: "~4,100 Mn",
+    irr: "~22.3%",
+    paybackPeriod: "~5-7 years",
+    category: "Manufacturing Activities",
+    activity: "Energy",
+    subActivity: "Renewable Energy",
+    municipality: "Tabuk",
+  },
+  {
+    id: 4,
+    title: "Advanced Manufacturing Complex",
+    type: "Manufacturing & Industry",
+    location: "King Abdullah Economic City",
+    description: "State-of-the-art manufacturing facility focusing on automotive components, electronics, and advanced materials production with Industry 4.0 technologies.",
+    investmentSize: "~$1.2B",
+    jobCreation: "~8,500 Jobs",
+    gdpImpact: "~1,800 Mn",
+    irr: "~16.7%",
+    paybackPeriod: "~6-8 years",
+    category: "Manufacturing Activities",
+    activity: "Manufacturing",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Jeddah",
+  },
+  {
+    id: 5,
+    title: "Heritage Tourism Development",
+    type: "Tourism & Entertainment",
+    location: "Diriyah",
+    description: "Cultural tourism project that combines historical preservation with modern amenities to create world-class visitor experiences.",
+    investmentSize: "~$3.2B",
+    jobCreation: "~12,000 Jobs",
+    gdpImpact: "~2,700 Mn",
+    irr: "~15.4%",
+    paybackPeriod: "~8-10 years",
+    category: "Tourism Activities",
+    activity: "Tourism",
+    subActivity: "Logistics",
+    municipality: "Riyadh",
+  },
+  {
+    id: 6,
+    title: "Solar Energy Initiative",
+    type: "Renewable Energy",
+    location: "Al-Ula",
+    description: "Innovative solar energy project designed to power local communities while preserving the natural landscape and heritage sites.",
+    investmentSize: "~$890M",
+    jobCreation: "~5,200 Jobs",
+    gdpImpact: "~1,200 Mn",
+    irr: "~19.8%",
+    paybackPeriod: "~4-6 years",
+    category: "Manufacturing Activities",
+    activity: "Energy",
+    subActivity: "Renewable Energy",
+    municipality: "Madinah",
+  },
+  {
+    id: 7,
+    title: "AI & Machine Learning Research Center",
+    type: "Technology & Innovation",
+    location: "Riyadh",
+    description: "Cutting-edge research and development center focusing on artificial intelligence, machine learning, and data science applications for various industries.",
+    investmentSize: "~$450M",
+    jobCreation: "~3,500 Jobs",
+    gdpImpact: "~680 Mn",
+    irr: "~24.2%",
+    paybackPeriod: "~5-6 years",
+    category: "General Services Activities",
+    activity: "Technology",
+    subActivity: "AI & Machine Learning",
+    municipality: "Riyadh",
+  },
+  {
+    id: 8,
+    title: "Port Development and Logistics Hub",
+    type: "Logistics & Transportation",
+    location: "Dammam",
+    description: "Modern port expansion and logistics hub development to enhance trade connectivity and support regional economic growth.",
+    investmentSize: "~$1.8B",
+    jobCreation: "~10,000 Jobs",
+    gdpImpact: "~2,100 Mn",
+    irr: "~17.9%",
+    paybackPeriod: "~7-8 years",
+    category: "General Services Activities",
+    activity: "Manufacturing",
+    subActivity: "Logistics",
+    municipality: "Dammam",
+  },
+  {
+    id: 9,
+    title: "Healthcare Innovation Center",
+    type: "Healthcare & Biotech",
+    location: "Riyadh",
+    description: "Advanced healthcare facility combining medical research, patient care, and biotechnology innovation to serve the region's growing healthcare needs.",
+    investmentSize: "~$650M",
+    jobCreation: "~4,800 Jobs",
+    gdpImpact: "~920 Mn",
+    irr: "~19.3%",
+    paybackPeriod: "~6-7 years",
+    category: "General Services Activities",
+    activity: "Healthcare",
+    subActivity: "Software Development",
+    municipality: "Riyadh",
+  },
+  {
+    id: 10,
+    title: "Financial Technology Hub",
+    type: "Finance & Banking",
+    location: "Riyadh",
+    description: "State-of-the-art fintech hub supporting digital banking, payment solutions, and financial innovation in the region.",
+    investmentSize: "~$520M",
+    jobCreation: "~3,200 Jobs",
+    gdpImpact: "~750 Mn",
+    irr: "~21.5%",
+    paybackPeriod: "~5-6 years",
+    category: "Financial Activities",
+    activity: "Finance",
+    subActivity: "Software Development",
+    municipality: "Riyadh",
+  },
+  {
+    id: 11,
+    title: "Vehicle Manufacturing Plant",
+    type: "Automotive Industry",
+    location: "Jeddah",
+    description: "Modern vehicle assembly and manufacturing facility producing electric and hybrid vehicles for regional and international markets.",
+    investmentSize: "~$1.5B",
+    jobCreation: "~9,500 Jobs",
+    gdpImpact: "~1,950 Mn",
+    irr: "~18.7%",
+    paybackPeriod: "~7-8 years",
+    category: "Vehicle Activities",
+    activity: "Manufacturing",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Jeddah",
+  },
+  {
+    id: 12,
+    title: "Construction Materials Production",
+    type: "Construction & Building",
+    location: "Riyadh",
+    description: "Large-scale production facility for construction materials including cement, steel, and prefabricated building components.",
+    investmentSize: "~$720M",
+    jobCreation: "~6,800 Jobs",
+    gdpImpact: "~1,100 Mn",
+    irr: "~17.2%",
+    paybackPeriod: "~6-7 years",
+    category: "Construction Activities",
+    activity: "Manufacturing",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Riyadh",
+  },
+  {
+    id: 13,
+    title: "Luxury Resort Development",
+    type: "Tourism & Hospitality",
+    location: "Jeddah",
+    description: "World-class luxury resort and entertainment complex featuring premium accommodations, dining, and recreational facilities.",
+    investmentSize: "~$2.1B",
+    jobCreation: "~11,500 Jobs",
+    gdpImpact: "~2,400 Mn",
+    irr: "~16.8%",
+    paybackPeriod: "~8-9 years",
+    category: "Tourism Activities",
+    activity: "Tourism",
+    subActivity: "Logistics",
+    municipality: "Jeddah",
+  },
+  {
+    id: 14,
+    title: "Petrochemical Processing Facility",
+    type: "Petrochemicals",
+    location: "Dammam",
+    description: "Advanced petrochemical processing plant producing high-value chemical products for domestic and export markets.",
+    investmentSize: "~$3.5B",
+    jobCreation: "~18,000 Jobs",
+    gdpImpact: "~3,200 Mn",
+    irr: "~20.1%",
+    paybackPeriod: "~7-8 years",
+    category: "Manufacturing Activities",
+    activity: "Energy",
+    subActivity: "Renewable Energy",
+    municipality: "Dammam",
+  },
+  {
+    id: 15,
+    title: "Data Center and Cloud Services",
+    type: "Technology & IT",
+    location: "Riyadh",
+    description: "State-of-the-art data center providing cloud computing, data storage, and IT infrastructure services for businesses across the region.",
+    investmentSize: "~$380M",
+    jobCreation: "~2,800 Jobs",
+    gdpImpact: "~580 Mn",
+    irr: "~23.4%",
+    paybackPeriod: "~4-5 years",
+    category: "General Services Activities",
+    activity: "Technology",
+    subActivity: "Software Development",
+    municipality: "Riyadh",
+  },
+  {
+    id: 16,
+    title: "Agricultural Technology Park",
+    type: "Agriculture & Food",
+    location: "Makkah",
+    description: "Innovative agricultural technology park focusing on sustainable farming, food processing, and agricultural innovation.",
+    investmentSize: "~$580M",
+    jobCreation: "~4,200 Jobs",
+    gdpImpact: "~850 Mn",
+    irr: "~18.9%",
+    paybackPeriod: "~6-7 years",
+    category: "General Services Activities",
+    activity: "Manufacturing",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Makkah",
+  },
+  {
+    id: 17,
+    title: "Electric Vehicle Charging Network",
+    type: "Energy & Infrastructure",
+    location: "Riyadh",
+    description: "Comprehensive network of electric vehicle charging stations across major cities, supporting the transition to sustainable transportation.",
+    investmentSize: "~$320M",
+    jobCreation: "~2,100 Jobs",
+    gdpImpact: "~480 Mn",
+    irr: "~22.7%",
+    paybackPeriod: "~4-5 years",
+    category: "Vehicle Activities",
+    activity: "Energy",
+    subActivity: "Renewable Energy",
+    municipality: "Riyadh",
+  },
+  {
+    id: 18,
+    title: "Pharmaceutical Manufacturing",
+    type: "Healthcare & Pharmaceuticals",
+    location: "Riyadh",
+    description: "Modern pharmaceutical manufacturing facility producing generic and specialty medications for domestic and regional markets.",
+    investmentSize: "~$950M",
+    jobCreation: "~5,600 Jobs",
+    gdpImpact: "~1,350 Mn",
+    irr: "~20.3%",
+    paybackPeriod: "~6-7 years",
+    category: "Manufacturing Activities",
+    activity: "Healthcare",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Riyadh",
+  },
+  {
+    id: 19,
+    title: "Entertainment Complex",
+    type: "Tourism & Entertainment",
+    location: "Riyadh",
+    description: "Large-scale entertainment complex featuring theme parks, cinemas, restaurants, and family entertainment facilities.",
+    investmentSize: "~$1.4B",
+    jobCreation: "~8,200 Jobs",
+    gdpImpact: "~1,750 Mn",
+    irr: "~17.5%",
+    paybackPeriod: "~7-8 years",
+    category: "Tourism Activities",
+    activity: "Tourism",
+    subActivity: "Logistics",
+    municipality: "Riyadh",
+  },
+  {
+    id: 20,
+    title: "Water Desalination Plant",
+    type: "Water & Utilities",
+    location: "Jeddah",
+    description: "Advanced water desalination facility using reverse osmosis technology to provide clean water for urban and industrial use.",
+    investmentSize: "~$1.1B",
+    jobCreation: "~6,500 Jobs",
+    gdpImpact: "~1,500 Mn",
+    irr: "~19.1%",
+    paybackPeriod: "~6-7 years",
+    category: "General Services Activities",
+    activity: "Energy",
+    subActivity: "Renewable Energy",
+    municipality: "Jeddah",
+  },
+  {
+    id: 21,
+    title: "Aerospace Manufacturing",
+    type: "Aerospace & Defense",
+    location: "Riyadh",
+    description: "Advanced aerospace manufacturing facility producing aircraft components, drones, and defense systems.",
+    investmentSize: "~$2.8B",
+    jobCreation: "~14,500 Jobs",
+    gdpImpact: "~2,600 Mn",
+    irr: "~19.7%",
+    paybackPeriod: "~7-8 years",
+    category: "Manufacturing Activities",
+    activity: "Manufacturing",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Riyadh",
+  },
+  {
+    id: 22,
+    title: "Digital Banking Platform",
+    type: "Finance & Technology",
+    location: "Riyadh",
+    description: "Comprehensive digital banking platform providing online and mobile banking services with advanced security features.",
+    investmentSize: "~$420M",
+    jobCreation: "~2,600 Jobs",
+    gdpImpact: "~640 Mn",
+    irr: "~25.1%",
+    paybackPeriod: "~4-5 years",
+    category: "Financial Activities",
+    activity: "Finance",
+    subActivity: "Software Development",
+    municipality: "Riyadh",
+  },
+  {
+    id: 23,
+    title: "Waste Management and Recycling",
+    type: "Environment Services",
+    location: "Dammam",
+    description: "Comprehensive waste management and recycling facility processing municipal and industrial waste into reusable materials.",
+    investmentSize: "~$680M",
+    jobCreation: "~5,100 Jobs",
+    gdpImpact: "~980 Mn",
+    irr: "~18.4%",
+    paybackPeriod: "~6-7 years",
+    category: "General Services Activities",
+    activity: "Manufacturing",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Dammam",
+  },
+  {
+    id: 24,
+    title: "Textile Manufacturing",
+    type: "Textiles & Apparel",
+    location: "Jeddah",
+    description: "Modern textile manufacturing facility producing high-quality fabrics and garments for domestic and export markets.",
+    investmentSize: "~$540M",
+    jobCreation: "~4,500 Jobs",
+    gdpImpact: "~820 Mn",
+    irr: "~17.8%",
+    paybackPeriod: "~6-7 years",
+    category: "Manufacturing Activities",
+    activity: "Manufacturing",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Jeddah",
+  },
+  {
+    id: 25,
+    title: "E-commerce Logistics Center",
+    type: "Logistics & E-commerce",
+    location: "Riyadh",
+    description: "Large-scale logistics and distribution center supporting e-commerce operations with automated sorting and delivery systems.",
+    investmentSize: "~$750M",
+    jobCreation: "~5,800 Jobs",
+    gdpImpact: "~1,120 Mn",
+    irr: "~20.6%",
+    paybackPeriod: "~5-6 years",
+    category: "General Services Activities",
+    activity: "Technology",
+    subActivity: "Logistics",
+    municipality: "Riyadh",
+  },
+  {
+    id: 26,
+    title: "Medical Device Manufacturing",
+    type: "Healthcare & Medical Devices",
+    location: "Riyadh",
+    description: "Advanced medical device manufacturing facility producing diagnostic equipment, surgical instruments, and medical supplies.",
+    investmentSize: "~$620M",
+    jobCreation: "~4,000 Jobs",
+    gdpImpact: "~940 Mn",
+    irr: "~21.2%",
+    paybackPeriod: "~5-6 years",
+    category: "Manufacturing Activities",
+    activity: "Healthcare",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Riyadh",
+  },
+  {
+    id: 27,
+    title: "Green Hydrogen Production",
+    type: "Renewable Energy",
+    location: "NEOM",
+    description: "Large-scale green hydrogen production facility using renewable energy to produce clean hydrogen fuel for various applications.",
+    investmentSize: "~$4.2B",
+    jobCreation: "~22,000 Jobs",
+    gdpImpact: "~4,800 Mn",
+    irr: "~23.8%",
+    paybackPeriod: "~6-7 years",
+    category: "Manufacturing Activities",
+    activity: "Energy",
+    subActivity: "Renewable Energy",
+    municipality: "Tabuk",
+  },
+  {
+    id: 28,
+    title: "Software Development Hub",
+    type: "Technology & Software",
+    location: "Riyadh",
+    description: "Comprehensive software development center creating enterprise solutions, mobile applications, and cloud-based services.",
+    investmentSize: "~$380M",
+    jobCreation: "~3,400 Jobs",
+    gdpImpact: "~620 Mn",
+    irr: "~26.3%",
+    paybackPeriod: "~3-4 years",
+    category: "General Services Activities",
+    activity: "Technology",
+    subActivity: "Software Development",
+    municipality: "Riyadh",
+  },
+  {
+    id: 29,
+    title: "Food Processing Plant",
+    type: "Food & Beverage",
+    location: "Makkah",
+    description: "Modern food processing facility producing packaged foods, beverages, and halal-certified products for regional markets.",
+    investmentSize: "~$480M",
+    jobCreation: "~3,800 Jobs",
+    gdpImpact: "~720 Mn",
+    irr: "~19.5%",
+    paybackPeriod: "~5-6 years",
+    category: "Manufacturing Activities",
+    activity: "Manufacturing",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Makkah",
+  },
+  {
+    id: 30,
+    title: "Real Estate Development",
+    type: "Real Estate & Construction",
+    location: "Riyadh",
+    description: "Large-scale mixed-use real estate development featuring residential, commercial, and retail spaces with modern amenities.",
+    investmentSize: "~$2.3B",
+    jobCreation: "~13,500 Jobs",
+    gdpImpact: "~2,550 Mn",
+    irr: "~16.9%",
+    paybackPeriod: "~8-9 years",
+    category: "Construction Activities",
+    activity: "Manufacturing",
+    subActivity: "Advanced Manufacturing",
+    municipality: "Riyadh",
+  },
+];
+
+// Helper function to filter and paginate projects
+export function getFilteredProjects(
+  projects: InvestmentProject[],
+  filters: {
+    search?: string;
+    category?: string;
+    activity?: string;
+    subActivity?: string;
+    municipality?: string;
+  },
+  page: number = 1,
+  limit: number = 6
+) {
+  let filtered = [...projects];
+
+  // Apply search filter
+  if (filters.search) {
+    const searchLower = filters.search.toLowerCase();
+    filtered = filtered.filter(
+      (project) =>
+        project.title.toLowerCase().includes(searchLower) ||
+        project.description.toLowerCase().includes(searchLower) ||
+        project.type.toLowerCase().includes(searchLower) ||
+        project.location.toLowerCase().includes(searchLower)
+    );
+  }
+
+  // Apply category filter
+  if (filters.category && filters.category !== "All") {
+    filtered = filtered.filter(
+      (project) => project.category === filters.category
+    );
+  }
+
+  // Apply activity filter
+  if (filters.activity) {
+    filtered = filtered.filter(
+      (project) => project.activity === filters.activity
+    );
+  }
+
+  // Apply sub-activity filter
+  if (filters.subActivity) {
+    filtered = filtered.filter(
+      (project) => project.subActivity === filters.subActivity
+    );
+  }
+
+  // Apply municipality filter
+  if (filters.municipality) {
+    filtered = filtered.filter(
+      (project) => project.municipality === filters.municipality
+    );
+  }
+
+  // Calculate pagination
+  const totalItems = filtered.length;
+  const totalPages = Math.ceil(totalItems / limit);
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + limit;
+  const paginatedProjects = filtered.slice(startIndex, endIndex);
+
+  return {
+    data: paginatedProjects,
+    pagination: {
+      currentPage: page,
+      totalPages,
+      totalItems,
+      itemsPerPage: limit,
+      hasNextPage: page < totalPages,
+      hasPreviousPage: page > 1,
+    },
+  };
+}
+

@@ -1,0 +1,70 @@
+{
+  "strategic_direction": {
+    "investment_destination": "Investment Destination",
+    "tabs": {
+      "economy": "Transformational Vision",
+      "society": "Game-Changing Opportunities",
+      "nation": "Trusted and Stable Destination",
+      "talent": "Physical Infrastructure",
+      "saudi": "Digital Infrastructure"
+    },
+    "economy_items": {
+      "item1": "Economy item 1",
+      "item2": "Economy item 2",
+      "item3": "Economy item 3",
+      "item4": "Economy item 4",
+      "item5": "Economy item 5"
+    },
+    "society_items": {
+      "item1": "Society item 1",
+      "item2": "Society item 2",
+      "item3": "Society item 3",
+      "item4": "Society item 4",
+      "item5": "Society item 5"
+    },
+    "nation_items": {
+      "item1": "Nation item 1",
+      "item2": "Nation item 2",
+      "item3": "Nation item 3",
+      "item4": "Nation item 4",
+      "item5": "Nation item 5"
+    }
+  },
+  "footer": {
+    "whoWeAre": "WHO WE ARE",
+    "whoWeAreLinks": {
+      "leadership": "Our Leadership",
+      "history": "Our History",
+      "solutions": "Solutions"
+    },
+    "ourInvestments": "OUR INVESTMENTS",
+    "ourInvestmentsLinks": {
+      "portfolio": "Our Portfolio",
+      "gigaProjects": "Giga-Projects",
+      "investmentPools": "Investment Pools",
+      "governance": "Governance and Investment Decisions"
+    },
+    "strategyAndImpact": "STRATEGY & IMPACT",
+    "strategyLinks": {
+      "program": "Our Program",
+      "investedBetter": "Invested in Better"
+    },
+    "investors": "INVESTORS",
+    "investorsLinks": {
+      "greenFinance": "Green Finance Framework",
+      "capitalMarkets": "Capital Markets Program",
+      "annualReports": "Annual Reports",
+      "financialStatements": "Financial Statements",
+      "creditRatings": "Credit Ratings"
+    }
+  },
+  "chat": {
+    "welcome_message": "Hello! How can I help you with investment opportunities in Saudi Arabia?",
+    "responses": {
+      "investment": "Saudi Arabia offers excellent investment opportunities across various sectors including technology, energy, tourism, and manufacturing. Would you like to know more about a specific sector?",
+      "visa": "For visa and travel information, please visit our services section or contact our support team directly.",
+      "contact": "You can reach us through our contact form, email, or phone. Check the footer section for all contact details."
+    }
+  }
+}
+

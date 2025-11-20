@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "swiper/css";
+
+
+
+
+@font-face {
+    font-family: "F29LT Bukra Lt";
+    src: url("https://db.onlinewebfonts.com/t/73a1a23ef60759de6911fa0f5ef5bf35.eot");
+    src: url("https://db.onlinewebfonts.com/t/73a1a23ef60759de6911fa0f5ef5bf35.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/73a1a23ef60759de6911fa0f5ef5bf35.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/73a1a23ef60759de6911fa0f5ef5bf35.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/73a1a23ef60759de6911fa0f5ef5bf35.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/73a1a23ef60759de6911fa0f5ef5bf35.svg#F29LT Bukra Lt")format("svg");
+}
+
+@font-face {
+    font-family: "F29LT Bukra Regular";
+    src: url("https://db.onlinewebfonts.com/t/739571e5b3270dd49b19f413b1ef148e.eot");
+    src: url("https://db.onlinewebfonts.com/t/739571e5b3270dd49b19f413b1ef148e.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/739571e5b3270dd49b19f413b1ef148e.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/739571e5b3270dd49b19f413b1ef148e.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/739571e5b3270dd49b19f413b1ef148e.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/739571e5b3270dd49b19f413b1ef148e.svg#F29LT Bukra Regular")format("svg");
+}
+
+@font-face {
+    font-family: "F29LT Bukra";
+    src: url("https://db.onlinewebfonts.com/t/7a4456451db34fc8abc7a9ce7da13480.eot");
+    src: url("https://db.onlinewebfonts.com/t/7a4456451db34fc8abc7a9ce7da13480.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/7a4456451db34fc8abc7a9ce7da13480.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/7a4456451db34fc8abc7a9ce7da13480.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/7a4456451db34fc8abc7a9ce7da13480.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/7a4456451db34fc8abc7a9ce7da13480.svg#F29LT Bukra")format("svg");
+}
+
+
+@font-face {
+    font-family: "F29LT Bukra Md";
+    src: url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.eot");
+    src: url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/837ca9196b6625ec9766cc377acc8108.svg#F29LT Bukra Md")format("svg");
+}
+
+
+.bukra-light {
+    font-family: "F29LT Bukra Lt";
+}
+
+.bukra-regular {
+    font-family: "F29LT Bukra Regular";
+}
+
+.bukra-bold {
+    font-family: "F29LT Bukra";
+}
+
+.bukra-medium {
+    font-family: "F29LT Bukra Md";
+}
