@@ -9,7 +9,7 @@ const InvestmentOpportunities = lazy(
   () => import("./pages/InvestmentOpportunities")
 );
 const Sectors = lazy(() => import("./pages/Sectors"));
-const Earth = lazy(() => import("./pages/Earth"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 function App() {
   const router = createBrowserRouter([
     {
@@ -22,7 +22,7 @@ function App() {
           element: <InvestmentOpportunities />,
         },
         { path: "sectors", element: <Sectors /> },
-        { path: "earth", element: <Earth /> },
+        { path: "*", element: <NotFound /> },
       ],
     },
   ]);
